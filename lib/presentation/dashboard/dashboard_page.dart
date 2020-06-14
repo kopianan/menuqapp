@@ -28,6 +28,19 @@ class _DashboardPagedState extends State<DashboardPaged> {
                 leading: Container(),
                 title: Text(scanProvider.getMenuData.restaurantName),
                 centerTitle: true,
+                actions: <Widget>[
+                  IconButton(
+                    onPressed: (){
+                      Navigator.of(context).pop(); 
+                    },
+                                      icon: Icon(
+                      MdiIcons.logout,
+                      color: Colors.white,
+                      size: 20,
+                      
+                    ),
+                  )
+                ],
               ),
               SliverToBoxAdapter(
                   child: Container(

@@ -8,6 +8,7 @@ import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreenPage extends StatefulWidget {
   HomeScreenPage({Key key}) : super(key: key);
@@ -50,10 +51,12 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
             backgroundColor: Colors.transparent,
             title: Text(
               "WELCOME",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.black),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  color: Colors.black),
             ),
             centerTitle: true,
-           
           ),
           body: Column(
             children: <Widget>[
@@ -77,7 +80,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                         onPressed: () async {
                           try {
                             var result = await BarcodeScanner.scan();
-                            
+
                             // context.bloc<ScanBloc>().add(
                             //     ScanEvent(codeQr: "5ee1dafbf5b7fb0c2426cc61"));
                             context
@@ -105,13 +108,16 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                       height: 5,
                     ),
                     InkWell(
+                        onTap: () {
+                          launch("https://froza.xolura.com/");
+                        },
                         child: Text(
-                      "google.com",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ))
+                          "froza.xolura.com",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ))
                   ],
                 ),
               )
