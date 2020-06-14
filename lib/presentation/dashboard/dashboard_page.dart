@@ -26,7 +26,6 @@ class _DashboardPagedState extends State<DashboardPaged> {
                 body: CustomScrollView(slivers: <Widget>[
               SliverAppBar(
                 leading: Container(),
-                actions: <Widget>[Icon(MdiIcons.logout)],
                 title: Text(scanProvider.getMenuData.restaurantName),
                 centerTitle: true,
               ),

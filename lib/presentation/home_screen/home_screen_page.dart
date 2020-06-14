@@ -77,10 +77,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                         onPressed: () async {
                           try {
                             var result = await BarcodeScanner.scan();
-                            if (result.rawContent.isEmpty) {
-                            } else {
-                              Navigator.of(context).pop();
-                            }
+                            
                             // context.bloc<ScanBloc>().add(
                             //     ScanEvent(codeQr: "5ee1dafbf5b7fb0c2426cc61"));
                             context
