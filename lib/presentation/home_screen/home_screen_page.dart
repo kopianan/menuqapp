@@ -80,12 +80,11 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                         onPressed: () async {
                           try {
                             var result = await BarcodeScanner.scan();
-
-                            // context.bloc<ScanBloc>().add(
-                            //     ScanEvent(codeQr: "5ee1dafbf5b7fb0c2426cc61"));
+                            String _id = result.rawContent.split("/").last;
+                            print(_id); 
                             context
                                 .bloc<ScanBloc>()
-                                .add(ScanEvent(codeQr: result.rawContent));
+                                .add(ScanEvent(codeQr: _id));
                           } catch (e) {
                             print(e.toString());
                           }
@@ -109,10 +108,10 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                     ),
                     InkWell(
                         onTap: () {
-                          launch("https://froza.xolura.com/");
+                          launch("https://menuq.co/");
                         },
                         child: Text(
-                          "froza.xolura.com",
+                          "menuq.co",
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,

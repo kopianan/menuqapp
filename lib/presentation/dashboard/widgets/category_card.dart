@@ -19,12 +19,12 @@ class _CategoryCardState extends State<CategoryCard> {
         widget.onClick();
       },
       child: Container(
-        width: 90,
+        width: 80,
         child: Column(
           children: <Widget>[
             new Container(
-              width: 80.0,
-              height: 80.0,
+              width: 70.0,
+              height: 70.0,
               decoration: new BoxDecoration(
                 color: const Color(0xff7c94b6),
                 image: new DecorationImage(

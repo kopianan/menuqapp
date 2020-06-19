@@ -19,7 +19,7 @@ class ScanRepository implements IScanFacade {
     try {
       print("DIO"); 
       _response = await _dio
-          .get("https://froza.xolura.com/app/v1/api/restaurant/" + code);
+          .get("https://menuq.co/app/v1/api/restaurant/" + code);
       final _result = MenuData.fromJson(_response.data['data']);
       print(_result.toJson());
       return right(_result);
