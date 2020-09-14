@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>941935301623-jo8q3uiuqbspgshjk8k6m56710o2kc9p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.941935301623-jo8q3uiuqbspgshjk8k6m56710o2kc9p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA3ys6-5A6ORnEI6adzaSoL5pUnEWQyaYY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>941935301623</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.menuq.menuq</string>
+	<key>PROJECT_ID</key>
+	<string>menuq-87cbf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>menuq-87cbf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:941935301623:ios:ab2c6e089d5fc4dd5794f2</string>
+	<key>DATABASE_URL</key>
+	<string>https://menuq-87cbf.firebaseio.com</string>
+</dict>
+</plist>

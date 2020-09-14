@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "941935301623",
+    "firebase_url": "https://menuq-87cbf.firebaseio.com",
+    "project_id": "menuq-87cbf",
+    "storage_bucket": "menuq-87cbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941935301623:android:88d393cf57d089545794f2",
+        "android_client_info": {
+          "package_name": "com.menuq.menuqapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941935301623-hbjgdpdes1e6ba80qivrjof2o5hntbb8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.menuq.menuqapp",
+            "certificate_hash": "d1bad46a76fa0a85ea88a59fff400356edd322ed"
+          }
+        },
+        {
+          "client_id": "941935301623-srhls0hviifekvmo1acmn85fpalmsjfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoqkgsKu9swLl-H288nu0JOw9mRa7OmME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941935301623-srhls0hviifekvmo1acmn85fpalmsjfa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "941935301623-jo8q3uiuqbspgshjk8k6m56710o2kc9p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.menuq.menuq",
+                "app_store_id": "1519568767"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
