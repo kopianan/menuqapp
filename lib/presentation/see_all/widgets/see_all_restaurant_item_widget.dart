@@ -23,6 +23,7 @@ class SeeAllRestaurantItemWidget extends StatelessWidget {
               flex: 9,
               child: Container(
                 // width: 160,
+
                 height: 170,
                 decoration: new BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
