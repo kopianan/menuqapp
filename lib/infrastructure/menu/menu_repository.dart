@@ -67,19 +67,38 @@ class MenuRepository implements IMenuFacade {
   }
 
   @override
-  Future<Either<MenuFailure, List<MenuClassDataWithRestaurant>>>
-      getAllMenuByLocation(String paginate, String page) async {
+  Future<Either<MenuFailure, List<MenuClassData>>> getAllMenuByLocation(
+      String paginate, String page) async {
     Response _response;
 
     try {
       _response = await _dio.get(
-        Setting().getUrl +
-            "app/v1/api/menu?paginate=$paginate&page=$page&with=restaurant",
+        Setting().getUrl + "app/v1/api/menu?paginate=$paginate&page=$page",
       );
       print(_response.data.toString());
       List _data = _response.data['data'];
-      List<MenuClassDataWithRestaurant> _result =
-          _data.map((e) => MenuClassDataWithRestaurant.fromJson(e)).toList();
+      List<MenuClassData> _result =
+          _data.map((e) => MenuClassData.fromJson(e)).toList();
+
+      return right(_result);
+    } on DioError catch (e) {
+      print(e.toString());
+      return left(MenuFailure.badRequest(e.response.data.toString()));
+    }
+  }
+
+  @override
+  Future<Either<MenuFailure, List<MenuBookData>>> getAllBookMenu(
+      String paginate, String page) async {
+    Response _response;
+
+    try {
+      _response = await _dio.get(
+        Setting().getUrl + "app/v1/api/menu-book?paginate=$paginate&page=$page",
+      );
+      List _data = _response.data['data'];
+      List<MenuBookData> _result =
+          _data.map((e) => MenuBookData.fromJson(e)).toList();
 
       return right(_result);
     } on DioError catch (e) {

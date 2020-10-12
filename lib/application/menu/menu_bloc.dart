@@ -60,6 +60,24 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
         yield MenuState.getAllMenuOption(
             isLoading: false, allMenuOption: some(_result));
       },
+      getAllMenuBook: (_GetAllMenuBook value) async* {
+        yield MenuState.getAllMenuBookOption(
+          isLoading: true,
+          allMenuBookData: none(),
+        );
+
+        try {
+          final _result =
+              await _iMenuFacade.getAllBookMenu(value.paginate, value.page);
+          yield MenuState.getAllMenuBookOption(
+              isLoading: false, allMenuBookData: some(_result));
+        } catch (e) {
+          yield MenuState.getAllMenuBookOption(
+              isLoading: false,
+              allMenuBookData:
+                  some(left(MenuFailure.serverError("Something in bloc"))));
+        }
+      },
     );
   }
 }

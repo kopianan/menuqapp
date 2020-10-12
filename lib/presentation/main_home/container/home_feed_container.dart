@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:feroza/application/home/bloc/home_bloc.dart';
 import 'package:feroza/infrastructure/location/location_service.dart';
 import 'package:feroza/presentation/main_home/widgets/card_menu_list.dart';
@@ -60,6 +61,13 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
     super.initState();
   }
 
+  List<String> imageUrl = [
+    "https://suneducationgroup.com/wp-content/uploads/2019/11/WEB-BANNER-YEAR-END-PROMO-SUN-ENGLISH-2019-Copy-1.jpg",
+    "https://www.acerid.com/wp-content/uploads/2019/07/Acer-Day-2019-banner.jpg",
+    "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/hair-salon-summer-promo-banner-design-template-528ff4abd3f1db406d83eab50d1f7994_screen.jpg?ts=1561539295",
+    "https://snipped-d4559.firebaseapp.com/images/slider5.jpg",
+    "https://sslindonesia.com/wp-content/uploads/2018/11/banner-promo.jpg"
+  ];
   Stream stream;
 
   @override
@@ -141,6 +149,7 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
                         ],
                       ),
                     ),
+                    _promoCarousel(),
                     Column(
                       children: <Widget>[
                         HomeSubTitleContainer(
@@ -169,7 +178,9 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
                     Column(
                       children: <Widget>[
                         HomeSubTitleContainer(
-                          onSeeAll: () {},
+                          onSeeAll: () {
+                            Get.toNamed('/see_all_menu_book');
+                          },
                           title: "Book Menu",
                         ),
                         listMenuBookData(menuController.getMenuBook.data),
@@ -224,6 +235,36 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
     );
   }
 
+  Widget _promoCarousel() {
+    return Container(
+      child: Column(
+        children: [
+          CarouselSlider(
+            options: CarouselOptions(
+                height: 100.0,
+                enlargeStrategy: CenterPageEnlargeStrategy.scale,
+                enlargeCenterPage: false),
+            items: imageUrl.map((i) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Container(
+                    width: MediaQuery.of(context).size.width,
+                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: NetworkImage(i), fit: BoxFit.cover)),
+                  );
+                },
+              );
+            }).toList(),
+          ),
+        ],
+      ),
+    );
+  }
+
   Container listAllMenu() {
     return Container(
       margin: EdgeInsets.only(left: 20, right: 20),
@@ -245,6 +286,8 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
 
   Widget listItem(List<MenuClassData> dataList) {
     return Container(
+      width: double.infinity,
+      alignment: Alignment.centerLeft,
       height: 210,
       margin: EdgeInsets.only(left: 20),
       child: ListView.builder(

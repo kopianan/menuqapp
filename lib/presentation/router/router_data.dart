@@ -3,6 +3,7 @@ import 'package:feroza/presentation/item_detail/item_detail.dart';
 import 'package:feroza/presentation/menu_book/menu_book_page.dart';
 import 'package:feroza/presentation/place_profile/restaurant_profile_page.dart';
 import 'package:feroza/presentation/see_all/see_all_food_page.dart';
+import 'package:feroza/presentation/see_all/see_all_menu_book_page.dart';
 import 'package:feroza/presentation/see_all/see_all_page.dart';
 import 'package:feroza/presentation/splash_screen/splash_screen_page.dart';
 import 'package:get/route_manager.dart';
@@ -23,6 +24,7 @@ class RouterData {
       GetPage(name: '/see_all', page: () => SeeAllPage()),
       GetPage(name: '/app_widget', page: () => AppWidget()),
       GetPage(name: '/see_all_food', page: () => SeeAllFoodPage()),
+      GetPage(name: '/see_all_menu_book', page: () => SeeAllMenuBookPage()),
     ];
   }
 }

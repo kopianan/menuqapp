@@ -1,5 +1,6 @@
 import 'package:feroza/domain/menu/menu_data.dart';
 import 'package:feroza/infrastructure/core/formatter.dart';
+import 'package:feroza/presentation/item_detail/item_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_money_formatter/flutter_money_formatter.dart';
 import 'package:get/get.dart';
@@ -15,7 +16,7 @@ class MenuSingleListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed('/item_detail', arguments: menuClassData);
+        Get.toNamed('/item_detail', arguments: menuClassData.id);
       },
       child: Container(
           height: 100,

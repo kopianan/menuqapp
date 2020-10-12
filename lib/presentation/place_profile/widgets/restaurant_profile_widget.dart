@@ -6,7 +6,6 @@ import 'package:feroza/presentation/place_profile/widgets/menu_list_container.da
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 class RestaurantProfileWidget extends StatefulWidget {
   const RestaurantProfileWidget({
     Key key,
@@ -26,7 +25,7 @@ class _RestaurantProfileWidgetState extends State<RestaurantProfileWidget> {
   void initState() {
     restaurantController
         .setAllRestaurantData(widget.getAllRestaurantDataResponse);
-    print(restaurantController.getAllRestaurantData.data.address);
+
     _getAllRestaurantDataResponse = widget.getAllRestaurantDataResponse;
     _tabs = widget.getAllRestaurantDataResponse.data.categoryList;
     _tabs.insert(

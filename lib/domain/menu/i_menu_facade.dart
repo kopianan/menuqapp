@@ -11,6 +11,8 @@ abstract class IMenuFacade {
       MenuBookRequest request);
   Future<Either<MenuFailure, MenuBookResponseWithRestaurant>>
       getSingleMenuWithRestaurant(String menuId);
-  Future<Either<MenuFailure, List<MenuClassDataWithRestaurant>>>
-      getAllMenuByLocation(String paginate, String page);
+  Future<Either<MenuFailure, List<MenuClassData>>> getAllMenuByLocation(
+      String paginate, String page);
+  Future<Either<MenuFailure, List<MenuBookData>>> getAllBookMenu(
+      String paginate, String page);
 }

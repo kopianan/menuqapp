@@ -5,7 +5,6 @@ import 'package:feroza/presentation/item_detail/widgets/menu_item_detail_content
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/route_manager.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'widgets/item_detail_loading_page.dart';
 
@@ -17,11 +16,10 @@ class ItemDetail extends StatefulWidget {
 }
 
 class _ItemDetailState extends State<ItemDetail> {
-  MenuClassData menuClassData;
+  String menuId;
   @override
   void initState() {
-    menuClassData = Get.arguments as MenuClassData;
-    print(menuClassData.id);
+    menuId = Get.arguments as String;
     super.initState();
   }
 
@@ -29,7 +27,7 @@ class _ItemDetailState extends State<ItemDetail> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          getIt<MenuBloc>()..add(MenuEvent.getSingleMenu(menuClassData.id)),
+          getIt<MenuBloc>()..add(MenuEvent.getSingleMenu(menuId)),
       child: BlocConsumer<MenuBloc, MenuState>(
         listener: (context, state) {},
         builder: (context, state) {

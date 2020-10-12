@@ -22,9 +22,15 @@ abstract class MenuState with _$MenuState {
               singleMenuOption}) = _SingleMenuWithRestaurantData;
 
   const factory MenuState.getAllMenuOption(
+          {@required
+              bool isLoading,
+          @required
+              Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption}) =
+      _GetAllMenuOption;
+  const factory MenuState.getAllMenuBookOption(
       {@required
           bool isLoading,
       @required
-          Option<Either<MenuFailure, List<MenuClassDataWithRestaurant>>>
-              allMenuOption}) = _GetAllMenuOption;
+          Option<Either<MenuFailure, List<MenuBookData>>>
+              allMenuBookData}) = _GetAllMenuBookOption;
 }

@@ -15,7 +15,7 @@ class CardMenuList extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed('/item_detail', arguments: menuClassData);
+        Get.toNamed('/item_detail', arguments: menuClassData.id);
       },
       child: Container(
           height: 100,
@@ -23,7 +23,9 @@ class CardMenuList extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
           ),
-          margin: EdgeInsets.only(top: 10, ),
+          margin: EdgeInsets.only(
+            top: 10,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,

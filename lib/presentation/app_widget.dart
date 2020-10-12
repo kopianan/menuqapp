@@ -10,6 +10,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Menuq',
       getPages: RouterData().getAllPages,
+      defaultTransition: Transition.downToUp,
       theme: ThemeData(
         accentColor: Color(0xffF8DE44),
         buttonTheme: ButtonThemeData(
@@ -20,9 +21,7 @@ class AppWidget extends StatelessWidget {
         textTheme: TextTheme(
             button: TextStyle(fontSize: 20),
             headline3: TextStyle(
-                fontSize: 16,
-                color: Colors.black,
-                fontWeight: FontWeight.bold),
+                fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
             headline4: TextStyle(fontSize: 15, color: Colors.black),
             headline5: TextStyle(fontSize: 14, color: Colors.grey)),
         primaryColor: Color(0xff28334A),

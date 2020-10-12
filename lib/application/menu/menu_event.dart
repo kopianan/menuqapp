@@ -11,4 +11,6 @@ abstract class MenuEvent with _$MenuEvent {
   const factory MenuEvent.getSingleMenu(String menuId) = _GetSingleMenu;
   const factory MenuEvent.getAllMenu(String paginate, String page) =
       _GetAllMenu;
+  const factory MenuEvent.getAllMenuBook(String paginate, String page) =
+      _GetAllMenuBook;
 }

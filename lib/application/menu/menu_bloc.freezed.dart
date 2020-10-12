@@ -42,6 +42,13 @@ class _$MenuEventTearOff {
       page,
     );
   }
+
+  _GetAllMenuBook getAllMenuBook(String paginate, String page) {
+    return _GetAllMenuBook(
+      paginate,
+      page,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -55,6 +62,7 @@ mixin _$MenuEvent {
     @required Result getMenuBook(MenuBookRequest menuBookRequest),
     @required Result getSingleMenu(String menuId),
     @required Result getAllMenu(String paginate, String page),
+    @required Result getAllMenuBook(String paginate, String page),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -63,6 +71,7 @@ mixin _$MenuEvent {
     Result getMenuBook(MenuBookRequest menuBookRequest),
     Result getSingleMenu(String menuId),
     Result getAllMenu(String paginate, String page),
+    Result getAllMenuBook(String paginate, String page),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -72,6 +81,7 @@ mixin _$MenuEvent {
     @required Result getMenuBook(_GetMenuBook value),
     @required Result getSingleMenu(_GetSingleMenu value),
     @required Result getAllMenu(_GetAllMenu value),
+    @required Result getAllMenuBook(_GetAllMenuBook value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -80,6 +90,7 @@ mixin _$MenuEvent {
     Result getMenuBook(_GetMenuBook value),
     Result getSingleMenu(_GetSingleMenu value),
     Result getAllMenu(_GetAllMenu value),
+    Result getAllMenuBook(_GetAllMenuBook value),
     @required Result orElse(),
   });
 }
@@ -158,12 +169,14 @@ class _$_GetNearbyMenu implements _GetNearbyMenu {
     @required Result getMenuBook(MenuBookRequest menuBookRequest),
     @required Result getSingleMenu(String menuId),
     @required Result getAllMenu(String paginate, String page),
+    @required Result getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getNearbyMenu(request);
   }
 
@@ -175,6 +188,7 @@ class _$_GetNearbyMenu implements _GetNearbyMenu {
     Result getMenuBook(MenuBookRequest menuBookRequest),
     Result getSingleMenu(String menuId),
     Result getAllMenu(String paginate, String page),
+    Result getAllMenuBook(String paginate, String page),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -192,12 +206,14 @@ class _$_GetNearbyMenu implements _GetNearbyMenu {
     @required Result getMenuBook(_GetMenuBook value),
     @required Result getSingleMenu(_GetSingleMenu value),
     @required Result getAllMenu(_GetAllMenu value),
+    @required Result getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getNearbyMenu(this);
   }
 
@@ -209,6 +225,7 @@ class _$_GetNearbyMenu implements _GetNearbyMenu {
     Result getMenuBook(_GetMenuBook value),
     Result getSingleMenu(_GetSingleMenu value),
     Result getAllMenu(_GetAllMenu value),
+    Result getAllMenuBook(_GetAllMenuBook value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -288,12 +305,14 @@ class _$_GetRecommendedMenu implements _GetRecommendedMenu {
     @required Result getMenuBook(MenuBookRequest menuBookRequest),
     @required Result getSingleMenu(String menuId),
     @required Result getAllMenu(String paginate, String page),
+    @required Result getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getRecommendedMenu(request);
   }
 
@@ -305,6 +324,7 @@ class _$_GetRecommendedMenu implements _GetRecommendedMenu {
     Result getMenuBook(MenuBookRequest menuBookRequest),
     Result getSingleMenu(String menuId),
     Result getAllMenu(String paginate, String page),
+    Result getAllMenuBook(String paginate, String page),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -322,12 +342,14 @@ class _$_GetRecommendedMenu implements _GetRecommendedMenu {
     @required Result getMenuBook(_GetMenuBook value),
     @required Result getSingleMenu(_GetSingleMenu value),
     @required Result getAllMenu(_GetAllMenu value),
+    @required Result getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getRecommendedMenu(this);
   }
 
@@ -339,6 +361,7 @@ class _$_GetRecommendedMenu implements _GetRecommendedMenu {
     Result getMenuBook(_GetMenuBook value),
     Result getSingleMenu(_GetSingleMenu value),
     Result getAllMenu(_GetAllMenu value),
+    Result getAllMenuBook(_GetAllMenuBook value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -422,12 +445,14 @@ class _$_GetMenuBook implements _GetMenuBook {
     @required Result getMenuBook(MenuBookRequest menuBookRequest),
     @required Result getSingleMenu(String menuId),
     @required Result getAllMenu(String paginate, String page),
+    @required Result getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getMenuBook(menuBookRequest);
   }
 
@@ -439,6 +464,7 @@ class _$_GetMenuBook implements _GetMenuBook {
     Result getMenuBook(MenuBookRequest menuBookRequest),
     Result getSingleMenu(String menuId),
     Result getAllMenu(String paginate, String page),
+    Result getAllMenuBook(String paginate, String page),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -456,12 +482,14 @@ class _$_GetMenuBook implements _GetMenuBook {
     @required Result getMenuBook(_GetMenuBook value),
     @required Result getSingleMenu(_GetSingleMenu value),
     @required Result getAllMenu(_GetAllMenu value),
+    @required Result getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getMenuBook(this);
   }
 
@@ -473,6 +501,7 @@ class _$_GetMenuBook implements _GetMenuBook {
     Result getMenuBook(_GetMenuBook value),
     Result getSingleMenu(_GetSingleMenu value),
     Result getAllMenu(_GetAllMenu value),
+    Result getAllMenuBook(_GetAllMenuBook value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -551,12 +580,14 @@ class _$_GetSingleMenu implements _GetSingleMenu {
     @required Result getMenuBook(MenuBookRequest menuBookRequest),
     @required Result getSingleMenu(String menuId),
     @required Result getAllMenu(String paginate, String page),
+    @required Result getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getSingleMenu(menuId);
   }
 
@@ -568,6 +599,7 @@ class _$_GetSingleMenu implements _GetSingleMenu {
     Result getMenuBook(MenuBookRequest menuBookRequest),
     Result getSingleMenu(String menuId),
     Result getAllMenu(String paginate, String page),
+    Result getAllMenuBook(String paginate, String page),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -585,12 +617,14 @@ class _$_GetSingleMenu implements _GetSingleMenu {
     @required Result getMenuBook(_GetMenuBook value),
     @required Result getSingleMenu(_GetSingleMenu value),
     @required Result getAllMenu(_GetAllMenu value),
+    @required Result getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getSingleMenu(this);
   }
 
@@ -602,6 +636,7 @@ class _$_GetSingleMenu implements _GetSingleMenu {
     Result getMenuBook(_GetMenuBook value),
     Result getSingleMenu(_GetSingleMenu value),
     Result getAllMenu(_GetAllMenu value),
+    Result getAllMenuBook(_GetAllMenuBook value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -691,12 +726,14 @@ class _$_GetAllMenu implements _GetAllMenu {
     @required Result getMenuBook(MenuBookRequest menuBookRequest),
     @required Result getSingleMenu(String menuId),
     @required Result getAllMenu(String paginate, String page),
+    @required Result getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getAllMenu(paginate, page);
   }
 
@@ -708,6 +745,7 @@ class _$_GetAllMenu implements _GetAllMenu {
     Result getMenuBook(MenuBookRequest menuBookRequest),
     Result getSingleMenu(String menuId),
     Result getAllMenu(String paginate, String page),
+    Result getAllMenuBook(String paginate, String page),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -725,12 +763,14 @@ class _$_GetAllMenu implements _GetAllMenu {
     @required Result getMenuBook(_GetMenuBook value),
     @required Result getSingleMenu(_GetSingleMenu value),
     @required Result getAllMenu(_GetAllMenu value),
+    @required Result getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
     assert(getMenuBook != null);
     assert(getSingleMenu != null);
     assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
     return getAllMenu(this);
   }
 
@@ -742,6 +782,7 @@ class _$_GetAllMenu implements _GetAllMenu {
     Result getMenuBook(_GetMenuBook value),
     Result getSingleMenu(_GetSingleMenu value),
     Result getAllMenu(_GetAllMenu value),
+    Result getAllMenuBook(_GetAllMenuBook value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -758,6 +799,154 @@ abstract class _GetAllMenu implements MenuEvent {
   String get paginate;
   String get page;
   _$GetAllMenuCopyWith<_GetAllMenu> get copyWith;
+}
+
+abstract class _$GetAllMenuBookCopyWith<$Res> {
+  factory _$GetAllMenuBookCopyWith(
+          _GetAllMenuBook value, $Res Function(_GetAllMenuBook) then) =
+      __$GetAllMenuBookCopyWithImpl<$Res>;
+  $Res call({String paginate, String page});
+}
+
+class __$GetAllMenuBookCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
+    implements _$GetAllMenuBookCopyWith<$Res> {
+  __$GetAllMenuBookCopyWithImpl(
+      _GetAllMenuBook _value, $Res Function(_GetAllMenuBook) _then)
+      : super(_value, (v) => _then(v as _GetAllMenuBook));
+
+  @override
+  _GetAllMenuBook get _value => super._value as _GetAllMenuBook;
+
+  @override
+  $Res call({
+    Object paginate = freezed,
+    Object page = freezed,
+  }) {
+    return _then(_GetAllMenuBook(
+      paginate == freezed ? _value.paginate : paginate as String,
+      page == freezed ? _value.page : page as String,
+    ));
+  }
+}
+
+class _$_GetAllMenuBook implements _GetAllMenuBook {
+  const _$_GetAllMenuBook(this.paginate, this.page)
+      : assert(paginate != null),
+        assert(page != null);
+
+  @override
+  final String paginate;
+  @override
+  final String page;
+
+  @override
+  String toString() {
+    return 'MenuEvent.getAllMenuBook(paginate: $paginate, page: $page)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _GetAllMenuBook &&
+            (identical(other.paginate, paginate) ||
+                const DeepCollectionEquality()
+                    .equals(other.paginate, paginate)) &&
+            (identical(other.page, page) ||
+                const DeepCollectionEquality().equals(other.page, page)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(paginate) ^
+      const DeepCollectionEquality().hash(page);
+
+  @override
+  _$GetAllMenuBookCopyWith<_GetAllMenuBook> get copyWith =>
+      __$GetAllMenuBookCopyWithImpl<_GetAllMenuBook>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result getNearbyMenu(MenuRequestByNearby request),
+    @required Result getRecommendedMenu(MenuRequestByNearby request),
+    @required Result getMenuBook(MenuBookRequest menuBookRequest),
+    @required Result getSingleMenu(String menuId),
+    @required Result getAllMenu(String paginate, String page),
+    @required Result getAllMenuBook(String paginate, String page),
+  }) {
+    assert(getNearbyMenu != null);
+    assert(getRecommendedMenu != null);
+    assert(getMenuBook != null);
+    assert(getSingleMenu != null);
+    assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
+    return getAllMenuBook(paginate, page);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result getNearbyMenu(MenuRequestByNearby request),
+    Result getRecommendedMenu(MenuRequestByNearby request),
+    Result getMenuBook(MenuBookRequest menuBookRequest),
+    Result getSingleMenu(String menuId),
+    Result getAllMenu(String paginate, String page),
+    Result getAllMenuBook(String paginate, String page),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (getAllMenuBook != null) {
+      return getAllMenuBook(paginate, page);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result getNearbyMenu(_GetNearbyMenu value),
+    @required Result getRecommendedMenu(_GetRecommendedMenu value),
+    @required Result getMenuBook(_GetMenuBook value),
+    @required Result getSingleMenu(_GetSingleMenu value),
+    @required Result getAllMenu(_GetAllMenu value),
+    @required Result getAllMenuBook(_GetAllMenuBook value),
+  }) {
+    assert(getNearbyMenu != null);
+    assert(getRecommendedMenu != null);
+    assert(getMenuBook != null);
+    assert(getSingleMenu != null);
+    assert(getAllMenu != null);
+    assert(getAllMenuBook != null);
+    return getAllMenuBook(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result getNearbyMenu(_GetNearbyMenu value),
+    Result getRecommendedMenu(_GetRecommendedMenu value),
+    Result getMenuBook(_GetMenuBook value),
+    Result getSingleMenu(_GetSingleMenu value),
+    Result getAllMenu(_GetAllMenu value),
+    Result getAllMenuBook(_GetAllMenuBook value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (getAllMenuBook != null) {
+      return getAllMenuBook(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAllMenuBook implements MenuEvent {
+  const factory _GetAllMenuBook(String paginate, String page) =
+      _$_GetAllMenuBook;
+
+  String get paginate;
+  String get page;
+  _$GetAllMenuBookCopyWith<_GetAllMenuBook> get copyWith;
 }
 
 class _$MenuStateTearOff {
@@ -800,11 +989,24 @@ class _$MenuStateTearOff {
   }
 
   _GetAllMenuOption getAllMenuOption(
-      {@required bool isLoading,
-      @required Option<Either<MenuFailure, List<dynamic>>> allMenuOption}) {
+      {@required
+          bool isLoading,
+      @required
+          Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption}) {
     return _GetAllMenuOption(
       isLoading: isLoading,
       allMenuOption: allMenuOption,
+    );
+  }
+
+  _GetAllMenuBookOption getAllMenuBookOption(
+      {@required
+          bool isLoading,
+      @required
+          Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData}) {
+    return _GetAllMenuBookOption(
+      isLoading: isLoading,
+      allMenuBookData: allMenuBookData,
     );
   }
 }
@@ -829,7 +1031,10 @@ mixin _$MenuState {
                 singleMenuOption),
     @required
         Result getAllMenuOption(bool isLoading,
-            Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+            Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    @required
+        Result getAllMenuBookOption(bool isLoading,
+            Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -843,7 +1048,9 @@ mixin _$MenuState {
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
     Result getAllMenuOption(bool isLoading,
-        Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+        Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    Result getAllMenuBookOption(bool isLoading,
+        Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -855,6 +1062,7 @@ mixin _$MenuState {
         Result singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
     @required Result getAllMenuOption(_GetAllMenuOption value),
+    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -863,6 +1071,7 @@ mixin _$MenuState {
     Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
     Result getAllMenuOption(_GetAllMenuOption value),
+    Result getAllMenuBookOption(_GetAllMenuBookOption value),
     @required Result orElse(),
   });
 }
@@ -927,13 +1136,17 @@ class _$_Initial implements _Initial {
                 singleMenuOption),
     @required
         Result getAllMenuOption(bool isLoading,
-            Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+            Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    @required
+        Result getAllMenuBookOption(bool isLoading,
+            Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return initial();
   }
 
@@ -950,7 +1163,9 @@ class _$_Initial implements _Initial {
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
     Result getAllMenuOption(bool isLoading,
-        Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+        Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    Result getAllMenuBookOption(bool isLoading,
+        Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -970,12 +1185,14 @@ class _$_Initial implements _Initial {
         Result singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
     @required Result getAllMenuOption(_GetAllMenuOption value),
+    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return initial(this);
   }
 
@@ -987,6 +1204,7 @@ class _$_Initial implements _Initial {
     Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
     Result getAllMenuOption(_GetAllMenuOption value),
+    Result getAllMenuBookOption(_GetAllMenuBookOption value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1088,13 +1306,17 @@ class _$_NearbyMenuOption implements _NearbyMenuOption {
                 singleMenuOption),
     @required
         Result getAllMenuOption(bool isLoading,
-            Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+            Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    @required
+        Result getAllMenuBookOption(bool isLoading,
+            Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return nearbyMenuOption(isLoading, menuResponse);
   }
 
@@ -1111,7 +1333,9 @@ class _$_NearbyMenuOption implements _NearbyMenuOption {
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
     Result getAllMenuOption(bool isLoading,
-        Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+        Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    Result getAllMenuBookOption(bool isLoading,
+        Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1131,12 +1355,14 @@ class _$_NearbyMenuOption implements _NearbyMenuOption {
         Result singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
     @required Result getAllMenuOption(_GetAllMenuOption value),
+    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return nearbyMenuOption(this);
   }
 
@@ -1148,6 +1374,7 @@ class _$_NearbyMenuOption implements _NearbyMenuOption {
     Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
     Result getAllMenuOption(_GetAllMenuOption value),
+    Result getAllMenuBookOption(_GetAllMenuBookOption value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1259,13 +1486,17 @@ class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
                 singleMenuOption),
     @required
         Result getAllMenuOption(bool isLoading,
-            Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+            Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    @required
+        Result getAllMenuBookOption(bool isLoading,
+            Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return getMenuBookByRestaurant(isLoading, menuBookResponse);
   }
 
@@ -1282,7 +1513,9 @@ class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
     Result getAllMenuOption(bool isLoading,
-        Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+        Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    Result getAllMenuBookOption(bool isLoading,
+        Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1302,12 +1535,14 @@ class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
         Result singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
     @required Result getAllMenuOption(_GetAllMenuOption value),
+    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return getMenuBookByRestaurant(this);
   }
 
@@ -1319,6 +1554,7 @@ class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
     Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
     Result getAllMenuOption(_GetAllMenuOption value),
+    Result getAllMenuBookOption(_GetAllMenuBookOption value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1437,13 +1673,17 @@ class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
                 singleMenuOption),
     @required
         Result getAllMenuOption(bool isLoading,
-            Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+            Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    @required
+        Result getAllMenuBookOption(bool isLoading,
+            Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return singleMenuWithRestaurantData(isLoading, singleMenuOption);
   }
 
@@ -1460,7 +1700,9 @@ class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
     Result getAllMenuOption(bool isLoading,
-        Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+        Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    Result getAllMenuBookOption(bool isLoading,
+        Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1480,12 +1722,14 @@ class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
         Result singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
     @required Result getAllMenuOption(_GetAllMenuOption value),
+    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return singleMenuWithRestaurantData(this);
   }
 
@@ -1497,6 +1741,7 @@ class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
     Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
     Result getAllMenuOption(_GetAllMenuOption value),
+    Result getAllMenuBookOption(_GetAllMenuBookOption value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1528,7 +1773,7 @@ abstract class _$GetAllMenuOptionCopyWith<$Res> {
       __$GetAllMenuOptionCopyWithImpl<$Res>;
   $Res call(
       {bool isLoading,
-      Option<Either<MenuFailure, List<dynamic>>> allMenuOption});
+      Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption});
 }
 
 class __$GetAllMenuOptionCopyWithImpl<$Res>
@@ -1550,7 +1795,7 @@ class __$GetAllMenuOptionCopyWithImpl<$Res>
       isLoading: isLoading == freezed ? _value.isLoading : isLoading as bool,
       allMenuOption: allMenuOption == freezed
           ? _value.allMenuOption
-          : allMenuOption as Option<Either<MenuFailure, List<dynamic>>>,
+          : allMenuOption as Option<Either<MenuFailure, List<MenuClassData>>>,
     ));
   }
 }
@@ -1564,7 +1809,7 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
   @override
   final bool isLoading;
   @override
-  final Option<Either<MenuFailure, List<dynamic>>> allMenuOption;
+  final Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption;
 
   @override
   String toString() {
@@ -1610,13 +1855,17 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
                 singleMenuOption),
     @required
         Result getAllMenuOption(bool isLoading,
-            Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+            Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    @required
+        Result getAllMenuBookOption(bool isLoading,
+            Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return getAllMenuOption(isLoading, allMenuOption);
   }
 
@@ -1633,7 +1882,9 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
     Result getAllMenuOption(bool isLoading,
-        Option<Either<MenuFailure, List<dynamic>>> allMenuOption),
+        Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    Result getAllMenuBookOption(bool isLoading,
+        Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1653,12 +1904,14 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
         Result singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
     @required Result getAllMenuOption(_GetAllMenuOption value),
+    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
     assert(getMenuBookByRestaurant != null);
     assert(singleMenuWithRestaurantData != null);
     assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
     return getAllMenuOption(this);
   }
 
@@ -1670,6 +1923,7 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
     Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
     Result getAllMenuOption(_GetAllMenuOption value),
+    Result getAllMenuBookOption(_GetAllMenuBookOption value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1682,11 +1936,194 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
 
 abstract class _GetAllMenuOption implements MenuState {
   const factory _GetAllMenuOption(
-          {@required bool isLoading,
-          @required Option<Either<MenuFailure, List<dynamic>>> allMenuOption}) =
+          {@required
+              bool isLoading,
+          @required
+              Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption}) =
       _$_GetAllMenuOption;
 
   bool get isLoading;
-  Option<Either<MenuFailure, List<dynamic>>> get allMenuOption;
+  Option<Either<MenuFailure, List<MenuClassData>>> get allMenuOption;
   _$GetAllMenuOptionCopyWith<_GetAllMenuOption> get copyWith;
+}
+
+abstract class _$GetAllMenuBookOptionCopyWith<$Res> {
+  factory _$GetAllMenuBookOptionCopyWith(_GetAllMenuBookOption value,
+          $Res Function(_GetAllMenuBookOption) then) =
+      __$GetAllMenuBookOptionCopyWithImpl<$Res>;
+  $Res call(
+      {bool isLoading,
+      Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData});
+}
+
+class __$GetAllMenuBookOptionCopyWithImpl<$Res>
+    extends _$MenuStateCopyWithImpl<$Res>
+    implements _$GetAllMenuBookOptionCopyWith<$Res> {
+  __$GetAllMenuBookOptionCopyWithImpl(
+      _GetAllMenuBookOption _value, $Res Function(_GetAllMenuBookOption) _then)
+      : super(_value, (v) => _then(v as _GetAllMenuBookOption));
+
+  @override
+  _GetAllMenuBookOption get _value => super._value as _GetAllMenuBookOption;
+
+  @override
+  $Res call({
+    Object isLoading = freezed,
+    Object allMenuBookData = freezed,
+  }) {
+    return _then(_GetAllMenuBookOption(
+      isLoading: isLoading == freezed ? _value.isLoading : isLoading as bool,
+      allMenuBookData: allMenuBookData == freezed
+          ? _value.allMenuBookData
+          : allMenuBookData as Option<Either<MenuFailure, List<MenuBookData>>>,
+    ));
+  }
+}
+
+class _$_GetAllMenuBookOption implements _GetAllMenuBookOption {
+  const _$_GetAllMenuBookOption(
+      {@required this.isLoading, @required this.allMenuBookData})
+      : assert(isLoading != null),
+        assert(allMenuBookData != null);
+
+  @override
+  final bool isLoading;
+  @override
+  final Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData;
+
+  @override
+  String toString() {
+    return 'MenuState.getAllMenuBookOption(isLoading: $isLoading, allMenuBookData: $allMenuBookData)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _GetAllMenuBookOption &&
+            (identical(other.isLoading, isLoading) ||
+                const DeepCollectionEquality()
+                    .equals(other.isLoading, isLoading)) &&
+            (identical(other.allMenuBookData, allMenuBookData) ||
+                const DeepCollectionEquality()
+                    .equals(other.allMenuBookData, allMenuBookData)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isLoading) ^
+      const DeepCollectionEquality().hash(allMenuBookData);
+
+  @override
+  _$GetAllMenuBookOptionCopyWith<_GetAllMenuBookOption> get copyWith =>
+      __$GetAllMenuBookOptionCopyWithImpl<_GetAllMenuBookOption>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initial(),
+    @required
+        Result nearbyMenuOption(bool isLoading,
+            Option<Either<MenuFailure, MenuResponse>> menuResponse),
+    @required
+        Result getMenuBookByRestaurant(bool isLoading,
+            Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
+    @required
+        Result singleMenuWithRestaurantData(
+            bool isLoading,
+            Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
+                singleMenuOption),
+    @required
+        Result getAllMenuOption(bool isLoading,
+            Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    @required
+        Result getAllMenuBookOption(bool isLoading,
+            Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
+  }) {
+    assert(initial != null);
+    assert(nearbyMenuOption != null);
+    assert(getMenuBookByRestaurant != null);
+    assert(singleMenuWithRestaurantData != null);
+    assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
+    return getAllMenuBookOption(isLoading, allMenuBookData);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initial(),
+    Result nearbyMenuOption(
+        bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse),
+    Result getMenuBookByRestaurant(bool isLoading,
+        Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
+    Result singleMenuWithRestaurantData(
+        bool isLoading,
+        Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
+            singleMenuOption),
+    Result getAllMenuOption(bool isLoading,
+        Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
+    Result getAllMenuBookOption(bool isLoading,
+        Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (getAllMenuBookOption != null) {
+      return getAllMenuBookOption(isLoading, allMenuBookData);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initial(_Initial value),
+    @required Result nearbyMenuOption(_NearbyMenuOption value),
+    @required Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    @required
+        Result singleMenuWithRestaurantData(
+            _SingleMenuWithRestaurantData value),
+    @required Result getAllMenuOption(_GetAllMenuOption value),
+    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
+  }) {
+    assert(initial != null);
+    assert(nearbyMenuOption != null);
+    assert(getMenuBookByRestaurant != null);
+    assert(singleMenuWithRestaurantData != null);
+    assert(getAllMenuOption != null);
+    assert(getAllMenuBookOption != null);
+    return getAllMenuBookOption(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initial(_Initial value),
+    Result nearbyMenuOption(_NearbyMenuOption value),
+    Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
+    Result getAllMenuOption(_GetAllMenuOption value),
+    Result getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (getAllMenuBookOption != null) {
+      return getAllMenuBookOption(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAllMenuBookOption implements MenuState {
+  const factory _GetAllMenuBookOption(
+      {@required
+          bool isLoading,
+      @required
+          Option<Either<MenuFailure, List<MenuBookData>>>
+              allMenuBookData}) = _$_GetAllMenuBookOption;
+
+  bool get isLoading;
+  Option<Either<MenuFailure, List<MenuBookData>>> get allMenuBookData;
+  _$GetAllMenuBookOptionCopyWith<_GetAllMenuBookOption> get copyWith;
 }

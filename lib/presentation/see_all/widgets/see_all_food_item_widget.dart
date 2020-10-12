@@ -9,12 +9,12 @@ class SeeAllFoodItemWidget extends StatelessWidget {
     @required this.menuClassDataWithRestaurant,
   }) : super(key: key);
 
-  final MenuClassDataWithRestaurant menuClassDataWithRestaurant;
+  final MenuClassData menuClassDataWithRestaurant;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed('/item_detail', arguments: menuClassDataWithRestaurant);
+        Get.toNamed('/item_detail', arguments: menuClassDataWithRestaurant.id);
       },
       child: Container(
         decoration: new BoxDecoration(

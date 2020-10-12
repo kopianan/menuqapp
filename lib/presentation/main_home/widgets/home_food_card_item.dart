@@ -14,7 +14,7 @@ class HomeFoodCardItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.toNamed('/item_detail', arguments: menuClassData);
+        Get.toNamed('/item_detail', arguments: menuClassData.id);
       },
       child: Container(
         margin: EdgeInsets.only(right: 15),

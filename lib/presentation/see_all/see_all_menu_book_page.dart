@@ -1,19 +1,18 @@
-import 'package:feroza/presentation/see_all/widgets/see_all_food_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../application/menu/menu_bloc.dart';
 import '../../domain/menu/menu_data.dart';
 import '../../injection.dart';
+import 'widgets/see_all_book_menu_item_widget.dart';
 
-class SeeAllFoodPage extends StatefulWidget {
-  SeeAllFoodPage({Key key}) : super(key: key);
+class SeeAllMenuBookPage extends StatefulWidget {
+  SeeAllMenuBookPage({Key key}) : super(key: key);
 
   @override
-  _SeeAllFoodPageState createState() => _SeeAllFoodPageState();
+  _SeeAllMenuBookPageState createState() => _SeeAllMenuBookPageState();
 }
 
-class _SeeAllFoodPageState extends State<SeeAllFoodPage> {
+class _SeeAllMenuBookPageState extends State<SeeAllMenuBookPage> {
   @override
   void initState() {
     // TODO: implement initState
@@ -24,32 +23,32 @@ class _SeeAllFoodPageState extends State<SeeAllFoodPage> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          getIt<MenuBloc>()..add(MenuEvent.getAllMenu("5", "1")),
+          getIt<MenuBloc>()..add(MenuEvent.getAllMenuBook("5", "1")),
       child: BlocConsumer<MenuBloc, MenuState>(
         listener: (context, state) {
           state.maybeMap(
             orElse: () {},
-            getAllMenuOption: (value) {
+            getAllMenuBookOption: (value) {
               print(value.isLoading);
-              print(value.allMenuOption);
+              print(value.allMenuBookData);
             },
           );
         },
         builder: (context, state) {
           return state.maybeMap(
             orElse: () {
-              return _seeAllFoodMenuLoading();
+              return _seeAllMenuBookLoading();
             },
-            getAllMenuOption: (value) {
+            getAllMenuBookOption: (value) {
               if (value.isLoading) {
                 //tampilkan loading page
-                return _seeAllFoodMenuLoading();
+                return _seeAllMenuBookLoading();
               } else {
-                return value.allMenuOption.fold(
-                    () => _seeAllFoodMenuLoading(),
+                return value.allMenuBookData.fold(
+                    () => _seeAllMenuBookLoading(),
                     (a) => a.fold(
-                          (l) => _seeAllFoodMenuError(),
-                          (r) => _seeAllFoodMenuContainer(r),
+                          (l) => _seeAllMenuBookError(),
+                          (r) => _seeAllMenuBookData(r),
                         ));
               }
             },
@@ -59,31 +58,33 @@ class _SeeAllFoodPageState extends State<SeeAllFoodPage> {
     );
   }
 
-  Scaffold _seeAllFoodMenuContainer(
-      List<MenuClassDataWithRestaurant> testData) {
+  Scaffold _seeAllMenuBookData(List<MenuBookData> testData) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Nearby Food"),
+          title: Text("Nearby Menu"),
         ),
-        body: CustomScrollView(
-          slivers: [
-            SliverGrid(
-              delegate: SliverChildBuilderDelegate((context, index) {
-                return SeeAllFoodItemWidget(
-                  menuClassDataWithRestaurant: testData[index],
-                );
-              }, childCount: testData.length),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 1),
-            )
-          ],
+        body: Container(
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          child: CustomScrollView(
+            slivers: [
+              SliverGrid(
+                delegate: SliverChildBuilderDelegate((context, index) {
+                  return SeeAllBookMenuItemWidget(
+                    menuBookData: testData[index],
+                  );
+                }, childCount: testData.length),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 1),
+              )
+            ],
+          ),
         ));
   }
 
-  Scaffold _seeAllFoodMenuLoading() {
+  Scaffold _seeAllMenuBookLoading() {
     return Scaffold(
       body: Center(
         child: CircularProgressIndicator(),
@@ -91,7 +92,7 @@ class _SeeAllFoodPageState extends State<SeeAllFoodPage> {
     );
   }
 
-  Scaffold _seeAllFoodMenuError() {
+  Scaffold _seeAllMenuBookError() {
     return Scaffold(
       body: Center(
         child: Text(

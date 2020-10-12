@@ -73,7 +73,7 @@ class _SeeAllPageState extends State<SeeAllPage> {
           builder: (context, state) {
             return Scaffold(
               appBar: AppBar(
-                title: Text("Judul"),
+                title: Text("Nearby Restaurant"),
               ),
               body: SafeArea(
                   child: Container(
