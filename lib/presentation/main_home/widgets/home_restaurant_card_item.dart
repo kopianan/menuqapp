@@ -27,9 +27,9 @@ class HomeRestaurantCardItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: (restaurantData.logoUrl == null)
+                      image: (restaurantData.logoUrl  == null)
                           ? AssetImage(
-                              "assets/images/indomaret.jpeg",
+                              "assets/images/placeholder.jpg",
                             )
                           : NetworkImage(restaurantData.logoUrl))),
             ),

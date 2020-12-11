@@ -31,7 +31,7 @@ class _SeeAllPageState extends State<SeeAllPage> {
     _refreshController = RefreshController(initialRefresh: false);
     _request = GetRestaurantListRequest(
         page: _page,
-        paginate: 5,
+        paginate: 8,
         latLang: "${_locationController.getCurrentPosition}");
     print(_request.toJson());
     super.initState();

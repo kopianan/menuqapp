@@ -1,5 +1,4 @@
 import 'package:feroza/presentation/app_widget.dart';
-import 'package:feroza/presentation/item_detail/item_detail.dart';
 import 'package:feroza/presentation/menu_book/menu_book_page.dart';
 import 'package:feroza/presentation/place_profile/restaurant_profile_page.dart';
 import 'package:feroza/presentation/see_all/see_all_food_page.dart';
@@ -16,7 +15,6 @@ class RouterData {
     return [
       GetPage(name: '/photo_view', page: () => PhotoViewPage()),
       GetPage(name: '/main_home', page: () => MainHome()),
-      GetPage(name: '/item_detail', page: () => ItemDetail()),
       GetPage(name: '/restaurant_profile', page: () => RestaurantProfilePage()),
       GetPage(name: '/splash_screen', page: () => SplashScreenPage()),
       GetPage(name: '/menu_book', page: () => MenuBookPage()),
