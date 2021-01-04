@@ -31,7 +31,7 @@ class MenuBookListItem extends StatelessWidget {
             right: 0.0,
             child: Container(
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: LinearGradient( 
                   colors: [
                     Color.fromARGB(200, 0, 0, 0),
                     Color.fromARGB(0, 0, 0, 0)

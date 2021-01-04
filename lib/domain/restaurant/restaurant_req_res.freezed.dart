@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'restaurant_req_res.dart';
 
@@ -22,9 +22,11 @@ RestaurantReqRes _$RestaurantReqResFromJson(Map<String, dynamic> json) {
   }
 }
 
+/// @nodoc
 class _$RestaurantReqResTearOff {
   const _$RestaurantReqResTearOff();
 
+// ignore: unused_element
   GetRestaurantListResponse getRestaurantListResponse(
       {List<RestaurantData> data}) {
     return GetRestaurantListResponse(
@@ -32,6 +34,7 @@ class _$RestaurantReqResTearOff {
     );
   }
 
+// ignore: unused_element
   GetAllRestaurantDataResponse getAllRestaurantDataResponse(
       SingleRestaurantCompleteData data) {
     return GetAllRestaurantDataResponse(
@@ -39,6 +42,7 @@ class _$RestaurantReqResTearOff {
     );
   }
 
+// ignore: unused_element
   GetRestaurantListRequest getRestaurantListRequest(
       {@required int paginate,
       @required int page,
@@ -49,52 +53,63 @@ class _$RestaurantReqResTearOff {
       latLang: latLang,
     );
   }
+
+// ignore: unused_element
+  RestaurantReqRes fromJson(Map<String, Object> json) {
+    return RestaurantReqRes.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RestaurantReqRes = _$RestaurantReqResTearOff();
 
+/// @nodoc
 mixin _$RestaurantReqRes {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getRestaurantListResponse(List<RestaurantData> data),
+  TResult when<TResult extends Object>({
+    @required TResult getRestaurantListResponse(List<RestaurantData> data),
     @required
-        Result getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
+        TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     @required
-        Result getRestaurantListRequest(int paginate, int page,
+        TResult getRestaurantListRequest(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getRestaurantListResponse(List<RestaurantData> data),
-    Result getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
-    Result getRestaurantListRequest(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult getRestaurantListResponse(List<RestaurantData> data),
+    TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
+    TResult getRestaurantListRequest(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result orElse(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getRestaurantListResponse(GetRestaurantListResponse value),
+  TResult map<TResult extends Object>({
     @required
-        Result getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
-    @required Result getRestaurantListRequest(GetRestaurantListRequest value),
+        TResult getRestaurantListResponse(GetRestaurantListResponse value),
+    @required
+        TResult getAllRestaurantDataResponse(
+            GetAllRestaurantDataResponse value),
+    @required TResult getRestaurantListRequest(GetRestaurantListRequest value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getRestaurantListResponse(GetRestaurantListResponse value),
-    Result getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
-    Result getRestaurantListRequest(GetRestaurantListRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getRestaurantListResponse(GetRestaurantListResponse value),
+    TResult getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
+    TResult getRestaurantListRequest(GetRestaurantListRequest value),
+    @required TResult orElse(),
   });
   Map<String, dynamic> toJson();
 }
 
+/// @nodoc
 abstract class $RestaurantReqResCopyWith<$Res> {
   factory $RestaurantReqResCopyWith(
           RestaurantReqRes value, $Res Function(RestaurantReqRes) then) =
       _$RestaurantReqResCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$RestaurantReqResCopyWithImpl<$Res>
     implements $RestaurantReqResCopyWith<$Res> {
   _$RestaurantReqResCopyWithImpl(this._value, this._then);
@@ -104,6 +119,7 @@ class _$RestaurantReqResCopyWithImpl<$Res>
   final $Res Function(RestaurantReqRes) _then;
 }
 
+/// @nodoc
 abstract class $GetRestaurantListResponseCopyWith<$Res> {
   factory $GetRestaurantListResponseCopyWith(GetRestaurantListResponse value,
           $Res Function(GetRestaurantListResponse) then) =
@@ -111,6 +127,7 @@ abstract class $GetRestaurantListResponseCopyWith<$Res> {
   $Res call({List<RestaurantData> data});
 }
 
+/// @nodoc
 class _$GetRestaurantListResponseCopyWithImpl<$Res>
     extends _$RestaurantReqResCopyWithImpl<$Res>
     implements $GetRestaurantListResponseCopyWith<$Res> {
@@ -133,6 +150,8 @@ class _$GetRestaurantListResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$GetRestaurantListResponse implements GetRestaurantListResponse {
   const _$GetRestaurantListResponse({this.data});
 
@@ -166,12 +185,12 @@ class _$GetRestaurantListResponse implements GetRestaurantListResponse {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getRestaurantListResponse(List<RestaurantData> data),
+  TResult when<TResult extends Object>({
+    @required TResult getRestaurantListResponse(List<RestaurantData> data),
     @required
-        Result getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
+        TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     @required
-        Result getRestaurantListRequest(int paginate, int page,
+        TResult getRestaurantListRequest(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
   }) {
     assert(getRestaurantListResponse != null);
@@ -182,12 +201,12 @@ class _$GetRestaurantListResponse implements GetRestaurantListResponse {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getRestaurantListResponse(List<RestaurantData> data),
-    Result getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
-    Result getRestaurantListRequest(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult getRestaurantListResponse(List<RestaurantData> data),
+    TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
+    TResult getRestaurantListRequest(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRestaurantListResponse != null) {
@@ -198,11 +217,13 @@ class _$GetRestaurantListResponse implements GetRestaurantListResponse {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getRestaurantListResponse(GetRestaurantListResponse value),
+  TResult map<TResult extends Object>({
     @required
-        Result getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
-    @required Result getRestaurantListRequest(GetRestaurantListRequest value),
+        TResult getRestaurantListResponse(GetRestaurantListResponse value),
+    @required
+        TResult getAllRestaurantDataResponse(
+            GetAllRestaurantDataResponse value),
+    @required TResult getRestaurantListRequest(GetRestaurantListRequest value),
   }) {
     assert(getRestaurantListResponse != null);
     assert(getAllRestaurantDataResponse != null);
@@ -212,11 +233,11 @@ class _$GetRestaurantListResponse implements GetRestaurantListResponse {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getRestaurantListResponse(GetRestaurantListResponse value),
-    Result getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
-    Result getRestaurantListRequest(GetRestaurantListRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getRestaurantListResponse(GetRestaurantListResponse value),
+    TResult getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
+    TResult getRestaurantListRequest(GetRestaurantListRequest value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRestaurantListResponse != null) {
@@ -243,6 +264,7 @@ abstract class GetRestaurantListResponse implements RestaurantReqRes {
   $GetRestaurantListResponseCopyWith<GetRestaurantListResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $GetAllRestaurantDataResponseCopyWith<$Res> {
   factory $GetAllRestaurantDataResponseCopyWith(
           GetAllRestaurantDataResponse value,
@@ -251,6 +273,7 @@ abstract class $GetAllRestaurantDataResponseCopyWith<$Res> {
   $Res call({SingleRestaurantCompleteData data});
 }
 
+/// @nodoc
 class _$GetAllRestaurantDataResponseCopyWithImpl<$Res>
     extends _$RestaurantReqResCopyWithImpl<$Res>
     implements $GetAllRestaurantDataResponseCopyWith<$Res> {
@@ -274,6 +297,8 @@ class _$GetAllRestaurantDataResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$GetAllRestaurantDataResponse implements GetAllRestaurantDataResponse {
   const _$GetAllRestaurantDataResponse(this.data) : assert(data != null);
 
@@ -307,12 +332,12 @@ class _$GetAllRestaurantDataResponse implements GetAllRestaurantDataResponse {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getRestaurantListResponse(List<RestaurantData> data),
+  TResult when<TResult extends Object>({
+    @required TResult getRestaurantListResponse(List<RestaurantData> data),
     @required
-        Result getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
+        TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     @required
-        Result getRestaurantListRequest(int paginate, int page,
+        TResult getRestaurantListRequest(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
   }) {
     assert(getRestaurantListResponse != null);
@@ -323,12 +348,12 @@ class _$GetAllRestaurantDataResponse implements GetAllRestaurantDataResponse {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getRestaurantListResponse(List<RestaurantData> data),
-    Result getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
-    Result getRestaurantListRequest(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult getRestaurantListResponse(List<RestaurantData> data),
+    TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
+    TResult getRestaurantListRequest(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllRestaurantDataResponse != null) {
@@ -339,11 +364,13 @@ class _$GetAllRestaurantDataResponse implements GetAllRestaurantDataResponse {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getRestaurantListResponse(GetRestaurantListResponse value),
+  TResult map<TResult extends Object>({
     @required
-        Result getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
-    @required Result getRestaurantListRequest(GetRestaurantListRequest value),
+        TResult getRestaurantListResponse(GetRestaurantListResponse value),
+    @required
+        TResult getAllRestaurantDataResponse(
+            GetAllRestaurantDataResponse value),
+    @required TResult getRestaurantListRequest(GetRestaurantListRequest value),
   }) {
     assert(getRestaurantListResponse != null);
     assert(getAllRestaurantDataResponse != null);
@@ -353,11 +380,11 @@ class _$GetAllRestaurantDataResponse implements GetAllRestaurantDataResponse {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getRestaurantListResponse(GetRestaurantListResponse value),
-    Result getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
-    Result getRestaurantListRequest(GetRestaurantListRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getRestaurantListResponse(GetRestaurantListResponse value),
+    TResult getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
+    TResult getRestaurantListRequest(GetRestaurantListRequest value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllRestaurantDataResponse != null) {
@@ -385,6 +412,7 @@ abstract class GetAllRestaurantDataResponse implements RestaurantReqRes {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $GetRestaurantListRequestCopyWith<$Res> {
   factory $GetRestaurantListRequestCopyWith(GetRestaurantListRequest value,
           $Res Function(GetRestaurantListRequest) then) =
@@ -395,6 +423,7 @@ abstract class $GetRestaurantListRequestCopyWith<$Res> {
       @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang});
 }
 
+/// @nodoc
 class _$GetRestaurantListRequestCopyWithImpl<$Res>
     extends _$RestaurantReqResCopyWithImpl<$Res>
     implements $GetRestaurantListRequestCopyWith<$Res> {
@@ -421,6 +450,8 @@ class _$GetRestaurantListRequestCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$GetRestaurantListRequest implements GetRestaurantListRequest {
   const _$GetRestaurantListRequest(
       {@required this.paginate,
@@ -473,12 +504,12 @@ class _$GetRestaurantListRequest implements GetRestaurantListRequest {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getRestaurantListResponse(List<RestaurantData> data),
+  TResult when<TResult extends Object>({
+    @required TResult getRestaurantListResponse(List<RestaurantData> data),
     @required
-        Result getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
+        TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     @required
-        Result getRestaurantListRequest(int paginate, int page,
+        TResult getRestaurantListRequest(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
   }) {
     assert(getRestaurantListResponse != null);
@@ -489,12 +520,12 @@ class _$GetRestaurantListRequest implements GetRestaurantListRequest {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getRestaurantListResponse(List<RestaurantData> data),
-    Result getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
-    Result getRestaurantListRequest(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult getRestaurantListResponse(List<RestaurantData> data),
+    TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
+    TResult getRestaurantListRequest(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRestaurantListRequest != null) {
@@ -505,11 +536,13 @@ class _$GetRestaurantListRequest implements GetRestaurantListRequest {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getRestaurantListResponse(GetRestaurantListResponse value),
+  TResult map<TResult extends Object>({
     @required
-        Result getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
-    @required Result getRestaurantListRequest(GetRestaurantListRequest value),
+        TResult getRestaurantListResponse(GetRestaurantListResponse value),
+    @required
+        TResult getAllRestaurantDataResponse(
+            GetAllRestaurantDataResponse value),
+    @required TResult getRestaurantListRequest(GetRestaurantListRequest value),
   }) {
     assert(getRestaurantListResponse != null);
     assert(getAllRestaurantDataResponse != null);
@@ -519,11 +552,11 @@ class _$GetRestaurantListRequest implements GetRestaurantListRequest {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getRestaurantListResponse(GetRestaurantListResponse value),
-    Result getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
-    Result getRestaurantListRequest(GetRestaurantListRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getRestaurantListResponse(GetRestaurantListResponse value),
+    TResult getAllRestaurantDataResponse(GetAllRestaurantDataResponse value),
+    TResult getRestaurantListRequest(GetRestaurantListRequest value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRestaurantListRequest != null) {

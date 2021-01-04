@@ -7,6 +7,7 @@ import 'package:photo_view/photo_view.dart';
 import 'package:share/share.dart';
 
 class PhotoViewPage extends StatefulWidget {
+  static final String TAG = "/photo_view"; 
   @override
   _PhotoViewPageState createState() => _PhotoViewPageState();
 }

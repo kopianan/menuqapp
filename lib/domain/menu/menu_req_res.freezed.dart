@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'menu_req_res.dart';
 
@@ -26,15 +26,18 @@ MenuReqRes _$MenuReqResFromJson(Map<String, dynamic> json) {
   }
 }
 
+/// @nodoc
 class _$MenuReqResTearOff {
   const _$MenuReqResTearOff();
 
+// ignore: unused_element
   MenuResponse menuResponse({List<MenuClassData> data}) {
     return MenuResponse(
       data: data,
     );
   }
 
+// ignore: unused_element
   MenuRequestByNearby menuRequestByNearby(
       {int paginate,
       int page,
@@ -46,12 +49,14 @@ class _$MenuReqResTearOff {
     );
   }
 
+// ignore: unused_element
   MenuBookResponse menuBookResponse({List<MenuBookData> data}) {
     return MenuBookResponse(
       data: data,
     );
   }
 
+// ignore: unused_element
   MenuBookResponseWithRestaurant menuBookResponseWithRestaurant(
       {MenuClassDataWithRestaurant data}) {
     return MenuBookResponseWithRestaurant(
@@ -59,67 +64,79 @@ class _$MenuReqResTearOff {
     );
   }
 
+// ignore: unused_element
   MenuBookRequest menuBookRequest({int paginate, int page}) {
     return MenuBookRequest(
       paginate: paginate,
       page: page,
     );
   }
+
+// ignore: unused_element
+  MenuReqRes fromJson(Map<String, Object> json) {
+    return MenuReqRes.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MenuReqRes = _$MenuReqResTearOff();
 
+/// @nodoc
 mixin _$MenuReqRes {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result menuResponse(List<MenuClassData> data),
+  TResult when<TResult extends Object>({
+    @required TResult menuResponse(List<MenuClassData> data),
     @required
-        Result menuRequestByNearby(int paginate, int page,
+        TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result menuBookResponse(List<MenuBookData> data),
+    @required TResult menuBookResponse(List<MenuBookData> data),
     @required
-        Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    @required Result menuBookRequest(int paginate, int page),
+        TResult menuBookResponseWithRestaurant(
+            MenuClassDataWithRestaurant data),
+    @required TResult menuBookRequest(int paginate, int page),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuResponse(List<MenuClassData> data),
-    Result menuRequestByNearby(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuResponse(List<MenuClassData> data),
+    TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    Result menuBookResponse(List<MenuBookData> data),
-    Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    Result menuBookRequest(int paginate, int page),
-    @required Result orElse(),
+    TResult menuBookResponse(List<MenuBookData> data),
+    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookRequest(int paginate, int page),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuResponse(MenuResponse value),
-    @required Result menuRequestByNearby(MenuRequestByNearby value),
-    @required Result menuBookResponse(MenuBookResponse value),
+  TResult map<TResult extends Object>({
+    @required TResult menuResponse(MenuResponse value),
+    @required TResult menuRequestByNearby(MenuRequestByNearby value),
+    @required TResult menuBookResponse(MenuBookResponse value),
     @required
-        Result menuBookResponseWithRestaurant(
+        TResult menuBookResponseWithRestaurant(
             MenuBookResponseWithRestaurant value),
-    @required Result menuBookRequest(MenuBookRequest value),
+    @required TResult menuBookRequest(MenuBookRequest value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuResponse(MenuResponse value),
-    Result menuRequestByNearby(MenuRequestByNearby value),
-    Result menuBookResponse(MenuBookResponse value),
-    Result menuBookResponseWithRestaurant(MenuBookResponseWithRestaurant value),
-    Result menuBookRequest(MenuBookRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuResponse(MenuResponse value),
+    TResult menuRequestByNearby(MenuRequestByNearby value),
+    TResult menuBookResponse(MenuBookResponse value),
+    TResult menuBookResponseWithRestaurant(
+        MenuBookResponseWithRestaurant value),
+    TResult menuBookRequest(MenuBookRequest value),
+    @required TResult orElse(),
   });
   Map<String, dynamic> toJson();
 }
 
+/// @nodoc
 abstract class $MenuReqResCopyWith<$Res> {
   factory $MenuReqResCopyWith(
           MenuReqRes value, $Res Function(MenuReqRes) then) =
       _$MenuReqResCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MenuReqResCopyWithImpl<$Res> implements $MenuReqResCopyWith<$Res> {
   _$MenuReqResCopyWithImpl(this._value, this._then);
 
@@ -128,6 +145,7 @@ class _$MenuReqResCopyWithImpl<$Res> implements $MenuReqResCopyWith<$Res> {
   final $Res Function(MenuReqRes) _then;
 }
 
+/// @nodoc
 abstract class $MenuResponseCopyWith<$Res> {
   factory $MenuResponseCopyWith(
           MenuResponse value, $Res Function(MenuResponse) then) =
@@ -135,6 +153,7 @@ abstract class $MenuResponseCopyWith<$Res> {
   $Res call({List<MenuClassData> data});
 }
 
+/// @nodoc
 class _$MenuResponseCopyWithImpl<$Res> extends _$MenuReqResCopyWithImpl<$Res>
     implements $MenuResponseCopyWith<$Res> {
   _$MenuResponseCopyWithImpl(
@@ -155,6 +174,8 @@ class _$MenuResponseCopyWithImpl<$Res> extends _$MenuReqResCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$MenuResponse implements MenuResponse {
   const _$MenuResponse({this.data});
 
@@ -187,15 +208,16 @@ class _$MenuResponse implements MenuResponse {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result menuResponse(List<MenuClassData> data),
+  TResult when<TResult extends Object>({
+    @required TResult menuResponse(List<MenuClassData> data),
     @required
-        Result menuRequestByNearby(int paginate, int page,
+        TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result menuBookResponse(List<MenuBookData> data),
+    @required TResult menuBookResponse(List<MenuBookData> data),
     @required
-        Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    @required Result menuBookRequest(int paginate, int page),
+        TResult menuBookResponseWithRestaurant(
+            MenuClassDataWithRestaurant data),
+    @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -207,14 +229,14 @@ class _$MenuResponse implements MenuResponse {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuResponse(List<MenuClassData> data),
-    Result menuRequestByNearby(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuResponse(List<MenuClassData> data),
+    TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    Result menuBookResponse(List<MenuBookData> data),
-    Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    Result menuBookRequest(int paginate, int page),
-    @required Result orElse(),
+    TResult menuBookResponse(List<MenuBookData> data),
+    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookRequest(int paginate, int page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuResponse != null) {
@@ -225,14 +247,14 @@ class _$MenuResponse implements MenuResponse {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuResponse(MenuResponse value),
-    @required Result menuRequestByNearby(MenuRequestByNearby value),
-    @required Result menuBookResponse(MenuBookResponse value),
+  TResult map<TResult extends Object>({
+    @required TResult menuResponse(MenuResponse value),
+    @required TResult menuRequestByNearby(MenuRequestByNearby value),
+    @required TResult menuBookResponse(MenuBookResponse value),
     @required
-        Result menuBookResponseWithRestaurant(
+        TResult menuBookResponseWithRestaurant(
             MenuBookResponseWithRestaurant value),
-    @required Result menuBookRequest(MenuBookRequest value),
+    @required TResult menuBookRequest(MenuBookRequest value),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -244,13 +266,14 @@ class _$MenuResponse implements MenuResponse {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuResponse(MenuResponse value),
-    Result menuRequestByNearby(MenuRequestByNearby value),
-    Result menuBookResponse(MenuBookResponse value),
-    Result menuBookResponseWithRestaurant(MenuBookResponseWithRestaurant value),
-    Result menuBookRequest(MenuBookRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuResponse(MenuResponse value),
+    TResult menuRequestByNearby(MenuRequestByNearby value),
+    TResult menuBookResponse(MenuBookResponse value),
+    TResult menuBookResponseWithRestaurant(
+        MenuBookResponseWithRestaurant value),
+    TResult menuBookRequest(MenuBookRequest value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuResponse != null) {
@@ -275,6 +298,7 @@ abstract class MenuResponse implements MenuReqRes {
   $MenuResponseCopyWith<MenuResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $MenuRequestByNearbyCopyWith<$Res> {
   factory $MenuRequestByNearbyCopyWith(
           MenuRequestByNearby value, $Res Function(MenuRequestByNearby) then) =
@@ -285,6 +309,7 @@ abstract class $MenuRequestByNearbyCopyWith<$Res> {
       @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang});
 }
 
+/// @nodoc
 class _$MenuRequestByNearbyCopyWithImpl<$Res>
     extends _$MenuReqResCopyWithImpl<$Res>
     implements $MenuRequestByNearbyCopyWith<$Res> {
@@ -310,6 +335,8 @@ class _$MenuRequestByNearbyCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$MenuRequestByNearby implements MenuRequestByNearby {
   const _$MenuRequestByNearby(
       {this.paginate,
@@ -358,15 +385,16 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result menuResponse(List<MenuClassData> data),
+  TResult when<TResult extends Object>({
+    @required TResult menuResponse(List<MenuClassData> data),
     @required
-        Result menuRequestByNearby(int paginate, int page,
+        TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result menuBookResponse(List<MenuBookData> data),
+    @required TResult menuBookResponse(List<MenuBookData> data),
     @required
-        Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    @required Result menuBookRequest(int paginate, int page),
+        TResult menuBookResponseWithRestaurant(
+            MenuClassDataWithRestaurant data),
+    @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -378,14 +406,14 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuResponse(List<MenuClassData> data),
-    Result menuRequestByNearby(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuResponse(List<MenuClassData> data),
+    TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    Result menuBookResponse(List<MenuBookData> data),
-    Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    Result menuBookRequest(int paginate, int page),
-    @required Result orElse(),
+    TResult menuBookResponse(List<MenuBookData> data),
+    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookRequest(int paginate, int page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuRequestByNearby != null) {
@@ -396,14 +424,14 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuResponse(MenuResponse value),
-    @required Result menuRequestByNearby(MenuRequestByNearby value),
-    @required Result menuBookResponse(MenuBookResponse value),
+  TResult map<TResult extends Object>({
+    @required TResult menuResponse(MenuResponse value),
+    @required TResult menuRequestByNearby(MenuRequestByNearby value),
+    @required TResult menuBookResponse(MenuBookResponse value),
     @required
-        Result menuBookResponseWithRestaurant(
+        TResult menuBookResponseWithRestaurant(
             MenuBookResponseWithRestaurant value),
-    @required Result menuBookRequest(MenuBookRequest value),
+    @required TResult menuBookRequest(MenuBookRequest value),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -415,13 +443,14 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuResponse(MenuResponse value),
-    Result menuRequestByNearby(MenuRequestByNearby value),
-    Result menuBookResponse(MenuBookResponse value),
-    Result menuBookResponseWithRestaurant(MenuBookResponseWithRestaurant value),
-    Result menuBookRequest(MenuBookRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuResponse(MenuResponse value),
+    TResult menuRequestByNearby(MenuRequestByNearby value),
+    TResult menuBookResponse(MenuBookResponse value),
+    TResult menuBookResponseWithRestaurant(
+        MenuBookResponseWithRestaurant value),
+    TResult menuBookRequest(MenuBookRequest value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuRequestByNearby != null) {
@@ -454,6 +483,7 @@ abstract class MenuRequestByNearby implements MenuReqRes {
   $MenuRequestByNearbyCopyWith<MenuRequestByNearby> get copyWith;
 }
 
+/// @nodoc
 abstract class $MenuBookResponseCopyWith<$Res> {
   factory $MenuBookResponseCopyWith(
           MenuBookResponse value, $Res Function(MenuBookResponse) then) =
@@ -461,6 +491,7 @@ abstract class $MenuBookResponseCopyWith<$Res> {
   $Res call({List<MenuBookData> data});
 }
 
+/// @nodoc
 class _$MenuBookResponseCopyWithImpl<$Res>
     extends _$MenuReqResCopyWithImpl<$Res>
     implements $MenuBookResponseCopyWith<$Res> {
@@ -482,6 +513,8 @@ class _$MenuBookResponseCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$MenuBookResponse implements MenuBookResponse {
   const _$MenuBookResponse({this.data});
 
@@ -514,15 +547,16 @@ class _$MenuBookResponse implements MenuBookResponse {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result menuResponse(List<MenuClassData> data),
+  TResult when<TResult extends Object>({
+    @required TResult menuResponse(List<MenuClassData> data),
     @required
-        Result menuRequestByNearby(int paginate, int page,
+        TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result menuBookResponse(List<MenuBookData> data),
+    @required TResult menuBookResponse(List<MenuBookData> data),
     @required
-        Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    @required Result menuBookRequest(int paginate, int page),
+        TResult menuBookResponseWithRestaurant(
+            MenuClassDataWithRestaurant data),
+    @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -534,14 +568,14 @@ class _$MenuBookResponse implements MenuBookResponse {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuResponse(List<MenuClassData> data),
-    Result menuRequestByNearby(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuResponse(List<MenuClassData> data),
+    TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    Result menuBookResponse(List<MenuBookData> data),
-    Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    Result menuBookRequest(int paginate, int page),
-    @required Result orElse(),
+    TResult menuBookResponse(List<MenuBookData> data),
+    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookRequest(int paginate, int page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuBookResponse != null) {
@@ -552,14 +586,14 @@ class _$MenuBookResponse implements MenuBookResponse {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuResponse(MenuResponse value),
-    @required Result menuRequestByNearby(MenuRequestByNearby value),
-    @required Result menuBookResponse(MenuBookResponse value),
+  TResult map<TResult extends Object>({
+    @required TResult menuResponse(MenuResponse value),
+    @required TResult menuRequestByNearby(MenuRequestByNearby value),
+    @required TResult menuBookResponse(MenuBookResponse value),
     @required
-        Result menuBookResponseWithRestaurant(
+        TResult menuBookResponseWithRestaurant(
             MenuBookResponseWithRestaurant value),
-    @required Result menuBookRequest(MenuBookRequest value),
+    @required TResult menuBookRequest(MenuBookRequest value),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -571,13 +605,14 @@ class _$MenuBookResponse implements MenuBookResponse {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuResponse(MenuResponse value),
-    Result menuRequestByNearby(MenuRequestByNearby value),
-    Result menuBookResponse(MenuBookResponse value),
-    Result menuBookResponseWithRestaurant(MenuBookResponseWithRestaurant value),
-    Result menuBookRequest(MenuBookRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuResponse(MenuResponse value),
+    TResult menuRequestByNearby(MenuRequestByNearby value),
+    TResult menuBookResponse(MenuBookResponse value),
+    TResult menuBookResponseWithRestaurant(
+        MenuBookResponseWithRestaurant value),
+    TResult menuBookRequest(MenuBookRequest value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuBookResponse != null) {
@@ -604,6 +639,7 @@ abstract class MenuBookResponse implements MenuReqRes {
   $MenuBookResponseCopyWith<MenuBookResponse> get copyWith;
 }
 
+/// @nodoc
 abstract class $MenuBookResponseWithRestaurantCopyWith<$Res> {
   factory $MenuBookResponseWithRestaurantCopyWith(
           MenuBookResponseWithRestaurant value,
@@ -612,6 +648,7 @@ abstract class $MenuBookResponseWithRestaurantCopyWith<$Res> {
   $Res call({MenuClassDataWithRestaurant data});
 }
 
+/// @nodoc
 class _$MenuBookResponseWithRestaurantCopyWithImpl<$Res>
     extends _$MenuReqResCopyWithImpl<$Res>
     implements $MenuBookResponseWithRestaurantCopyWith<$Res> {
@@ -635,6 +672,8 @@ class _$MenuBookResponseWithRestaurantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$MenuBookResponseWithRestaurant
     implements MenuBookResponseWithRestaurant {
   const _$MenuBookResponseWithRestaurant({this.data});
@@ -670,15 +709,16 @@ class _$MenuBookResponseWithRestaurant
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result menuResponse(List<MenuClassData> data),
+  TResult when<TResult extends Object>({
+    @required TResult menuResponse(List<MenuClassData> data),
     @required
-        Result menuRequestByNearby(int paginate, int page,
+        TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result menuBookResponse(List<MenuBookData> data),
+    @required TResult menuBookResponse(List<MenuBookData> data),
     @required
-        Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    @required Result menuBookRequest(int paginate, int page),
+        TResult menuBookResponseWithRestaurant(
+            MenuClassDataWithRestaurant data),
+    @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -690,14 +730,14 @@ class _$MenuBookResponseWithRestaurant
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuResponse(List<MenuClassData> data),
-    Result menuRequestByNearby(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuResponse(List<MenuClassData> data),
+    TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    Result menuBookResponse(List<MenuBookData> data),
-    Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    Result menuBookRequest(int paginate, int page),
-    @required Result orElse(),
+    TResult menuBookResponse(List<MenuBookData> data),
+    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookRequest(int paginate, int page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuBookResponseWithRestaurant != null) {
@@ -708,14 +748,14 @@ class _$MenuBookResponseWithRestaurant
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuResponse(MenuResponse value),
-    @required Result menuRequestByNearby(MenuRequestByNearby value),
-    @required Result menuBookResponse(MenuBookResponse value),
+  TResult map<TResult extends Object>({
+    @required TResult menuResponse(MenuResponse value),
+    @required TResult menuRequestByNearby(MenuRequestByNearby value),
+    @required TResult menuBookResponse(MenuBookResponse value),
     @required
-        Result menuBookResponseWithRestaurant(
+        TResult menuBookResponseWithRestaurant(
             MenuBookResponseWithRestaurant value),
-    @required Result menuBookRequest(MenuBookRequest value),
+    @required TResult menuBookRequest(MenuBookRequest value),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -727,13 +767,14 @@ class _$MenuBookResponseWithRestaurant
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuResponse(MenuResponse value),
-    Result menuRequestByNearby(MenuRequestByNearby value),
-    Result menuBookResponse(MenuBookResponse value),
-    Result menuBookResponseWithRestaurant(MenuBookResponseWithRestaurant value),
-    Result menuBookRequest(MenuBookRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuResponse(MenuResponse value),
+    TResult menuRequestByNearby(MenuRequestByNearby value),
+    TResult menuBookResponse(MenuBookResponse value),
+    TResult menuBookResponseWithRestaurant(
+        MenuBookResponseWithRestaurant value),
+    TResult menuBookRequest(MenuBookRequest value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuBookResponseWithRestaurant != null) {
@@ -761,6 +802,7 @@ abstract class MenuBookResponseWithRestaurant implements MenuReqRes {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $MenuBookRequestCopyWith<$Res> {
   factory $MenuBookRequestCopyWith(
           MenuBookRequest value, $Res Function(MenuBookRequest) then) =
@@ -768,6 +810,7 @@ abstract class $MenuBookRequestCopyWith<$Res> {
   $Res call({int paginate, int page});
 }
 
+/// @nodoc
 class _$MenuBookRequestCopyWithImpl<$Res> extends _$MenuReqResCopyWithImpl<$Res>
     implements $MenuBookRequestCopyWith<$Res> {
   _$MenuBookRequestCopyWithImpl(
@@ -790,6 +833,8 @@ class _$MenuBookRequestCopyWithImpl<$Res> extends _$MenuReqResCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$MenuBookRequest implements MenuBookRequest {
   const _$MenuBookRequest({this.paginate, this.page});
 
@@ -829,15 +874,16 @@ class _$MenuBookRequest implements MenuBookRequest {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result menuResponse(List<MenuClassData> data),
+  TResult when<TResult extends Object>({
+    @required TResult menuResponse(List<MenuClassData> data),
     @required
-        Result menuRequestByNearby(int paginate, int page,
+        TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    @required Result menuBookResponse(List<MenuBookData> data),
+    @required TResult menuBookResponse(List<MenuBookData> data),
     @required
-        Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    @required Result menuBookRequest(int paginate, int page),
+        TResult menuBookResponseWithRestaurant(
+            MenuClassDataWithRestaurant data),
+    @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -849,14 +895,14 @@ class _$MenuBookRequest implements MenuBookRequest {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuResponse(List<MenuClassData> data),
-    Result menuRequestByNearby(int paginate, int page,
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuResponse(List<MenuClassData> data),
+    TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
-    Result menuBookResponse(List<MenuBookData> data),
-    Result menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
-    Result menuBookRequest(int paginate, int page),
-    @required Result orElse(),
+    TResult menuBookResponse(List<MenuBookData> data),
+    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookRequest(int paginate, int page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuBookRequest != null) {
@@ -867,14 +913,14 @@ class _$MenuBookRequest implements MenuBookRequest {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuResponse(MenuResponse value),
-    @required Result menuRequestByNearby(MenuRequestByNearby value),
-    @required Result menuBookResponse(MenuBookResponse value),
+  TResult map<TResult extends Object>({
+    @required TResult menuResponse(MenuResponse value),
+    @required TResult menuRequestByNearby(MenuRequestByNearby value),
+    @required TResult menuBookResponse(MenuBookResponse value),
     @required
-        Result menuBookResponseWithRestaurant(
+        TResult menuBookResponseWithRestaurant(
             MenuBookResponseWithRestaurant value),
-    @required Result menuBookRequest(MenuBookRequest value),
+    @required TResult menuBookRequest(MenuBookRequest value),
   }) {
     assert(menuResponse != null);
     assert(menuRequestByNearby != null);
@@ -886,13 +932,14 @@ class _$MenuBookRequest implements MenuBookRequest {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuResponse(MenuResponse value),
-    Result menuRequestByNearby(MenuRequestByNearby value),
-    Result menuBookResponse(MenuBookResponse value),
-    Result menuBookResponseWithRestaurant(MenuBookResponseWithRestaurant value),
-    Result menuBookRequest(MenuBookRequest value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuResponse(MenuResponse value),
+    TResult menuRequestByNearby(MenuRequestByNearby value),
+    TResult menuBookResponse(MenuBookResponse value),
+    TResult menuBookResponseWithRestaurant(
+        MenuBookResponseWithRestaurant value),
+    TResult menuBookRequest(MenuBookRequest value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuBookRequest != null) {

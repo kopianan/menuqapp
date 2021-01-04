@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'authentication_bloc.dart';
 
@@ -9,54 +9,61 @@ part of 'authentication_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$AuthenticationEventTearOff {
   const _$AuthenticationEventTearOff();
 
+// ignore: unused_element
   _RegisterDevice registerDevice(String imei) {
     return _RegisterDevice(
       imei,
     );
   }
 
+// ignore: unused_element
   _Authenticate authenticate() {
     return const _Authenticate();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuthenticationEvent = _$AuthenticationEventTearOff();
 
+/// @nodoc
 mixin _$AuthenticationEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result registerDevice(String imei),
-    @required Result authenticate(),
+  TResult when<TResult extends Object>({
+    @required TResult registerDevice(String imei),
+    @required TResult authenticate(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result registerDevice(String imei),
-    Result authenticate(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult registerDevice(String imei),
+    TResult authenticate(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result registerDevice(_RegisterDevice value),
-    @required Result authenticate(_Authenticate value),
+  TResult map<TResult extends Object>({
+    @required TResult registerDevice(_RegisterDevice value),
+    @required TResult authenticate(_Authenticate value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result registerDevice(_RegisterDevice value),
-    Result authenticate(_Authenticate value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult registerDevice(_RegisterDevice value),
+    TResult authenticate(_Authenticate value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $AuthenticationEventCopyWith<$Res> {
   factory $AuthenticationEventCopyWith(
           AuthenticationEvent value, $Res Function(AuthenticationEvent) then) =
       _$AuthenticationEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AuthenticationEventCopyWithImpl<$Res>
     implements $AuthenticationEventCopyWith<$Res> {
   _$AuthenticationEventCopyWithImpl(this._value, this._then);
@@ -66,6 +73,7 @@ class _$AuthenticationEventCopyWithImpl<$Res>
   final $Res Function(AuthenticationEvent) _then;
 }
 
+/// @nodoc
 abstract class _$RegisterDeviceCopyWith<$Res> {
   factory _$RegisterDeviceCopyWith(
           _RegisterDevice value, $Res Function(_RegisterDevice) then) =
@@ -73,6 +81,7 @@ abstract class _$RegisterDeviceCopyWith<$Res> {
   $Res call({String imei});
 }
 
+/// @nodoc
 class __$RegisterDeviceCopyWithImpl<$Res>
     extends _$AuthenticationEventCopyWithImpl<$Res>
     implements _$RegisterDeviceCopyWith<$Res> {
@@ -93,6 +102,7 @@ class __$RegisterDeviceCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_RegisterDevice implements _RegisterDevice {
   const _$_RegisterDevice(this.imei) : assert(imei != null);
 
@@ -122,9 +132,9 @@ class _$_RegisterDevice implements _RegisterDevice {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result registerDevice(String imei),
-    @required Result authenticate(),
+  TResult when<TResult extends Object>({
+    @required TResult registerDevice(String imei),
+    @required TResult authenticate(),
   }) {
     assert(registerDevice != null);
     assert(authenticate != null);
@@ -133,10 +143,10 @@ class _$_RegisterDevice implements _RegisterDevice {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result registerDevice(String imei),
-    Result authenticate(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult registerDevice(String imei),
+    TResult authenticate(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (registerDevice != null) {
@@ -147,9 +157,9 @@ class _$_RegisterDevice implements _RegisterDevice {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result registerDevice(_RegisterDevice value),
-    @required Result authenticate(_Authenticate value),
+  TResult map<TResult extends Object>({
+    @required TResult registerDevice(_RegisterDevice value),
+    @required TResult authenticate(_Authenticate value),
   }) {
     assert(registerDevice != null);
     assert(authenticate != null);
@@ -158,10 +168,10 @@ class _$_RegisterDevice implements _RegisterDevice {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result registerDevice(_RegisterDevice value),
-    Result authenticate(_Authenticate value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult registerDevice(_RegisterDevice value),
+    TResult authenticate(_Authenticate value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (registerDevice != null) {
@@ -178,12 +188,14 @@ abstract class _RegisterDevice implements AuthenticationEvent {
   _$RegisterDeviceCopyWith<_RegisterDevice> get copyWith;
 }
 
+/// @nodoc
 abstract class _$AuthenticateCopyWith<$Res> {
   factory _$AuthenticateCopyWith(
           _Authenticate value, $Res Function(_Authenticate) then) =
       __$AuthenticateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$AuthenticateCopyWithImpl<$Res>
     extends _$AuthenticationEventCopyWithImpl<$Res>
     implements _$AuthenticateCopyWith<$Res> {
@@ -195,6 +207,7 @@ class __$AuthenticateCopyWithImpl<$Res>
   _Authenticate get _value => super._value as _Authenticate;
 }
 
+/// @nodoc
 class _$_Authenticate implements _Authenticate {
   const _$_Authenticate();
 
@@ -213,9 +226,9 @@ class _$_Authenticate implements _Authenticate {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result registerDevice(String imei),
-    @required Result authenticate(),
+  TResult when<TResult extends Object>({
+    @required TResult registerDevice(String imei),
+    @required TResult authenticate(),
   }) {
     assert(registerDevice != null);
     assert(authenticate != null);
@@ -224,10 +237,10 @@ class _$_Authenticate implements _Authenticate {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result registerDevice(String imei),
-    Result authenticate(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult registerDevice(String imei),
+    TResult authenticate(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authenticate != null) {
@@ -238,9 +251,9 @@ class _$_Authenticate implements _Authenticate {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result registerDevice(_RegisterDevice value),
-    @required Result authenticate(_Authenticate value),
+  TResult map<TResult extends Object>({
+    @required TResult registerDevice(_RegisterDevice value),
+    @required TResult authenticate(_Authenticate value),
   }) {
     assert(registerDevice != null);
     assert(authenticate != null);
@@ -249,10 +262,10 @@ class _$_Authenticate implements _Authenticate {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result registerDevice(_RegisterDevice value),
-    Result authenticate(_Authenticate value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult registerDevice(_RegisterDevice value),
+    TResult authenticate(_Authenticate value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authenticate != null) {
@@ -266,13 +279,16 @@ abstract class _Authenticate implements AuthenticationEvent {
   const factory _Authenticate() = _$_Authenticate;
 }
 
+/// @nodoc
 class _$AuthenticationStateTearOff {
   const _$AuthenticationStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _RegisterDeviceOption registerDeviceOption(
       {bool isLoading, Option<Either<AuthenticationFailure, String>> option}) {
     return _RegisterDeviceOption(
@@ -281,6 +297,7 @@ class _$AuthenticationStateTearOff {
     );
   }
 
+// ignore: unused_element
   _AuthStatus authStatus(bool isAuthenticate) {
     return _AuthStatus(
       isAuthenticate,
@@ -288,47 +305,51 @@ class _$AuthenticationStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $AuthenticationState = _$AuthenticationStateTearOff();
 
+/// @nodoc
 mixin _$AuthenticationState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result registerDeviceOption(bool isLoading,
+        TResult registerDeviceOption(bool isLoading,
             Option<Either<AuthenticationFailure, String>> option),
-    @required Result authStatus(bool isAuthenticate),
+    @required TResult authStatus(bool isAuthenticate),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerDeviceOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult registerDeviceOption(
         bool isLoading, Option<Either<AuthenticationFailure, String>> option),
-    Result authStatus(bool isAuthenticate),
-    @required Result orElse(),
+    TResult authStatus(bool isAuthenticate),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result registerDeviceOption(_RegisterDeviceOption value),
-    @required Result authStatus(_AuthStatus value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult registerDeviceOption(_RegisterDeviceOption value),
+    @required TResult authStatus(_AuthStatus value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result registerDeviceOption(_RegisterDeviceOption value),
-    Result authStatus(_AuthStatus value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult registerDeviceOption(_RegisterDeviceOption value),
+    TResult authStatus(_AuthStatus value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $AuthenticationStateCopyWith<$Res> {
   factory $AuthenticationStateCopyWith(
           AuthenticationState value, $Res Function(AuthenticationState) then) =
       _$AuthenticationStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AuthenticationStateCopyWithImpl<$Res>
     implements $AuthenticationStateCopyWith<$Res> {
   _$AuthenticationStateCopyWithImpl(this._value, this._then);
@@ -338,11 +359,13 @@ class _$AuthenticationStateCopyWithImpl<$Res>
   final $Res Function(AuthenticationState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res>
     extends _$AuthenticationStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
@@ -353,6 +376,7 @@ class __$InitialCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -371,12 +395,12 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result registerDeviceOption(bool isLoading,
+        TResult registerDeviceOption(bool isLoading,
             Option<Either<AuthenticationFailure, String>> option),
-    @required Result authStatus(bool isAuthenticate),
+    @required TResult authStatus(bool isAuthenticate),
   }) {
     assert(initial != null);
     assert(registerDeviceOption != null);
@@ -386,12 +410,12 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerDeviceOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult registerDeviceOption(
         bool isLoading, Option<Either<AuthenticationFailure, String>> option),
-    Result authStatus(bool isAuthenticate),
-    @required Result orElse(),
+    TResult authStatus(bool isAuthenticate),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -402,10 +426,10 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result registerDeviceOption(_RegisterDeviceOption value),
-    @required Result authStatus(_AuthStatus value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult registerDeviceOption(_RegisterDeviceOption value),
+    @required TResult authStatus(_AuthStatus value),
   }) {
     assert(initial != null);
     assert(registerDeviceOption != null);
@@ -415,11 +439,11 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result registerDeviceOption(_RegisterDeviceOption value),
-    Result authStatus(_AuthStatus value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult registerDeviceOption(_RegisterDeviceOption value),
+    TResult authStatus(_AuthStatus value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -433,6 +457,7 @@ abstract class _Initial implements AuthenticationState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$RegisterDeviceOptionCopyWith<$Res> {
   factory _$RegisterDeviceOptionCopyWith(_RegisterDeviceOption value,
           $Res Function(_RegisterDeviceOption) then) =
@@ -441,6 +466,7 @@ abstract class _$RegisterDeviceOptionCopyWith<$Res> {
       {bool isLoading, Option<Either<AuthenticationFailure, String>> option});
 }
 
+/// @nodoc
 class __$RegisterDeviceOptionCopyWithImpl<$Res>
     extends _$AuthenticationStateCopyWithImpl<$Res>
     implements _$RegisterDeviceOptionCopyWith<$Res> {
@@ -465,6 +491,7 @@ class __$RegisterDeviceOptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_RegisterDeviceOption implements _RegisterDeviceOption {
   const _$_RegisterDeviceOption({this.isLoading, this.option});
 
@@ -502,12 +529,12 @@ class _$_RegisterDeviceOption implements _RegisterDeviceOption {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result registerDeviceOption(bool isLoading,
+        TResult registerDeviceOption(bool isLoading,
             Option<Either<AuthenticationFailure, String>> option),
-    @required Result authStatus(bool isAuthenticate),
+    @required TResult authStatus(bool isAuthenticate),
   }) {
     assert(initial != null);
     assert(registerDeviceOption != null);
@@ -517,12 +544,12 @@ class _$_RegisterDeviceOption implements _RegisterDeviceOption {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerDeviceOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult registerDeviceOption(
         bool isLoading, Option<Either<AuthenticationFailure, String>> option),
-    Result authStatus(bool isAuthenticate),
-    @required Result orElse(),
+    TResult authStatus(bool isAuthenticate),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (registerDeviceOption != null) {
@@ -533,10 +560,10 @@ class _$_RegisterDeviceOption implements _RegisterDeviceOption {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result registerDeviceOption(_RegisterDeviceOption value),
-    @required Result authStatus(_AuthStatus value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult registerDeviceOption(_RegisterDeviceOption value),
+    @required TResult authStatus(_AuthStatus value),
   }) {
     assert(initial != null);
     assert(registerDeviceOption != null);
@@ -546,11 +573,11 @@ class _$_RegisterDeviceOption implements _RegisterDeviceOption {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result registerDeviceOption(_RegisterDeviceOption value),
-    Result authStatus(_AuthStatus value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult registerDeviceOption(_RegisterDeviceOption value),
+    TResult authStatus(_AuthStatus value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (registerDeviceOption != null) {
@@ -571,6 +598,7 @@ abstract class _RegisterDeviceOption implements AuthenticationState {
   _$RegisterDeviceOptionCopyWith<_RegisterDeviceOption> get copyWith;
 }
 
+/// @nodoc
 abstract class _$AuthStatusCopyWith<$Res> {
   factory _$AuthStatusCopyWith(
           _AuthStatus value, $Res Function(_AuthStatus) then) =
@@ -578,6 +606,7 @@ abstract class _$AuthStatusCopyWith<$Res> {
   $Res call({bool isAuthenticate});
 }
 
+/// @nodoc
 class __$AuthStatusCopyWithImpl<$Res>
     extends _$AuthenticationStateCopyWithImpl<$Res>
     implements _$AuthStatusCopyWith<$Res> {
@@ -600,6 +629,7 @@ class __$AuthStatusCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_AuthStatus implements _AuthStatus {
   const _$_AuthStatus(this.isAuthenticate) : assert(isAuthenticate != null);
 
@@ -631,12 +661,12 @@ class _$_AuthStatus implements _AuthStatus {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result registerDeviceOption(bool isLoading,
+        TResult registerDeviceOption(bool isLoading,
             Option<Either<AuthenticationFailure, String>> option),
-    @required Result authStatus(bool isAuthenticate),
+    @required TResult authStatus(bool isAuthenticate),
   }) {
     assert(initial != null);
     assert(registerDeviceOption != null);
@@ -646,12 +676,12 @@ class _$_AuthStatus implements _AuthStatus {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerDeviceOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult registerDeviceOption(
         bool isLoading, Option<Either<AuthenticationFailure, String>> option),
-    Result authStatus(bool isAuthenticate),
-    @required Result orElse(),
+    TResult authStatus(bool isAuthenticate),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authStatus != null) {
@@ -662,10 +692,10 @@ class _$_AuthStatus implements _AuthStatus {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result registerDeviceOption(_RegisterDeviceOption value),
-    @required Result authStatus(_AuthStatus value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult registerDeviceOption(_RegisterDeviceOption value),
+    @required TResult authStatus(_AuthStatus value),
   }) {
     assert(initial != null);
     assert(registerDeviceOption != null);
@@ -675,11 +705,11 @@ class _$_AuthStatus implements _AuthStatus {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result registerDeviceOption(_RegisterDeviceOption value),
-    Result authStatus(_AuthStatus value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult registerDeviceOption(_RegisterDeviceOption value),
+    TResult authStatus(_AuthStatus value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (authStatus != null) {

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'menu_bloc.dart';
 
@@ -9,33 +9,39 @@ part of 'menu_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$MenuEventTearOff {
   const _$MenuEventTearOff();
 
+// ignore: unused_element
   _GetNearbyMenu getNearbyMenu(MenuRequestByNearby request) {
     return _GetNearbyMenu(
       request,
     );
   }
 
+// ignore: unused_element
   _GetRecommendedMenu getRecommendedMenu(MenuRequestByNearby request) {
     return _GetRecommendedMenu(
       request,
     );
   }
 
+// ignore: unused_element
   _GetMenuBook getMenuBook(MenuBookRequest menuBookRequest) {
     return _GetMenuBook(
       menuBookRequest,
     );
   }
 
+// ignore: unused_element
   _GetSingleMenu getSingleMenu(String menuId) {
     return _GetSingleMenu(
       menuId,
     );
   }
 
+// ignore: unused_element
   _GetAllMenu getAllMenu(String paginate, String page) {
     return _GetAllMenu(
       paginate,
@@ -43,6 +49,7 @@ class _$MenuEventTearOff {
     );
   }
 
+// ignore: unused_element
   _GetAllMenuBook getAllMenuBook(String paginate, String page) {
     return _GetAllMenuBook(
       paginate,
@@ -51,55 +58,59 @@ class _$MenuEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MenuEvent = _$MenuEventTearOff();
 
+/// @nodoc
 mixin _$MenuEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getNearbyMenu(MenuRequestByNearby request),
-    @required Result getRecommendedMenu(MenuRequestByNearby request),
-    @required Result getMenuBook(MenuBookRequest menuBookRequest),
-    @required Result getSingleMenu(String menuId),
-    @required Result getAllMenu(String paginate, String page),
-    @required Result getAllMenuBook(String paginate, String page),
+  TResult when<TResult extends Object>({
+    @required TResult getNearbyMenu(MenuRequestByNearby request),
+    @required TResult getRecommendedMenu(MenuRequestByNearby request),
+    @required TResult getMenuBook(MenuBookRequest menuBookRequest),
+    @required TResult getSingleMenu(String menuId),
+    @required TResult getAllMenu(String paginate, String page),
+    @required TResult getAllMenuBook(String paginate, String page),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getNearbyMenu(MenuRequestByNearby request),
-    Result getRecommendedMenu(MenuRequestByNearby request),
-    Result getMenuBook(MenuBookRequest menuBookRequest),
-    Result getSingleMenu(String menuId),
-    Result getAllMenu(String paginate, String page),
-    Result getAllMenuBook(String paginate, String page),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getNearbyMenu(MenuRequestByNearby request),
+    TResult getRecommendedMenu(MenuRequestByNearby request),
+    TResult getMenuBook(MenuBookRequest menuBookRequest),
+    TResult getSingleMenu(String menuId),
+    TResult getAllMenu(String paginate, String page),
+    TResult getAllMenuBook(String paginate, String page),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getNearbyMenu(_GetNearbyMenu value),
-    @required Result getRecommendedMenu(_GetRecommendedMenu value),
-    @required Result getMenuBook(_GetMenuBook value),
-    @required Result getSingleMenu(_GetSingleMenu value),
-    @required Result getAllMenu(_GetAllMenu value),
-    @required Result getAllMenuBook(_GetAllMenuBook value),
+  TResult map<TResult extends Object>({
+    @required TResult getNearbyMenu(_GetNearbyMenu value),
+    @required TResult getRecommendedMenu(_GetRecommendedMenu value),
+    @required TResult getMenuBook(_GetMenuBook value),
+    @required TResult getSingleMenu(_GetSingleMenu value),
+    @required TResult getAllMenu(_GetAllMenu value),
+    @required TResult getAllMenuBook(_GetAllMenuBook value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getNearbyMenu(_GetNearbyMenu value),
-    Result getRecommendedMenu(_GetRecommendedMenu value),
-    Result getMenuBook(_GetMenuBook value),
-    Result getSingleMenu(_GetSingleMenu value),
-    Result getAllMenu(_GetAllMenu value),
-    Result getAllMenuBook(_GetAllMenuBook value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getNearbyMenu(_GetNearbyMenu value),
+    TResult getRecommendedMenu(_GetRecommendedMenu value),
+    TResult getMenuBook(_GetMenuBook value),
+    TResult getSingleMenu(_GetSingleMenu value),
+    TResult getAllMenu(_GetAllMenu value),
+    TResult getAllMenuBook(_GetAllMenuBook value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $MenuEventCopyWith<$Res> {
   factory $MenuEventCopyWith(MenuEvent value, $Res Function(MenuEvent) then) =
       _$MenuEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MenuEventCopyWithImpl<$Res> implements $MenuEventCopyWith<$Res> {
   _$MenuEventCopyWithImpl(this._value, this._then);
 
@@ -108,6 +119,7 @@ class _$MenuEventCopyWithImpl<$Res> implements $MenuEventCopyWith<$Res> {
   final $Res Function(MenuEvent) _then;
 }
 
+/// @nodoc
 abstract class _$GetNearbyMenuCopyWith<$Res> {
   factory _$GetNearbyMenuCopyWith(
           _GetNearbyMenu value, $Res Function(_GetNearbyMenu) then) =
@@ -115,6 +127,7 @@ abstract class _$GetNearbyMenuCopyWith<$Res> {
   $Res call({MenuRequestByNearby request});
 }
 
+/// @nodoc
 class __$GetNearbyMenuCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
     implements _$GetNearbyMenuCopyWith<$Res> {
   __$GetNearbyMenuCopyWithImpl(
@@ -134,6 +147,7 @@ class __$GetNearbyMenuCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetNearbyMenu implements _GetNearbyMenu {
   const _$_GetNearbyMenu(this.request) : assert(request != null);
 
@@ -163,13 +177,13 @@ class _$_GetNearbyMenu implements _GetNearbyMenu {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getNearbyMenu(MenuRequestByNearby request),
-    @required Result getRecommendedMenu(MenuRequestByNearby request),
-    @required Result getMenuBook(MenuBookRequest menuBookRequest),
-    @required Result getSingleMenu(String menuId),
-    @required Result getAllMenu(String paginate, String page),
-    @required Result getAllMenuBook(String paginate, String page),
+  TResult when<TResult extends Object>({
+    @required TResult getNearbyMenu(MenuRequestByNearby request),
+    @required TResult getRecommendedMenu(MenuRequestByNearby request),
+    @required TResult getMenuBook(MenuBookRequest menuBookRequest),
+    @required TResult getSingleMenu(String menuId),
+    @required TResult getAllMenu(String paginate, String page),
+    @required TResult getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -182,14 +196,14 @@ class _$_GetNearbyMenu implements _GetNearbyMenu {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getNearbyMenu(MenuRequestByNearby request),
-    Result getRecommendedMenu(MenuRequestByNearby request),
-    Result getMenuBook(MenuBookRequest menuBookRequest),
-    Result getSingleMenu(String menuId),
-    Result getAllMenu(String paginate, String page),
-    Result getAllMenuBook(String paginate, String page),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getNearbyMenu(MenuRequestByNearby request),
+    TResult getRecommendedMenu(MenuRequestByNearby request),
+    TResult getMenuBook(MenuBookRequest menuBookRequest),
+    TResult getSingleMenu(String menuId),
+    TResult getAllMenu(String paginate, String page),
+    TResult getAllMenuBook(String paginate, String page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getNearbyMenu != null) {
@@ -200,13 +214,13 @@ class _$_GetNearbyMenu implements _GetNearbyMenu {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getNearbyMenu(_GetNearbyMenu value),
-    @required Result getRecommendedMenu(_GetRecommendedMenu value),
-    @required Result getMenuBook(_GetMenuBook value),
-    @required Result getSingleMenu(_GetSingleMenu value),
-    @required Result getAllMenu(_GetAllMenu value),
-    @required Result getAllMenuBook(_GetAllMenuBook value),
+  TResult map<TResult extends Object>({
+    @required TResult getNearbyMenu(_GetNearbyMenu value),
+    @required TResult getRecommendedMenu(_GetRecommendedMenu value),
+    @required TResult getMenuBook(_GetMenuBook value),
+    @required TResult getSingleMenu(_GetSingleMenu value),
+    @required TResult getAllMenu(_GetAllMenu value),
+    @required TResult getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -219,14 +233,14 @@ class _$_GetNearbyMenu implements _GetNearbyMenu {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getNearbyMenu(_GetNearbyMenu value),
-    Result getRecommendedMenu(_GetRecommendedMenu value),
-    Result getMenuBook(_GetMenuBook value),
-    Result getSingleMenu(_GetSingleMenu value),
-    Result getAllMenu(_GetAllMenu value),
-    Result getAllMenuBook(_GetAllMenuBook value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getNearbyMenu(_GetNearbyMenu value),
+    TResult getRecommendedMenu(_GetRecommendedMenu value),
+    TResult getMenuBook(_GetMenuBook value),
+    TResult getSingleMenu(_GetSingleMenu value),
+    TResult getAllMenu(_GetAllMenu value),
+    TResult getAllMenuBook(_GetAllMenuBook value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getNearbyMenu != null) {
@@ -243,6 +257,7 @@ abstract class _GetNearbyMenu implements MenuEvent {
   _$GetNearbyMenuCopyWith<_GetNearbyMenu> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetRecommendedMenuCopyWith<$Res> {
   factory _$GetRecommendedMenuCopyWith(
           _GetRecommendedMenu value, $Res Function(_GetRecommendedMenu) then) =
@@ -250,6 +265,7 @@ abstract class _$GetRecommendedMenuCopyWith<$Res> {
   $Res call({MenuRequestByNearby request});
 }
 
+/// @nodoc
 class __$GetRecommendedMenuCopyWithImpl<$Res>
     extends _$MenuEventCopyWithImpl<$Res>
     implements _$GetRecommendedMenuCopyWith<$Res> {
@@ -270,6 +286,7 @@ class __$GetRecommendedMenuCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetRecommendedMenu implements _GetRecommendedMenu {
   const _$_GetRecommendedMenu(this.request) : assert(request != null);
 
@@ -299,13 +316,13 @@ class _$_GetRecommendedMenu implements _GetRecommendedMenu {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getNearbyMenu(MenuRequestByNearby request),
-    @required Result getRecommendedMenu(MenuRequestByNearby request),
-    @required Result getMenuBook(MenuBookRequest menuBookRequest),
-    @required Result getSingleMenu(String menuId),
-    @required Result getAllMenu(String paginate, String page),
-    @required Result getAllMenuBook(String paginate, String page),
+  TResult when<TResult extends Object>({
+    @required TResult getNearbyMenu(MenuRequestByNearby request),
+    @required TResult getRecommendedMenu(MenuRequestByNearby request),
+    @required TResult getMenuBook(MenuBookRequest menuBookRequest),
+    @required TResult getSingleMenu(String menuId),
+    @required TResult getAllMenu(String paginate, String page),
+    @required TResult getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -318,14 +335,14 @@ class _$_GetRecommendedMenu implements _GetRecommendedMenu {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getNearbyMenu(MenuRequestByNearby request),
-    Result getRecommendedMenu(MenuRequestByNearby request),
-    Result getMenuBook(MenuBookRequest menuBookRequest),
-    Result getSingleMenu(String menuId),
-    Result getAllMenu(String paginate, String page),
-    Result getAllMenuBook(String paginate, String page),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getNearbyMenu(MenuRequestByNearby request),
+    TResult getRecommendedMenu(MenuRequestByNearby request),
+    TResult getMenuBook(MenuBookRequest menuBookRequest),
+    TResult getSingleMenu(String menuId),
+    TResult getAllMenu(String paginate, String page),
+    TResult getAllMenuBook(String paginate, String page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRecommendedMenu != null) {
@@ -336,13 +353,13 @@ class _$_GetRecommendedMenu implements _GetRecommendedMenu {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getNearbyMenu(_GetNearbyMenu value),
-    @required Result getRecommendedMenu(_GetRecommendedMenu value),
-    @required Result getMenuBook(_GetMenuBook value),
-    @required Result getSingleMenu(_GetSingleMenu value),
-    @required Result getAllMenu(_GetAllMenu value),
-    @required Result getAllMenuBook(_GetAllMenuBook value),
+  TResult map<TResult extends Object>({
+    @required TResult getNearbyMenu(_GetNearbyMenu value),
+    @required TResult getRecommendedMenu(_GetRecommendedMenu value),
+    @required TResult getMenuBook(_GetMenuBook value),
+    @required TResult getSingleMenu(_GetSingleMenu value),
+    @required TResult getAllMenu(_GetAllMenu value),
+    @required TResult getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -355,14 +372,14 @@ class _$_GetRecommendedMenu implements _GetRecommendedMenu {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getNearbyMenu(_GetNearbyMenu value),
-    Result getRecommendedMenu(_GetRecommendedMenu value),
-    Result getMenuBook(_GetMenuBook value),
-    Result getSingleMenu(_GetSingleMenu value),
-    Result getAllMenu(_GetAllMenu value),
-    Result getAllMenuBook(_GetAllMenuBook value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getNearbyMenu(_GetNearbyMenu value),
+    TResult getRecommendedMenu(_GetRecommendedMenu value),
+    TResult getMenuBook(_GetMenuBook value),
+    TResult getSingleMenu(_GetSingleMenu value),
+    TResult getAllMenu(_GetAllMenu value),
+    TResult getAllMenuBook(_GetAllMenuBook value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRecommendedMenu != null) {
@@ -380,6 +397,7 @@ abstract class _GetRecommendedMenu implements MenuEvent {
   _$GetRecommendedMenuCopyWith<_GetRecommendedMenu> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetMenuBookCopyWith<$Res> {
   factory _$GetMenuBookCopyWith(
           _GetMenuBook value, $Res Function(_GetMenuBook) then) =
@@ -387,6 +405,7 @@ abstract class _$GetMenuBookCopyWith<$Res> {
   $Res call({MenuBookRequest menuBookRequest});
 }
 
+/// @nodoc
 class __$GetMenuBookCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
     implements _$GetMenuBookCopyWith<$Res> {
   __$GetMenuBookCopyWithImpl(
@@ -408,6 +427,7 @@ class __$GetMenuBookCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetMenuBook implements _GetMenuBook {
   const _$_GetMenuBook(this.menuBookRequest) : assert(menuBookRequest != null);
 
@@ -439,13 +459,13 @@ class _$_GetMenuBook implements _GetMenuBook {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getNearbyMenu(MenuRequestByNearby request),
-    @required Result getRecommendedMenu(MenuRequestByNearby request),
-    @required Result getMenuBook(MenuBookRequest menuBookRequest),
-    @required Result getSingleMenu(String menuId),
-    @required Result getAllMenu(String paginate, String page),
-    @required Result getAllMenuBook(String paginate, String page),
+  TResult when<TResult extends Object>({
+    @required TResult getNearbyMenu(MenuRequestByNearby request),
+    @required TResult getRecommendedMenu(MenuRequestByNearby request),
+    @required TResult getMenuBook(MenuBookRequest menuBookRequest),
+    @required TResult getSingleMenu(String menuId),
+    @required TResult getAllMenu(String paginate, String page),
+    @required TResult getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -458,14 +478,14 @@ class _$_GetMenuBook implements _GetMenuBook {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getNearbyMenu(MenuRequestByNearby request),
-    Result getRecommendedMenu(MenuRequestByNearby request),
-    Result getMenuBook(MenuBookRequest menuBookRequest),
-    Result getSingleMenu(String menuId),
-    Result getAllMenu(String paginate, String page),
-    Result getAllMenuBook(String paginate, String page),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getNearbyMenu(MenuRequestByNearby request),
+    TResult getRecommendedMenu(MenuRequestByNearby request),
+    TResult getMenuBook(MenuBookRequest menuBookRequest),
+    TResult getSingleMenu(String menuId),
+    TResult getAllMenu(String paginate, String page),
+    TResult getAllMenuBook(String paginate, String page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getMenuBook != null) {
@@ -476,13 +496,13 @@ class _$_GetMenuBook implements _GetMenuBook {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getNearbyMenu(_GetNearbyMenu value),
-    @required Result getRecommendedMenu(_GetRecommendedMenu value),
-    @required Result getMenuBook(_GetMenuBook value),
-    @required Result getSingleMenu(_GetSingleMenu value),
-    @required Result getAllMenu(_GetAllMenu value),
-    @required Result getAllMenuBook(_GetAllMenuBook value),
+  TResult map<TResult extends Object>({
+    @required TResult getNearbyMenu(_GetNearbyMenu value),
+    @required TResult getRecommendedMenu(_GetRecommendedMenu value),
+    @required TResult getMenuBook(_GetMenuBook value),
+    @required TResult getSingleMenu(_GetSingleMenu value),
+    @required TResult getAllMenu(_GetAllMenu value),
+    @required TResult getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -495,14 +515,14 @@ class _$_GetMenuBook implements _GetMenuBook {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getNearbyMenu(_GetNearbyMenu value),
-    Result getRecommendedMenu(_GetRecommendedMenu value),
-    Result getMenuBook(_GetMenuBook value),
-    Result getSingleMenu(_GetSingleMenu value),
-    Result getAllMenu(_GetAllMenu value),
-    Result getAllMenuBook(_GetAllMenuBook value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getNearbyMenu(_GetNearbyMenu value),
+    TResult getRecommendedMenu(_GetRecommendedMenu value),
+    TResult getMenuBook(_GetMenuBook value),
+    TResult getSingleMenu(_GetSingleMenu value),
+    TResult getAllMenu(_GetAllMenu value),
+    TResult getAllMenuBook(_GetAllMenuBook value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getMenuBook != null) {
@@ -519,6 +539,7 @@ abstract class _GetMenuBook implements MenuEvent {
   _$GetMenuBookCopyWith<_GetMenuBook> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetSingleMenuCopyWith<$Res> {
   factory _$GetSingleMenuCopyWith(
           _GetSingleMenu value, $Res Function(_GetSingleMenu) then) =
@@ -526,6 +547,7 @@ abstract class _$GetSingleMenuCopyWith<$Res> {
   $Res call({String menuId});
 }
 
+/// @nodoc
 class __$GetSingleMenuCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
     implements _$GetSingleMenuCopyWith<$Res> {
   __$GetSingleMenuCopyWithImpl(
@@ -545,6 +567,7 @@ class __$GetSingleMenuCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetSingleMenu implements _GetSingleMenu {
   const _$_GetSingleMenu(this.menuId) : assert(menuId != null);
 
@@ -574,13 +597,13 @@ class _$_GetSingleMenu implements _GetSingleMenu {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getNearbyMenu(MenuRequestByNearby request),
-    @required Result getRecommendedMenu(MenuRequestByNearby request),
-    @required Result getMenuBook(MenuBookRequest menuBookRequest),
-    @required Result getSingleMenu(String menuId),
-    @required Result getAllMenu(String paginate, String page),
-    @required Result getAllMenuBook(String paginate, String page),
+  TResult when<TResult extends Object>({
+    @required TResult getNearbyMenu(MenuRequestByNearby request),
+    @required TResult getRecommendedMenu(MenuRequestByNearby request),
+    @required TResult getMenuBook(MenuBookRequest menuBookRequest),
+    @required TResult getSingleMenu(String menuId),
+    @required TResult getAllMenu(String paginate, String page),
+    @required TResult getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -593,14 +616,14 @@ class _$_GetSingleMenu implements _GetSingleMenu {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getNearbyMenu(MenuRequestByNearby request),
-    Result getRecommendedMenu(MenuRequestByNearby request),
-    Result getMenuBook(MenuBookRequest menuBookRequest),
-    Result getSingleMenu(String menuId),
-    Result getAllMenu(String paginate, String page),
-    Result getAllMenuBook(String paginate, String page),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getNearbyMenu(MenuRequestByNearby request),
+    TResult getRecommendedMenu(MenuRequestByNearby request),
+    TResult getMenuBook(MenuBookRequest menuBookRequest),
+    TResult getSingleMenu(String menuId),
+    TResult getAllMenu(String paginate, String page),
+    TResult getAllMenuBook(String paginate, String page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getSingleMenu != null) {
@@ -611,13 +634,13 @@ class _$_GetSingleMenu implements _GetSingleMenu {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getNearbyMenu(_GetNearbyMenu value),
-    @required Result getRecommendedMenu(_GetRecommendedMenu value),
-    @required Result getMenuBook(_GetMenuBook value),
-    @required Result getSingleMenu(_GetSingleMenu value),
-    @required Result getAllMenu(_GetAllMenu value),
-    @required Result getAllMenuBook(_GetAllMenuBook value),
+  TResult map<TResult extends Object>({
+    @required TResult getNearbyMenu(_GetNearbyMenu value),
+    @required TResult getRecommendedMenu(_GetRecommendedMenu value),
+    @required TResult getMenuBook(_GetMenuBook value),
+    @required TResult getSingleMenu(_GetSingleMenu value),
+    @required TResult getAllMenu(_GetAllMenu value),
+    @required TResult getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -630,14 +653,14 @@ class _$_GetSingleMenu implements _GetSingleMenu {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getNearbyMenu(_GetNearbyMenu value),
-    Result getRecommendedMenu(_GetRecommendedMenu value),
-    Result getMenuBook(_GetMenuBook value),
-    Result getSingleMenu(_GetSingleMenu value),
-    Result getAllMenu(_GetAllMenu value),
-    Result getAllMenuBook(_GetAllMenuBook value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getNearbyMenu(_GetNearbyMenu value),
+    TResult getRecommendedMenu(_GetRecommendedMenu value),
+    TResult getMenuBook(_GetMenuBook value),
+    TResult getSingleMenu(_GetSingleMenu value),
+    TResult getAllMenu(_GetAllMenu value),
+    TResult getAllMenuBook(_GetAllMenuBook value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getSingleMenu != null) {
@@ -654,6 +677,7 @@ abstract class _GetSingleMenu implements MenuEvent {
   _$GetSingleMenuCopyWith<_GetSingleMenu> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetAllMenuCopyWith<$Res> {
   factory _$GetAllMenuCopyWith(
           _GetAllMenu value, $Res Function(_GetAllMenu) then) =
@@ -661,6 +685,7 @@ abstract class _$GetAllMenuCopyWith<$Res> {
   $Res call({String paginate, String page});
 }
 
+/// @nodoc
 class __$GetAllMenuCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
     implements _$GetAllMenuCopyWith<$Res> {
   __$GetAllMenuCopyWithImpl(
@@ -682,6 +707,7 @@ class __$GetAllMenuCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetAllMenu implements _GetAllMenu {
   const _$_GetAllMenu(this.paginate, this.page)
       : assert(paginate != null),
@@ -720,13 +746,13 @@ class _$_GetAllMenu implements _GetAllMenu {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getNearbyMenu(MenuRequestByNearby request),
-    @required Result getRecommendedMenu(MenuRequestByNearby request),
-    @required Result getMenuBook(MenuBookRequest menuBookRequest),
-    @required Result getSingleMenu(String menuId),
-    @required Result getAllMenu(String paginate, String page),
-    @required Result getAllMenuBook(String paginate, String page),
+  TResult when<TResult extends Object>({
+    @required TResult getNearbyMenu(MenuRequestByNearby request),
+    @required TResult getRecommendedMenu(MenuRequestByNearby request),
+    @required TResult getMenuBook(MenuBookRequest menuBookRequest),
+    @required TResult getSingleMenu(String menuId),
+    @required TResult getAllMenu(String paginate, String page),
+    @required TResult getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -739,14 +765,14 @@ class _$_GetAllMenu implements _GetAllMenu {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getNearbyMenu(MenuRequestByNearby request),
-    Result getRecommendedMenu(MenuRequestByNearby request),
-    Result getMenuBook(MenuBookRequest menuBookRequest),
-    Result getSingleMenu(String menuId),
-    Result getAllMenu(String paginate, String page),
-    Result getAllMenuBook(String paginate, String page),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getNearbyMenu(MenuRequestByNearby request),
+    TResult getRecommendedMenu(MenuRequestByNearby request),
+    TResult getMenuBook(MenuBookRequest menuBookRequest),
+    TResult getSingleMenu(String menuId),
+    TResult getAllMenu(String paginate, String page),
+    TResult getAllMenuBook(String paginate, String page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllMenu != null) {
@@ -757,13 +783,13 @@ class _$_GetAllMenu implements _GetAllMenu {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getNearbyMenu(_GetNearbyMenu value),
-    @required Result getRecommendedMenu(_GetRecommendedMenu value),
-    @required Result getMenuBook(_GetMenuBook value),
-    @required Result getSingleMenu(_GetSingleMenu value),
-    @required Result getAllMenu(_GetAllMenu value),
-    @required Result getAllMenuBook(_GetAllMenuBook value),
+  TResult map<TResult extends Object>({
+    @required TResult getNearbyMenu(_GetNearbyMenu value),
+    @required TResult getRecommendedMenu(_GetRecommendedMenu value),
+    @required TResult getMenuBook(_GetMenuBook value),
+    @required TResult getSingleMenu(_GetSingleMenu value),
+    @required TResult getAllMenu(_GetAllMenu value),
+    @required TResult getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -776,14 +802,14 @@ class _$_GetAllMenu implements _GetAllMenu {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getNearbyMenu(_GetNearbyMenu value),
-    Result getRecommendedMenu(_GetRecommendedMenu value),
-    Result getMenuBook(_GetMenuBook value),
-    Result getSingleMenu(_GetSingleMenu value),
-    Result getAllMenu(_GetAllMenu value),
-    Result getAllMenuBook(_GetAllMenuBook value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getNearbyMenu(_GetNearbyMenu value),
+    TResult getRecommendedMenu(_GetRecommendedMenu value),
+    TResult getMenuBook(_GetMenuBook value),
+    TResult getSingleMenu(_GetSingleMenu value),
+    TResult getAllMenu(_GetAllMenu value),
+    TResult getAllMenuBook(_GetAllMenuBook value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllMenu != null) {
@@ -801,6 +827,7 @@ abstract class _GetAllMenu implements MenuEvent {
   _$GetAllMenuCopyWith<_GetAllMenu> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetAllMenuBookCopyWith<$Res> {
   factory _$GetAllMenuBookCopyWith(
           _GetAllMenuBook value, $Res Function(_GetAllMenuBook) then) =
@@ -808,6 +835,7 @@ abstract class _$GetAllMenuBookCopyWith<$Res> {
   $Res call({String paginate, String page});
 }
 
+/// @nodoc
 class __$GetAllMenuBookCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
     implements _$GetAllMenuBookCopyWith<$Res> {
   __$GetAllMenuBookCopyWithImpl(
@@ -829,6 +857,7 @@ class __$GetAllMenuBookCopyWithImpl<$Res> extends _$MenuEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetAllMenuBook implements _GetAllMenuBook {
   const _$_GetAllMenuBook(this.paginate, this.page)
       : assert(paginate != null),
@@ -867,13 +896,13 @@ class _$_GetAllMenuBook implements _GetAllMenuBook {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getNearbyMenu(MenuRequestByNearby request),
-    @required Result getRecommendedMenu(MenuRequestByNearby request),
-    @required Result getMenuBook(MenuBookRequest menuBookRequest),
-    @required Result getSingleMenu(String menuId),
-    @required Result getAllMenu(String paginate, String page),
-    @required Result getAllMenuBook(String paginate, String page),
+  TResult when<TResult extends Object>({
+    @required TResult getNearbyMenu(MenuRequestByNearby request),
+    @required TResult getRecommendedMenu(MenuRequestByNearby request),
+    @required TResult getMenuBook(MenuBookRequest menuBookRequest),
+    @required TResult getSingleMenu(String menuId),
+    @required TResult getAllMenu(String paginate, String page),
+    @required TResult getAllMenuBook(String paginate, String page),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -886,14 +915,14 @@ class _$_GetAllMenuBook implements _GetAllMenuBook {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getNearbyMenu(MenuRequestByNearby request),
-    Result getRecommendedMenu(MenuRequestByNearby request),
-    Result getMenuBook(MenuBookRequest menuBookRequest),
-    Result getSingleMenu(String menuId),
-    Result getAllMenu(String paginate, String page),
-    Result getAllMenuBook(String paginate, String page),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getNearbyMenu(MenuRequestByNearby request),
+    TResult getRecommendedMenu(MenuRequestByNearby request),
+    TResult getMenuBook(MenuBookRequest menuBookRequest),
+    TResult getSingleMenu(String menuId),
+    TResult getAllMenu(String paginate, String page),
+    TResult getAllMenuBook(String paginate, String page),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllMenuBook != null) {
@@ -904,13 +933,13 @@ class _$_GetAllMenuBook implements _GetAllMenuBook {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getNearbyMenu(_GetNearbyMenu value),
-    @required Result getRecommendedMenu(_GetRecommendedMenu value),
-    @required Result getMenuBook(_GetMenuBook value),
-    @required Result getSingleMenu(_GetSingleMenu value),
-    @required Result getAllMenu(_GetAllMenu value),
-    @required Result getAllMenuBook(_GetAllMenuBook value),
+  TResult map<TResult extends Object>({
+    @required TResult getNearbyMenu(_GetNearbyMenu value),
+    @required TResult getRecommendedMenu(_GetRecommendedMenu value),
+    @required TResult getMenuBook(_GetMenuBook value),
+    @required TResult getSingleMenu(_GetSingleMenu value),
+    @required TResult getAllMenu(_GetAllMenu value),
+    @required TResult getAllMenuBook(_GetAllMenuBook value),
   }) {
     assert(getNearbyMenu != null);
     assert(getRecommendedMenu != null);
@@ -923,14 +952,14 @@ class _$_GetAllMenuBook implements _GetAllMenuBook {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getNearbyMenu(_GetNearbyMenu value),
-    Result getRecommendedMenu(_GetRecommendedMenu value),
-    Result getMenuBook(_GetMenuBook value),
-    Result getSingleMenu(_GetSingleMenu value),
-    Result getAllMenu(_GetAllMenu value),
-    Result getAllMenuBook(_GetAllMenuBook value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getNearbyMenu(_GetNearbyMenu value),
+    TResult getRecommendedMenu(_GetRecommendedMenu value),
+    TResult getMenuBook(_GetMenuBook value),
+    TResult getSingleMenu(_GetSingleMenu value),
+    TResult getAllMenu(_GetAllMenu value),
+    TResult getAllMenuBook(_GetAllMenuBook value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllMenuBook != null) {
@@ -949,13 +978,16 @@ abstract class _GetAllMenuBook implements MenuEvent {
   _$GetAllMenuBookCopyWith<_GetAllMenuBook> get copyWith;
 }
 
+/// @nodoc
 class _$MenuStateTearOff {
   const _$MenuStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _NearbyMenuOption nearbyMenuOption(
       {@required bool isLoading,
       @required Option<Either<MenuFailure, MenuResponse>> menuResponse}) {
@@ -965,6 +997,7 @@ class _$MenuStateTearOff {
     );
   }
 
+// ignore: unused_element
   _GetMenuBookByRestaurant getMenuBookByRestaurant(
       {@required
           bool isLoading,
@@ -976,6 +1009,7 @@ class _$MenuStateTearOff {
     );
   }
 
+// ignore: unused_element
   _SingleMenuWithRestaurantData singleMenuWithRestaurantData(
       {@required
           bool isLoading,
@@ -988,6 +1022,7 @@ class _$MenuStateTearOff {
     );
   }
 
+// ignore: unused_element
   _GetAllMenuOption getAllMenuOption(
       {@required
           bool isLoading,
@@ -999,6 +1034,7 @@ class _$MenuStateTearOff {
     );
   }
 
+// ignore: unused_element
   _GetAllMenuBookOption getAllMenuBookOption(
       {@required
           bool isLoading,
@@ -1011,76 +1047,80 @@ class _$MenuStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MenuState = _$MenuStateTearOff();
 
+/// @nodoc
 mixin _$MenuState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result nearbyMenuOption(bool isLoading,
+        TResult nearbyMenuOption(bool isLoading,
             Option<Either<MenuFailure, MenuResponse>> menuResponse),
     @required
-        Result getMenuBookByRestaurant(bool isLoading,
+        TResult getMenuBookByRestaurant(bool isLoading,
             Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             bool isLoading,
             Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
                 singleMenuOption),
     @required
-        Result getAllMenuOption(bool isLoading,
+        TResult getAllMenuOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
     @required
-        Result getAllMenuBookOption(bool isLoading,
+        TResult getAllMenuBookOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result nearbyMenuOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult nearbyMenuOption(
         bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse),
-    Result getMenuBookByRestaurant(bool isLoading,
+    TResult getMenuBookByRestaurant(bool isLoading,
         Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
-    Result singleMenuWithRestaurantData(
+    TResult singleMenuWithRestaurantData(
         bool isLoading,
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
-    Result getAllMenuOption(bool isLoading,
+    TResult getAllMenuOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
-    Result getAllMenuBookOption(bool isLoading,
+    TResult getAllMenuBookOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
-    @required Result orElse(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result nearbyMenuOption(_NearbyMenuOption value),
-    @required Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult nearbyMenuOption(_NearbyMenuOption value),
+    @required TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
-    @required Result getAllMenuOption(_GetAllMenuOption value),
-    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult getAllMenuOption(_GetAllMenuOption value),
+    @required TResult getAllMenuBookOption(_GetAllMenuBookOption value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result nearbyMenuOption(_NearbyMenuOption value),
-    Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
-    Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
-    Result getAllMenuOption(_GetAllMenuOption value),
-    Result getAllMenuBookOption(_GetAllMenuBookOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult nearbyMenuOption(_NearbyMenuOption value),
+    TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    TResult singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
+    TResult getAllMenuOption(_GetAllMenuOption value),
+    TResult getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $MenuStateCopyWith<$Res> {
   factory $MenuStateCopyWith(MenuState value, $Res Function(MenuState) then) =
       _$MenuStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MenuStateCopyWithImpl<$Res> implements $MenuStateCopyWith<$Res> {
   _$MenuStateCopyWithImpl(this._value, this._then);
 
@@ -1089,11 +1129,13 @@ class _$MenuStateCopyWithImpl<$Res> implements $MenuStateCopyWith<$Res> {
   final $Res Function(MenuState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
@@ -1103,6 +1145,7 @@ class __$InitialCopyWithImpl<$Res> extends _$MenuStateCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -1121,24 +1164,24 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result nearbyMenuOption(bool isLoading,
+        TResult nearbyMenuOption(bool isLoading,
             Option<Either<MenuFailure, MenuResponse>> menuResponse),
     @required
-        Result getMenuBookByRestaurant(bool isLoading,
+        TResult getMenuBookByRestaurant(bool isLoading,
             Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             bool isLoading,
             Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
                 singleMenuOption),
     @required
-        Result getAllMenuOption(bool isLoading,
+        TResult getAllMenuOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
     @required
-        Result getAllMenuBookOption(bool isLoading,
+        TResult getAllMenuBookOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
@@ -1152,21 +1195,21 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result nearbyMenuOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult nearbyMenuOption(
         bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse),
-    Result getMenuBookByRestaurant(bool isLoading,
+    TResult getMenuBookByRestaurant(bool isLoading,
         Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
-    Result singleMenuWithRestaurantData(
+    TResult singleMenuWithRestaurantData(
         bool isLoading,
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
-    Result getAllMenuOption(bool isLoading,
+    TResult getAllMenuOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
-    Result getAllMenuBookOption(bool isLoading,
+    TResult getAllMenuBookOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -1177,15 +1220,15 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result nearbyMenuOption(_NearbyMenuOption value),
-    @required Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult nearbyMenuOption(_NearbyMenuOption value),
+    @required TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
-    @required Result getAllMenuOption(_GetAllMenuOption value),
-    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult getAllMenuOption(_GetAllMenuOption value),
+    @required TResult getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
@@ -1198,14 +1241,14 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result nearbyMenuOption(_NearbyMenuOption value),
-    Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
-    Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
-    Result getAllMenuOption(_GetAllMenuOption value),
-    Result getAllMenuBookOption(_GetAllMenuBookOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult nearbyMenuOption(_NearbyMenuOption value),
+    TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    TResult singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
+    TResult getAllMenuOption(_GetAllMenuOption value),
+    TResult getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -1219,6 +1262,7 @@ abstract class _Initial implements MenuState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$NearbyMenuOptionCopyWith<$Res> {
   factory _$NearbyMenuOptionCopyWith(
           _NearbyMenuOption value, $Res Function(_NearbyMenuOption) then) =
@@ -1227,6 +1271,7 @@ abstract class _$NearbyMenuOptionCopyWith<$Res> {
       {bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse});
 }
 
+/// @nodoc
 class __$NearbyMenuOptionCopyWithImpl<$Res>
     extends _$MenuStateCopyWithImpl<$Res>
     implements _$NearbyMenuOptionCopyWith<$Res> {
@@ -1251,6 +1296,7 @@ class __$NearbyMenuOptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_NearbyMenuOption implements _NearbyMenuOption {
   const _$_NearbyMenuOption(
       {@required this.isLoading, @required this.menuResponse})
@@ -1291,24 +1337,24 @@ class _$_NearbyMenuOption implements _NearbyMenuOption {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result nearbyMenuOption(bool isLoading,
+        TResult nearbyMenuOption(bool isLoading,
             Option<Either<MenuFailure, MenuResponse>> menuResponse),
     @required
-        Result getMenuBookByRestaurant(bool isLoading,
+        TResult getMenuBookByRestaurant(bool isLoading,
             Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             bool isLoading,
             Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
                 singleMenuOption),
     @required
-        Result getAllMenuOption(bool isLoading,
+        TResult getAllMenuOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
     @required
-        Result getAllMenuBookOption(bool isLoading,
+        TResult getAllMenuBookOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
@@ -1322,21 +1368,21 @@ class _$_NearbyMenuOption implements _NearbyMenuOption {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result nearbyMenuOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult nearbyMenuOption(
         bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse),
-    Result getMenuBookByRestaurant(bool isLoading,
+    TResult getMenuBookByRestaurant(bool isLoading,
         Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
-    Result singleMenuWithRestaurantData(
+    TResult singleMenuWithRestaurantData(
         bool isLoading,
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
-    Result getAllMenuOption(bool isLoading,
+    TResult getAllMenuOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
-    Result getAllMenuBookOption(bool isLoading,
+    TResult getAllMenuBookOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nearbyMenuOption != null) {
@@ -1347,15 +1393,15 @@ class _$_NearbyMenuOption implements _NearbyMenuOption {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result nearbyMenuOption(_NearbyMenuOption value),
-    @required Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult nearbyMenuOption(_NearbyMenuOption value),
+    @required TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
-    @required Result getAllMenuOption(_GetAllMenuOption value),
-    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult getAllMenuOption(_GetAllMenuOption value),
+    @required TResult getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
@@ -1368,14 +1414,14 @@ class _$_NearbyMenuOption implements _NearbyMenuOption {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result nearbyMenuOption(_NearbyMenuOption value),
-    Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
-    Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
-    Result getAllMenuOption(_GetAllMenuOption value),
-    Result getAllMenuBookOption(_GetAllMenuBookOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult nearbyMenuOption(_NearbyMenuOption value),
+    TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    TResult singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
+    TResult getAllMenuOption(_GetAllMenuOption value),
+    TResult getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nearbyMenuOption != null) {
@@ -1396,6 +1442,7 @@ abstract class _NearbyMenuOption implements MenuState {
   _$NearbyMenuOptionCopyWith<_NearbyMenuOption> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetMenuBookByRestaurantCopyWith<$Res> {
   factory _$GetMenuBookByRestaurantCopyWith(_GetMenuBookByRestaurant value,
           $Res Function(_GetMenuBookByRestaurant) then) =
@@ -1405,6 +1452,7 @@ abstract class _$GetMenuBookByRestaurantCopyWith<$Res> {
       Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse});
 }
 
+/// @nodoc
 class __$GetMenuBookByRestaurantCopyWithImpl<$Res>
     extends _$MenuStateCopyWithImpl<$Res>
     implements _$GetMenuBookByRestaurantCopyWith<$Res> {
@@ -1430,6 +1478,7 @@ class __$GetMenuBookByRestaurantCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
   const _$_GetMenuBookByRestaurant(
       {@required this.isLoading, @required this.menuBookResponse})
@@ -1471,24 +1520,24 @@ class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result nearbyMenuOption(bool isLoading,
+        TResult nearbyMenuOption(bool isLoading,
             Option<Either<MenuFailure, MenuResponse>> menuResponse),
     @required
-        Result getMenuBookByRestaurant(bool isLoading,
+        TResult getMenuBookByRestaurant(bool isLoading,
             Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             bool isLoading,
             Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
                 singleMenuOption),
     @required
-        Result getAllMenuOption(bool isLoading,
+        TResult getAllMenuOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
     @required
-        Result getAllMenuBookOption(bool isLoading,
+        TResult getAllMenuBookOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
@@ -1502,21 +1551,21 @@ class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result nearbyMenuOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult nearbyMenuOption(
         bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse),
-    Result getMenuBookByRestaurant(bool isLoading,
+    TResult getMenuBookByRestaurant(bool isLoading,
         Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
-    Result singleMenuWithRestaurantData(
+    TResult singleMenuWithRestaurantData(
         bool isLoading,
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
-    Result getAllMenuOption(bool isLoading,
+    TResult getAllMenuOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
-    Result getAllMenuBookOption(bool isLoading,
+    TResult getAllMenuBookOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getMenuBookByRestaurant != null) {
@@ -1527,15 +1576,15 @@ class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result nearbyMenuOption(_NearbyMenuOption value),
-    @required Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult nearbyMenuOption(_NearbyMenuOption value),
+    @required TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
-    @required Result getAllMenuOption(_GetAllMenuOption value),
-    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult getAllMenuOption(_GetAllMenuOption value),
+    @required TResult getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
@@ -1548,14 +1597,14 @@ class _$_GetMenuBookByRestaurant implements _GetMenuBookByRestaurant {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result nearbyMenuOption(_NearbyMenuOption value),
-    Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
-    Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
-    Result getAllMenuOption(_GetAllMenuOption value),
-    Result getAllMenuBookOption(_GetAllMenuBookOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult nearbyMenuOption(_NearbyMenuOption value),
+    TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    TResult singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
+    TResult getAllMenuOption(_GetAllMenuOption value),
+    TResult getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getMenuBookByRestaurant != null) {
@@ -1578,6 +1627,7 @@ abstract class _GetMenuBookByRestaurant implements MenuState {
   _$GetMenuBookByRestaurantCopyWith<_GetMenuBookByRestaurant> get copyWith;
 }
 
+/// @nodoc
 abstract class _$SingleMenuWithRestaurantDataCopyWith<$Res> {
   factory _$SingleMenuWithRestaurantDataCopyWith(
           _SingleMenuWithRestaurantData value,
@@ -1589,6 +1639,7 @@ abstract class _$SingleMenuWithRestaurantDataCopyWith<$Res> {
           singleMenuOption});
 }
 
+/// @nodoc
 class __$SingleMenuWithRestaurantDataCopyWithImpl<$Res>
     extends _$MenuStateCopyWithImpl<$Res>
     implements _$SingleMenuWithRestaurantDataCopyWith<$Res> {
@@ -1616,6 +1667,7 @@ class __$SingleMenuWithRestaurantDataCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
   const _$_SingleMenuWithRestaurantData(
       {@required this.isLoading, @required this.singleMenuOption})
@@ -1658,24 +1710,24 @@ class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result nearbyMenuOption(bool isLoading,
+        TResult nearbyMenuOption(bool isLoading,
             Option<Either<MenuFailure, MenuResponse>> menuResponse),
     @required
-        Result getMenuBookByRestaurant(bool isLoading,
+        TResult getMenuBookByRestaurant(bool isLoading,
             Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             bool isLoading,
             Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
                 singleMenuOption),
     @required
-        Result getAllMenuOption(bool isLoading,
+        TResult getAllMenuOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
     @required
-        Result getAllMenuBookOption(bool isLoading,
+        TResult getAllMenuBookOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
@@ -1689,21 +1741,21 @@ class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result nearbyMenuOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult nearbyMenuOption(
         bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse),
-    Result getMenuBookByRestaurant(bool isLoading,
+    TResult getMenuBookByRestaurant(bool isLoading,
         Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
-    Result singleMenuWithRestaurantData(
+    TResult singleMenuWithRestaurantData(
         bool isLoading,
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
-    Result getAllMenuOption(bool isLoading,
+    TResult getAllMenuOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
-    Result getAllMenuBookOption(bool isLoading,
+    TResult getAllMenuBookOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (singleMenuWithRestaurantData != null) {
@@ -1714,15 +1766,15 @@ class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result nearbyMenuOption(_NearbyMenuOption value),
-    @required Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult nearbyMenuOption(_NearbyMenuOption value),
+    @required TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
-    @required Result getAllMenuOption(_GetAllMenuOption value),
-    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult getAllMenuOption(_GetAllMenuOption value),
+    @required TResult getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
@@ -1735,14 +1787,14 @@ class _$_SingleMenuWithRestaurantData implements _SingleMenuWithRestaurantData {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result nearbyMenuOption(_NearbyMenuOption value),
-    Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
-    Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
-    Result getAllMenuOption(_GetAllMenuOption value),
-    Result getAllMenuBookOption(_GetAllMenuBookOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult nearbyMenuOption(_NearbyMenuOption value),
+    TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    TResult singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
+    TResult getAllMenuOption(_GetAllMenuOption value),
+    TResult getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (singleMenuWithRestaurantData != null) {
@@ -1767,6 +1819,7 @@ abstract class _SingleMenuWithRestaurantData implements MenuState {
       get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetAllMenuOptionCopyWith<$Res> {
   factory _$GetAllMenuOptionCopyWith(
           _GetAllMenuOption value, $Res Function(_GetAllMenuOption) then) =
@@ -1776,6 +1829,7 @@ abstract class _$GetAllMenuOptionCopyWith<$Res> {
       Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption});
 }
 
+/// @nodoc
 class __$GetAllMenuOptionCopyWithImpl<$Res>
     extends _$MenuStateCopyWithImpl<$Res>
     implements _$GetAllMenuOptionCopyWith<$Res> {
@@ -1800,6 +1854,7 @@ class __$GetAllMenuOptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetAllMenuOption implements _GetAllMenuOption {
   const _$_GetAllMenuOption(
       {@required this.isLoading, @required this.allMenuOption})
@@ -1840,24 +1895,24 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result nearbyMenuOption(bool isLoading,
+        TResult nearbyMenuOption(bool isLoading,
             Option<Either<MenuFailure, MenuResponse>> menuResponse),
     @required
-        Result getMenuBookByRestaurant(bool isLoading,
+        TResult getMenuBookByRestaurant(bool isLoading,
             Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             bool isLoading,
             Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
                 singleMenuOption),
     @required
-        Result getAllMenuOption(bool isLoading,
+        TResult getAllMenuOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
     @required
-        Result getAllMenuBookOption(bool isLoading,
+        TResult getAllMenuBookOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
@@ -1871,21 +1926,21 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result nearbyMenuOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult nearbyMenuOption(
         bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse),
-    Result getMenuBookByRestaurant(bool isLoading,
+    TResult getMenuBookByRestaurant(bool isLoading,
         Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
-    Result singleMenuWithRestaurantData(
+    TResult singleMenuWithRestaurantData(
         bool isLoading,
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
-    Result getAllMenuOption(bool isLoading,
+    TResult getAllMenuOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
-    Result getAllMenuBookOption(bool isLoading,
+    TResult getAllMenuBookOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllMenuOption != null) {
@@ -1896,15 +1951,15 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result nearbyMenuOption(_NearbyMenuOption value),
-    @required Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult nearbyMenuOption(_NearbyMenuOption value),
+    @required TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
-    @required Result getAllMenuOption(_GetAllMenuOption value),
-    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult getAllMenuOption(_GetAllMenuOption value),
+    @required TResult getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
@@ -1917,14 +1972,14 @@ class _$_GetAllMenuOption implements _GetAllMenuOption {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result nearbyMenuOption(_NearbyMenuOption value),
-    Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
-    Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
-    Result getAllMenuOption(_GetAllMenuOption value),
-    Result getAllMenuBookOption(_GetAllMenuBookOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult nearbyMenuOption(_NearbyMenuOption value),
+    TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    TResult singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
+    TResult getAllMenuOption(_GetAllMenuOption value),
+    TResult getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllMenuOption != null) {
@@ -1947,6 +2002,7 @@ abstract class _GetAllMenuOption implements MenuState {
   _$GetAllMenuOptionCopyWith<_GetAllMenuOption> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetAllMenuBookOptionCopyWith<$Res> {
   factory _$GetAllMenuBookOptionCopyWith(_GetAllMenuBookOption value,
           $Res Function(_GetAllMenuBookOption) then) =
@@ -1956,6 +2012,7 @@ abstract class _$GetAllMenuBookOptionCopyWith<$Res> {
       Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData});
 }
 
+/// @nodoc
 class __$GetAllMenuBookOptionCopyWithImpl<$Res>
     extends _$MenuStateCopyWithImpl<$Res>
     implements _$GetAllMenuBookOptionCopyWith<$Res> {
@@ -1980,6 +2037,7 @@ class __$GetAllMenuBookOptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetAllMenuBookOption implements _GetAllMenuBookOption {
   const _$_GetAllMenuBookOption(
       {@required this.isLoading, @required this.allMenuBookData})
@@ -2021,24 +2079,24 @@ class _$_GetAllMenuBookOption implements _GetAllMenuBookOption {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result nearbyMenuOption(bool isLoading,
+        TResult nearbyMenuOption(bool isLoading,
             Option<Either<MenuFailure, MenuResponse>> menuResponse),
     @required
-        Result getMenuBookByRestaurant(bool isLoading,
+        TResult getMenuBookByRestaurant(bool isLoading,
             Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             bool isLoading,
             Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
                 singleMenuOption),
     @required
-        Result getAllMenuOption(bool isLoading,
+        TResult getAllMenuOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
     @required
-        Result getAllMenuBookOption(bool isLoading,
+        TResult getAllMenuBookOption(bool isLoading,
             Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
   }) {
     assert(initial != null);
@@ -2052,21 +2110,21 @@ class _$_GetAllMenuBookOption implements _GetAllMenuBookOption {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result nearbyMenuOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult nearbyMenuOption(
         bool isLoading, Option<Either<MenuFailure, MenuResponse>> menuResponse),
-    Result getMenuBookByRestaurant(bool isLoading,
+    TResult getMenuBookByRestaurant(bool isLoading,
         Option<Either<MenuFailure, MenuBookResponse>> menuBookResponse),
-    Result singleMenuWithRestaurantData(
+    TResult singleMenuWithRestaurantData(
         bool isLoading,
         Option<Either<MenuFailure, MenuBookResponseWithRestaurant>>
             singleMenuOption),
-    Result getAllMenuOption(bool isLoading,
+    TResult getAllMenuOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuClassData>>> allMenuOption),
-    Result getAllMenuBookOption(bool isLoading,
+    TResult getAllMenuBookOption(bool isLoading,
         Option<Either<MenuFailure, List<MenuBookData>>> allMenuBookData),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllMenuBookOption != null) {
@@ -2077,15 +2135,15 @@ class _$_GetAllMenuBookOption implements _GetAllMenuBookOption {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result nearbyMenuOption(_NearbyMenuOption value),
-    @required Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult nearbyMenuOption(_NearbyMenuOption value),
+    @required TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
     @required
-        Result singleMenuWithRestaurantData(
+        TResult singleMenuWithRestaurantData(
             _SingleMenuWithRestaurantData value),
-    @required Result getAllMenuOption(_GetAllMenuOption value),
-    @required Result getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult getAllMenuOption(_GetAllMenuOption value),
+    @required TResult getAllMenuBookOption(_GetAllMenuBookOption value),
   }) {
     assert(initial != null);
     assert(nearbyMenuOption != null);
@@ -2098,14 +2156,14 @@ class _$_GetAllMenuBookOption implements _GetAllMenuBookOption {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result nearbyMenuOption(_NearbyMenuOption value),
-    Result getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
-    Result singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
-    Result getAllMenuOption(_GetAllMenuOption value),
-    Result getAllMenuBookOption(_GetAllMenuBookOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult nearbyMenuOption(_NearbyMenuOption value),
+    TResult getMenuBookByRestaurant(_GetMenuBookByRestaurant value),
+    TResult singleMenuWithRestaurantData(_SingleMenuWithRestaurantData value),
+    TResult getAllMenuOption(_GetAllMenuOption value),
+    TResult getAllMenuBookOption(_GetAllMenuBookOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getAllMenuBookOption != null) {

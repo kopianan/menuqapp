@@ -94,7 +94,7 @@ class MenuRepository implements IMenuFacade {
 
     try {
       _response = await _dio.get(
-        Setting().getUrl + "app/v1/api/menu-book?paginate=$paginate&page=$page",
+        Setting().getUrl + "app/v1/api/menu-book?paginate=$paginate&page=$page&with=restaurant",
       );
       List _data = _response.data['data'];
       List<MenuBookData> _result =

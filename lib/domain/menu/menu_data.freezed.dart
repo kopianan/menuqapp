@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'menu_data.dart';
 
@@ -22,9 +22,11 @@ MenuData _$MenuDataFromJson(Map<String, dynamic> json) {
   }
 }
 
+/// @nodoc
 class _$MenuDataTearOff {
   const _$MenuDataTearOff();
 
+// ignore: unused_element
   MenuClassData menuClassData(
       {String id,
       @JsonKey(name: 'category_id') String categoryId,
@@ -50,6 +52,7 @@ class _$MenuDataTearOff {
     );
   }
 
+// ignore: unused_element
   MenuClassDataWithRestaurant menuClassDataWithRestaurant(
       {String id,
       @JsonKey(name: 'category_id') String categoryId,
@@ -77,6 +80,7 @@ class _$MenuDataTearOff {
     );
   }
 
+// ignore: unused_element
   MenuBookData menuBookData(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'name') String name,
@@ -101,11 +105,18 @@ class _$MenuDataTearOff {
       restaurant: restaurant,
     );
   }
+
+// ignore: unused_element
+  MenuData fromJson(Map<String, Object> json) {
+    return MenuData.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MenuData = _$MenuDataTearOff();
 
+/// @nodoc
 mixin _$MenuData {
   String get id;
   @JsonKey(name: 'category_id')
@@ -119,9 +130,9 @@ mixin _$MenuData {
   String get largeUrl;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
+  TResult when<TResult extends Object>({
     @required
-        Result menuClassData(
+        TResult menuClassData(
             String id,
             @JsonKey(name: 'category_id') String categoryId,
             @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -133,7 +144,7 @@ mixin _$MenuData {
             @JsonKey(name: 'large_url') String largeUrl,
             int sorting),
     @required
-        Result menuClassDataWithRestaurant(
+        TResult menuClassDataWithRestaurant(
             String id,
             @JsonKey(name: 'category_id') String categoryId,
             @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -146,7 +157,7 @@ mixin _$MenuData {
             @JsonKey(name: 'restaurant') RestaurantData restaurant,
             int sorting),
     @required
-        Result menuBookData(
+        TResult menuBookData(
             @JsonKey(name: 'id') String id,
             @JsonKey(name: 'name') String name,
             @JsonKey(name: 'category_id') String categoryId,
@@ -159,8 +170,8 @@ mixin _$MenuData {
             @JsonKey(name: 'restaurant') RestaurantData restaurant),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuClassData(
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuClassData(
         String id,
         @JsonKey(name: 'category_id') String categoryId,
         @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -171,7 +182,7 @@ mixin _$MenuData {
         @JsonKey(name: 'medium_url') String mediumUrl,
         @JsonKey(name: 'large_url') String largeUrl,
         int sorting),
-    Result menuClassDataWithRestaurant(
+    TResult menuClassDataWithRestaurant(
         String id,
         @JsonKey(name: 'category_id') String categoryId,
         @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -183,7 +194,7 @@ mixin _$MenuData {
         @JsonKey(name: 'large_url') String largeUrl,
         @JsonKey(name: 'restaurant') RestaurantData restaurant,
         int sorting),
-    Result menuBookData(
+    TResult menuBookData(
         @JsonKey(name: 'id') String id,
         @JsonKey(name: 'name') String name,
         @JsonKey(name: 'category_id') String categoryId,
@@ -194,26 +205,27 @@ mixin _$MenuData {
         @JsonKey(name: 'created_at') String createdAt,
         @JsonKey(name: 'updated_at') String updatedAt,
         @JsonKey(name: 'restaurant') RestaurantData restaurant),
-    @required Result orElse(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuClassData(MenuClassData value),
+  TResult map<TResult extends Object>({
+    @required TResult menuClassData(MenuClassData value),
     @required
-        Result menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
-    @required Result menuBookData(MenuBookData value),
+        TResult menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
+    @required TResult menuBookData(MenuBookData value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuClassData(MenuClassData value),
-    Result menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
-    Result menuBookData(MenuBookData value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuClassData(MenuClassData value),
+    TResult menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
+    TResult menuBookData(MenuBookData value),
+    @required TResult orElse(),
   });
   Map<String, dynamic> toJson();
   $MenuDataCopyWith<MenuData> get copyWith;
 }
 
+/// @nodoc
 abstract class $MenuDataCopyWith<$Res> {
   factory $MenuDataCopyWith(MenuData value, $Res Function(MenuData) then) =
       _$MenuDataCopyWithImpl<$Res>;
@@ -226,6 +238,7 @@ abstract class $MenuDataCopyWith<$Res> {
       @JsonKey(name: 'large_url') String largeUrl});
 }
 
+/// @nodoc
 class _$MenuDataCopyWithImpl<$Res> implements $MenuDataCopyWith<$Res> {
   _$MenuDataCopyWithImpl(this._value, this._then);
 
@@ -254,6 +267,7 @@ class _$MenuDataCopyWithImpl<$Res> implements $MenuDataCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class $MenuClassDataCopyWith<$Res> implements $MenuDataCopyWith<$Res> {
   factory $MenuClassDataCopyWith(
           MenuClassData value, $Res Function(MenuClassData) then) =
@@ -272,6 +286,7 @@ abstract class $MenuClassDataCopyWith<$Res> implements $MenuDataCopyWith<$Res> {
       int sorting});
 }
 
+/// @nodoc
 class _$MenuClassDataCopyWithImpl<$Res> extends _$MenuDataCopyWithImpl<$Res>
     implements $MenuClassDataCopyWith<$Res> {
   _$MenuClassDataCopyWithImpl(
@@ -314,6 +329,8 @@ class _$MenuClassDataCopyWithImpl<$Res> extends _$MenuDataCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$MenuClassData implements MenuClassData {
   const _$MenuClassData(
       {this.id,
@@ -413,9 +430,9 @@ class _$MenuClassData implements MenuClassData {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
+  TResult when<TResult extends Object>({
     @required
-        Result menuClassData(
+        TResult menuClassData(
             String id,
             @JsonKey(name: 'category_id') String categoryId,
             @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -427,7 +444,7 @@ class _$MenuClassData implements MenuClassData {
             @JsonKey(name: 'large_url') String largeUrl,
             int sorting),
     @required
-        Result menuClassDataWithRestaurant(
+        TResult menuClassDataWithRestaurant(
             String id,
             @JsonKey(name: 'category_id') String categoryId,
             @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -440,7 +457,7 @@ class _$MenuClassData implements MenuClassData {
             @JsonKey(name: 'restaurant') RestaurantData restaurant,
             int sorting),
     @required
-        Result menuBookData(
+        TResult menuBookData(
             @JsonKey(name: 'id') String id,
             @JsonKey(name: 'name') String name,
             @JsonKey(name: 'category_id') String categoryId,
@@ -461,8 +478,8 @@ class _$MenuClassData implements MenuClassData {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuClassData(
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuClassData(
         String id,
         @JsonKey(name: 'category_id') String categoryId,
         @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -473,7 +490,7 @@ class _$MenuClassData implements MenuClassData {
         @JsonKey(name: 'medium_url') String mediumUrl,
         @JsonKey(name: 'large_url') String largeUrl,
         int sorting),
-    Result menuClassDataWithRestaurant(
+    TResult menuClassDataWithRestaurant(
         String id,
         @JsonKey(name: 'category_id') String categoryId,
         @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -485,7 +502,7 @@ class _$MenuClassData implements MenuClassData {
         @JsonKey(name: 'large_url') String largeUrl,
         @JsonKey(name: 'restaurant') RestaurantData restaurant,
         int sorting),
-    Result menuBookData(
+    TResult menuBookData(
         @JsonKey(name: 'id') String id,
         @JsonKey(name: 'name') String name,
         @JsonKey(name: 'category_id') String categoryId,
@@ -496,7 +513,7 @@ class _$MenuClassData implements MenuClassData {
         @JsonKey(name: 'created_at') String createdAt,
         @JsonKey(name: 'updated_at') String updatedAt,
         @JsonKey(name: 'restaurant') RestaurantData restaurant),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuClassData != null) {
@@ -508,11 +525,11 @@ class _$MenuClassData implements MenuClassData {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuClassData(MenuClassData value),
+  TResult map<TResult extends Object>({
+    @required TResult menuClassData(MenuClassData value),
     @required
-        Result menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
-    @required Result menuBookData(MenuBookData value),
+        TResult menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
+    @required TResult menuBookData(MenuBookData value),
   }) {
     assert(menuClassData != null);
     assert(menuClassDataWithRestaurant != null);
@@ -522,11 +539,11 @@ class _$MenuClassData implements MenuClassData {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuClassData(MenuClassData value),
-    Result menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
-    Result menuBookData(MenuBookData value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuClassData(MenuClassData value),
+    TResult menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
+    TResult menuBookData(MenuBookData value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuClassData != null) {
@@ -582,6 +599,7 @@ abstract class MenuClassData implements MenuData {
   $MenuClassDataCopyWith<MenuClassData> get copyWith;
 }
 
+/// @nodoc
 abstract class $MenuClassDataWithRestaurantCopyWith<$Res>
     implements $MenuDataCopyWith<$Res> {
   factory $MenuClassDataWithRestaurantCopyWith(
@@ -605,6 +623,7 @@ abstract class $MenuClassDataWithRestaurantCopyWith<$Res>
   $RestaurantDataCopyWith<$Res> get restaurant;
 }
 
+/// @nodoc
 class _$MenuClassDataWithRestaurantCopyWithImpl<$Res>
     extends _$MenuDataCopyWithImpl<$Res>
     implements $MenuClassDataWithRestaurantCopyWith<$Res> {
@@ -663,6 +682,8 @@ class _$MenuClassDataWithRestaurantCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
   const _$MenuClassDataWithRestaurant(
       {this.id,
@@ -771,9 +792,9 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
+  TResult when<TResult extends Object>({
     @required
-        Result menuClassData(
+        TResult menuClassData(
             String id,
             @JsonKey(name: 'category_id') String categoryId,
             @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -785,7 +806,7 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
             @JsonKey(name: 'large_url') String largeUrl,
             int sorting),
     @required
-        Result menuClassDataWithRestaurant(
+        TResult menuClassDataWithRestaurant(
             String id,
             @JsonKey(name: 'category_id') String categoryId,
             @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -798,7 +819,7 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
             @JsonKey(name: 'restaurant') RestaurantData restaurant,
             int sorting),
     @required
-        Result menuBookData(
+        TResult menuBookData(
             @JsonKey(name: 'id') String id,
             @JsonKey(name: 'name') String name,
             @JsonKey(name: 'category_id') String categoryId,
@@ -819,8 +840,8 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuClassData(
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuClassData(
         String id,
         @JsonKey(name: 'category_id') String categoryId,
         @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -831,7 +852,7 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
         @JsonKey(name: 'medium_url') String mediumUrl,
         @JsonKey(name: 'large_url') String largeUrl,
         int sorting),
-    Result menuClassDataWithRestaurant(
+    TResult menuClassDataWithRestaurant(
         String id,
         @JsonKey(name: 'category_id') String categoryId,
         @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -843,7 +864,7 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
         @JsonKey(name: 'large_url') String largeUrl,
         @JsonKey(name: 'restaurant') RestaurantData restaurant,
         int sorting),
-    Result menuBookData(
+    TResult menuBookData(
         @JsonKey(name: 'id') String id,
         @JsonKey(name: 'name') String name,
         @JsonKey(name: 'category_id') String categoryId,
@@ -854,7 +875,7 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
         @JsonKey(name: 'created_at') String createdAt,
         @JsonKey(name: 'updated_at') String updatedAt,
         @JsonKey(name: 'restaurant') RestaurantData restaurant),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuClassDataWithRestaurant != null) {
@@ -876,11 +897,11 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuClassData(MenuClassData value),
+  TResult map<TResult extends Object>({
+    @required TResult menuClassData(MenuClassData value),
     @required
-        Result menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
-    @required Result menuBookData(MenuBookData value),
+        TResult menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
+    @required TResult menuBookData(MenuBookData value),
   }) {
     assert(menuClassData != null);
     assert(menuClassDataWithRestaurant != null);
@@ -890,11 +911,11 @@ class _$MenuClassDataWithRestaurant implements MenuClassDataWithRestaurant {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuClassData(MenuClassData value),
-    Result menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
-    Result menuBookData(MenuBookData value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuClassData(MenuClassData value),
+    TResult menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
+    TResult menuBookData(MenuBookData value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuClassDataWithRestaurant != null) {
@@ -955,6 +976,7 @@ abstract class MenuClassDataWithRestaurant implements MenuData {
       get copyWith;
 }
 
+/// @nodoc
 abstract class $MenuBookDataCopyWith<$Res> implements $MenuDataCopyWith<$Res> {
   factory $MenuBookDataCopyWith(
           MenuBookData value, $Res Function(MenuBookData) then) =
@@ -975,6 +997,7 @@ abstract class $MenuBookDataCopyWith<$Res> implements $MenuDataCopyWith<$Res> {
   $RestaurantDataCopyWith<$Res> get restaurant;
 }
 
+/// @nodoc
 class _$MenuBookDataCopyWithImpl<$Res> extends _$MenuDataCopyWithImpl<$Res>
     implements $MenuBookDataCopyWith<$Res> {
   _$MenuBookDataCopyWithImpl(
@@ -1026,6 +1049,8 @@ class _$MenuBookDataCopyWithImpl<$Res> extends _$MenuDataCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$MenuBookData implements MenuBookData {
   const _$MenuBookData(
       {@JsonKey(name: 'id') this.id,
@@ -1132,9 +1157,9 @@ class _$MenuBookData implements MenuBookData {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
+  TResult when<TResult extends Object>({
     @required
-        Result menuClassData(
+        TResult menuClassData(
             String id,
             @JsonKey(name: 'category_id') String categoryId,
             @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -1146,7 +1171,7 @@ class _$MenuBookData implements MenuBookData {
             @JsonKey(name: 'large_url') String largeUrl,
             int sorting),
     @required
-        Result menuClassDataWithRestaurant(
+        TResult menuClassDataWithRestaurant(
             String id,
             @JsonKey(name: 'category_id') String categoryId,
             @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -1159,7 +1184,7 @@ class _$MenuBookData implements MenuBookData {
             @JsonKey(name: 'restaurant') RestaurantData restaurant,
             int sorting),
     @required
-        Result menuBookData(
+        TResult menuBookData(
             @JsonKey(name: 'id') String id,
             @JsonKey(name: 'name') String name,
             @JsonKey(name: 'category_id') String categoryId,
@@ -1180,8 +1205,8 @@ class _$MenuBookData implements MenuBookData {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result menuClassData(
+  TResult maybeWhen<TResult extends Object>({
+    TResult menuClassData(
         String id,
         @JsonKey(name: 'category_id') String categoryId,
         @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -1192,7 +1217,7 @@ class _$MenuBookData implements MenuBookData {
         @JsonKey(name: 'medium_url') String mediumUrl,
         @JsonKey(name: 'large_url') String largeUrl,
         int sorting),
-    Result menuClassDataWithRestaurant(
+    TResult menuClassDataWithRestaurant(
         String id,
         @JsonKey(name: 'category_id') String categoryId,
         @JsonKey(name: 'restaurant_id') String restaurantId,
@@ -1204,7 +1229,7 @@ class _$MenuBookData implements MenuBookData {
         @JsonKey(name: 'large_url') String largeUrl,
         @JsonKey(name: 'restaurant') RestaurantData restaurant,
         int sorting),
-    Result menuBookData(
+    TResult menuBookData(
         @JsonKey(name: 'id') String id,
         @JsonKey(name: 'name') String name,
         @JsonKey(name: 'category_id') String categoryId,
@@ -1215,7 +1240,7 @@ class _$MenuBookData implements MenuBookData {
         @JsonKey(name: 'created_at') String createdAt,
         @JsonKey(name: 'updated_at') String updatedAt,
         @JsonKey(name: 'restaurant') RestaurantData restaurant),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuBookData != null) {
@@ -1227,11 +1252,11 @@ class _$MenuBookData implements MenuBookData {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result menuClassData(MenuClassData value),
+  TResult map<TResult extends Object>({
+    @required TResult menuClassData(MenuClassData value),
     @required
-        Result menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
-    @required Result menuBookData(MenuBookData value),
+        TResult menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
+    @required TResult menuBookData(MenuBookData value),
   }) {
     assert(menuClassData != null);
     assert(menuClassDataWithRestaurant != null);
@@ -1241,11 +1266,11 @@ class _$MenuBookData implements MenuBookData {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result menuClassData(MenuClassData value),
-    Result menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
-    Result menuBookData(MenuBookData value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult menuClassData(MenuClassData value),
+    TResult menuClassDataWithRestaurant(MenuClassDataWithRestaurant value),
+    TResult menuBookData(MenuBookData value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (menuBookData != null) {

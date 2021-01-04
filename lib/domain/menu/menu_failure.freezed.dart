@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'menu_failure.dart';
 
@@ -9,19 +9,23 @@ part of 'menu_failure.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$MenuFailureTearOff {
   const _$MenuFailureTearOff();
 
+// ignore: unused_element
   _BadRequest badRequest(String message) {
     return _BadRequest(
       message,
     );
   }
 
+// ignore: unused_element
   _NotFound notFound() {
     return const _NotFound();
   }
 
+// ignore: unused_element
   _ServerError serverError(String message) {
     return _ServerError(
       message,
@@ -29,44 +33,48 @@ class _$MenuFailureTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $MenuFailure = _$MenuFailureTearOff();
 
+/// @nodoc
 mixin _$MenuFailure {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result badRequest(String message),
-    @required Result notFound(),
-    @required Result serverError(String message),
+  TResult when<TResult extends Object>({
+    @required TResult badRequest(String message),
+    @required TResult notFound(),
+    @required TResult serverError(String message),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result badRequest(String message),
-    Result notFound(),
-    Result serverError(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult badRequest(String message),
+    TResult notFound(),
+    TResult serverError(String message),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result badRequest(_BadRequest value),
-    @required Result notFound(_NotFound value),
-    @required Result serverError(_ServerError value),
+  TResult map<TResult extends Object>({
+    @required TResult badRequest(_BadRequest value),
+    @required TResult notFound(_NotFound value),
+    @required TResult serverError(_ServerError value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result badRequest(_BadRequest value),
-    Result notFound(_NotFound value),
-    Result serverError(_ServerError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult badRequest(_BadRequest value),
+    TResult notFound(_NotFound value),
+    TResult serverError(_ServerError value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $MenuFailureCopyWith<$Res> {
   factory $MenuFailureCopyWith(
           MenuFailure value, $Res Function(MenuFailure) then) =
       _$MenuFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MenuFailureCopyWithImpl<$Res> implements $MenuFailureCopyWith<$Res> {
   _$MenuFailureCopyWithImpl(this._value, this._then);
 
@@ -75,6 +83,7 @@ class _$MenuFailureCopyWithImpl<$Res> implements $MenuFailureCopyWith<$Res> {
   final $Res Function(MenuFailure) _then;
 }
 
+/// @nodoc
 abstract class _$BadRequestCopyWith<$Res> {
   factory _$BadRequestCopyWith(
           _BadRequest value, $Res Function(_BadRequest) then) =
@@ -82,6 +91,7 @@ abstract class _$BadRequestCopyWith<$Res> {
   $Res call({String message});
 }
 
+/// @nodoc
 class __$BadRequestCopyWithImpl<$Res> extends _$MenuFailureCopyWithImpl<$Res>
     implements _$BadRequestCopyWith<$Res> {
   __$BadRequestCopyWithImpl(
@@ -101,6 +111,7 @@ class __$BadRequestCopyWithImpl<$Res> extends _$MenuFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_BadRequest implements _BadRequest {
   const _$_BadRequest(this.message) : assert(message != null);
 
@@ -130,10 +141,10 @@ class _$_BadRequest implements _BadRequest {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result badRequest(String message),
-    @required Result notFound(),
-    @required Result serverError(String message),
+  TResult when<TResult extends Object>({
+    @required TResult badRequest(String message),
+    @required TResult notFound(),
+    @required TResult serverError(String message),
   }) {
     assert(badRequest != null);
     assert(notFound != null);
@@ -143,11 +154,11 @@ class _$_BadRequest implements _BadRequest {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result badRequest(String message),
-    Result notFound(),
-    Result serverError(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult badRequest(String message),
+    TResult notFound(),
+    TResult serverError(String message),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (badRequest != null) {
@@ -158,10 +169,10 @@ class _$_BadRequest implements _BadRequest {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result badRequest(_BadRequest value),
-    @required Result notFound(_NotFound value),
-    @required Result serverError(_ServerError value),
+  TResult map<TResult extends Object>({
+    @required TResult badRequest(_BadRequest value),
+    @required TResult notFound(_NotFound value),
+    @required TResult serverError(_ServerError value),
   }) {
     assert(badRequest != null);
     assert(notFound != null);
@@ -171,11 +182,11 @@ class _$_BadRequest implements _BadRequest {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result badRequest(_BadRequest value),
-    Result notFound(_NotFound value),
-    Result serverError(_ServerError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult badRequest(_BadRequest value),
+    TResult notFound(_NotFound value),
+    TResult serverError(_ServerError value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (badRequest != null) {
@@ -192,11 +203,13 @@ abstract class _BadRequest implements MenuFailure {
   _$BadRequestCopyWith<_BadRequest> get copyWith;
 }
 
+/// @nodoc
 abstract class _$NotFoundCopyWith<$Res> {
   factory _$NotFoundCopyWith(_NotFound value, $Res Function(_NotFound) then) =
       __$NotFoundCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$NotFoundCopyWithImpl<$Res> extends _$MenuFailureCopyWithImpl<$Res>
     implements _$NotFoundCopyWith<$Res> {
   __$NotFoundCopyWithImpl(_NotFound _value, $Res Function(_NotFound) _then)
@@ -206,6 +219,7 @@ class __$NotFoundCopyWithImpl<$Res> extends _$MenuFailureCopyWithImpl<$Res>
   _NotFound get _value => super._value as _NotFound;
 }
 
+/// @nodoc
 class _$_NotFound implements _NotFound {
   const _$_NotFound();
 
@@ -224,10 +238,10 @@ class _$_NotFound implements _NotFound {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result badRequest(String message),
-    @required Result notFound(),
-    @required Result serverError(String message),
+  TResult when<TResult extends Object>({
+    @required TResult badRequest(String message),
+    @required TResult notFound(),
+    @required TResult serverError(String message),
   }) {
     assert(badRequest != null);
     assert(notFound != null);
@@ -237,11 +251,11 @@ class _$_NotFound implements _NotFound {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result badRequest(String message),
-    Result notFound(),
-    Result serverError(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult badRequest(String message),
+    TResult notFound(),
+    TResult serverError(String message),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (notFound != null) {
@@ -252,10 +266,10 @@ class _$_NotFound implements _NotFound {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result badRequest(_BadRequest value),
-    @required Result notFound(_NotFound value),
-    @required Result serverError(_ServerError value),
+  TResult map<TResult extends Object>({
+    @required TResult badRequest(_BadRequest value),
+    @required TResult notFound(_NotFound value),
+    @required TResult serverError(_ServerError value),
   }) {
     assert(badRequest != null);
     assert(notFound != null);
@@ -265,11 +279,11 @@ class _$_NotFound implements _NotFound {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result badRequest(_BadRequest value),
-    Result notFound(_NotFound value),
-    Result serverError(_ServerError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult badRequest(_BadRequest value),
+    TResult notFound(_NotFound value),
+    TResult serverError(_ServerError value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (notFound != null) {
@@ -283,6 +297,7 @@ abstract class _NotFound implements MenuFailure {
   const factory _NotFound() = _$_NotFound;
 }
 
+/// @nodoc
 abstract class _$ServerErrorCopyWith<$Res> {
   factory _$ServerErrorCopyWith(
           _ServerError value, $Res Function(_ServerError) then) =
@@ -290,6 +305,7 @@ abstract class _$ServerErrorCopyWith<$Res> {
   $Res call({String message});
 }
 
+/// @nodoc
 class __$ServerErrorCopyWithImpl<$Res> extends _$MenuFailureCopyWithImpl<$Res>
     implements _$ServerErrorCopyWith<$Res> {
   __$ServerErrorCopyWithImpl(
@@ -309,6 +325,7 @@ class __$ServerErrorCopyWithImpl<$Res> extends _$MenuFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ServerError implements _ServerError {
   const _$_ServerError(this.message) : assert(message != null);
 
@@ -338,10 +355,10 @@ class _$_ServerError implements _ServerError {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result badRequest(String message),
-    @required Result notFound(),
-    @required Result serverError(String message),
+  TResult when<TResult extends Object>({
+    @required TResult badRequest(String message),
+    @required TResult notFound(),
+    @required TResult serverError(String message),
   }) {
     assert(badRequest != null);
     assert(notFound != null);
@@ -351,11 +368,11 @@ class _$_ServerError implements _ServerError {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result badRequest(String message),
-    Result notFound(),
-    Result serverError(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult badRequest(String message),
+    TResult notFound(),
+    TResult serverError(String message),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (serverError != null) {
@@ -366,10 +383,10 @@ class _$_ServerError implements _ServerError {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result badRequest(_BadRequest value),
-    @required Result notFound(_NotFound value),
-    @required Result serverError(_ServerError value),
+  TResult map<TResult extends Object>({
+    @required TResult badRequest(_BadRequest value),
+    @required TResult notFound(_NotFound value),
+    @required TResult serverError(_ServerError value),
   }) {
     assert(badRequest != null);
     assert(notFound != null);
@@ -379,11 +396,11 @@ class _$_ServerError implements _ServerError {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result badRequest(_BadRequest value),
-    Result notFound(_NotFound value),
-    Result serverError(_ServerError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult badRequest(_BadRequest value),
+    TResult notFound(_NotFound value),
+    TResult serverError(_ServerError value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (serverError != null) {

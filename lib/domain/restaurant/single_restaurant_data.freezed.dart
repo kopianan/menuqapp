@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'single_restaurant_data.dart';
 
@@ -12,9 +12,11 @@ SingleRestaurantData _$SingleRestaurantDataFromJson(Map<String, dynamic> json) {
   return SingleRestaurantCompleteData.fromJson(json);
 }
 
+/// @nodoc
 class _$SingleRestaurantDataTearOff {
   const _$SingleRestaurantDataTearOff();
 
+// ignore: unused_element
   SingleRestaurantCompleteData singleRestaurantCompleteData(
       {String id,
       @JsonKey(name: 'owner_id') String ownerId,
@@ -47,11 +49,18 @@ class _$SingleRestaurantDataTearOff {
       categoryList: categoryList,
     );
   }
+
+// ignore: unused_element
+  SingleRestaurantData fromJson(Map<String, Object> json) {
+    return SingleRestaurantData.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $SingleRestaurantData = _$SingleRestaurantDataTearOff();
 
+/// @nodoc
 mixin _$SingleRestaurantData {
   String get id;
   @JsonKey(name: 'owner_id')
@@ -76,10 +85,60 @@ mixin _$SingleRestaurantData {
   @JsonKey(name: 'categories')
   List<CategoryDataClass> get categoryList;
 
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required
+        TResult singleRestaurantCompleteData(
+            String id,
+            @JsonKey(name: 'owner_id') String ownerId,
+            String name,
+            String address,
+            @JsonKey(name: 'phone_number') String phoneNumber,
+            String instagram,
+            String lat,
+            String lng,
+            @JsonKey(name: 'created_at') String createdAt,
+            @JsonKey(name: 'logo_url') String logoUrl,
+            @JsonKey(name: 'updated_at') String updatedAt,
+            @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
+            @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
+            @JsonKey(name: 'categories') List<CategoryDataClass> categoryList),
+  });
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult singleRestaurantCompleteData(
+        String id,
+        @JsonKey(name: 'owner_id') String ownerId,
+        String name,
+        String address,
+        @JsonKey(name: 'phone_number') String phoneNumber,
+        String instagram,
+        String lat,
+        String lng,
+        @JsonKey(name: 'created_at') String createdAt,
+        @JsonKey(name: 'logo_url') String logoUrl,
+        @JsonKey(name: 'updated_at') String updatedAt,
+        @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
+        @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
+        @JsonKey(name: 'categories') List<CategoryDataClass> categoryList),
+    @required TResult orElse(),
+  });
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required
+        TResult singleRestaurantCompleteData(
+            SingleRestaurantCompleteData value),
+  });
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult singleRestaurantCompleteData(SingleRestaurantCompleteData value),
+    @required TResult orElse(),
+  });
   Map<String, dynamic> toJson();
   $SingleRestaurantDataCopyWith<SingleRestaurantData> get copyWith;
 }
 
+/// @nodoc
 abstract class $SingleRestaurantDataCopyWith<$Res> {
   factory $SingleRestaurantDataCopyWith(SingleRestaurantData value,
           $Res Function(SingleRestaurantData) then) =
@@ -101,6 +160,7 @@ abstract class $SingleRestaurantDataCopyWith<$Res> {
       @JsonKey(name: 'categories') List<CategoryDataClass> categoryList});
 }
 
+/// @nodoc
 class _$SingleRestaurantDataCopyWithImpl<$Res>
     implements $SingleRestaurantDataCopyWith<$Res> {
   _$SingleRestaurantDataCopyWithImpl(this._value, this._then);
@@ -152,6 +212,7 @@ class _$SingleRestaurantDataCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class $SingleRestaurantCompleteDataCopyWith<$Res>
     implements $SingleRestaurantDataCopyWith<$Res> {
   factory $SingleRestaurantCompleteDataCopyWith(
@@ -176,6 +237,7 @@ abstract class $SingleRestaurantCompleteDataCopyWith<$Res>
       @JsonKey(name: 'categories') List<CategoryDataClass> categoryList});
 }
 
+/// @nodoc
 class _$SingleRestaurantCompleteDataCopyWithImpl<$Res>
     extends _$SingleRestaurantDataCopyWithImpl<$Res>
     implements $SingleRestaurantCompleteDataCopyWith<$Res> {
@@ -232,6 +294,8 @@ class _$SingleRestaurantCompleteDataCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$SingleRestaurantCompleteData implements SingleRestaurantCompleteData {
   const _$SingleRestaurantCompleteData(
       {this.id,
@@ -360,6 +424,109 @@ class _$SingleRestaurantCompleteData implements SingleRestaurantCompleteData {
   $SingleRestaurantCompleteDataCopyWith<SingleRestaurantCompleteData>
       get copyWith => _$SingleRestaurantCompleteDataCopyWithImpl<
           SingleRestaurantCompleteData>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required
+        TResult singleRestaurantCompleteData(
+            String id,
+            @JsonKey(name: 'owner_id') String ownerId,
+            String name,
+            String address,
+            @JsonKey(name: 'phone_number') String phoneNumber,
+            String instagram,
+            String lat,
+            String lng,
+            @JsonKey(name: 'created_at') String createdAt,
+            @JsonKey(name: 'logo_url') String logoUrl,
+            @JsonKey(name: 'updated_at') String updatedAt,
+            @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
+            @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
+            @JsonKey(name: 'categories') List<CategoryDataClass> categoryList),
+  }) {
+    assert(singleRestaurantCompleteData != null);
+    return singleRestaurantCompleteData(
+        id,
+        ownerId,
+        name,
+        address,
+        phoneNumber,
+        instagram,
+        lat,
+        lng,
+        createdAt,
+        logoUrl,
+        updatedAt,
+        menuClassDataList,
+        menuBookDataList,
+        categoryList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult singleRestaurantCompleteData(
+        String id,
+        @JsonKey(name: 'owner_id') String ownerId,
+        String name,
+        String address,
+        @JsonKey(name: 'phone_number') String phoneNumber,
+        String instagram,
+        String lat,
+        String lng,
+        @JsonKey(name: 'created_at') String createdAt,
+        @JsonKey(name: 'logo_url') String logoUrl,
+        @JsonKey(name: 'updated_at') String updatedAt,
+        @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
+        @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
+        @JsonKey(name: 'categories') List<CategoryDataClass> categoryList),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (singleRestaurantCompleteData != null) {
+      return singleRestaurantCompleteData(
+          id,
+          ownerId,
+          name,
+          address,
+          phoneNumber,
+          instagram,
+          lat,
+          lng,
+          createdAt,
+          logoUrl,
+          updatedAt,
+          menuClassDataList,
+          menuBookDataList,
+          categoryList);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required
+        TResult singleRestaurantCompleteData(
+            SingleRestaurantCompleteData value),
+  }) {
+    assert(singleRestaurantCompleteData != null);
+    return singleRestaurantCompleteData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult singleRestaurantCompleteData(SingleRestaurantCompleteData value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (singleRestaurantCompleteData != null) {
+      return singleRestaurantCompleteData(this);
+    }
+    return orElse();
+  }
 
   @override
   Map<String, dynamic> toJson() {

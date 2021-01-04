@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'category_data.dart';
 
@@ -12,9 +12,11 @@ CategoryData _$CategoryDataFromJson(Map<String, dynamic> json) {
   return CategoryDataClass.fromJson(json);
 }
 
+/// @nodoc
 class _$CategoryDataTearOff {
   const _$CategoryDataTearOff();
 
+// ignore: unused_element
   CategoryDataClass categoryDataClass(
       {String id,
       String name,
@@ -25,21 +27,50 @@ class _$CategoryDataTearOff {
       restaurantId: restaurantId,
     );
   }
+
+// ignore: unused_element
+  CategoryData fromJson(Map<String, Object> json) {
+    return CategoryData.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $CategoryData = _$CategoryDataTearOff();
 
+/// @nodoc
 mixin _$CategoryData {
   String get id;
   String get name;
   @JsonKey(name: 'restaurant_id')
   String get restaurantId;
 
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required
+        TResult categoryDataClass(String id, String name,
+            @JsonKey(name: 'restaurant_id') String restaurantId),
+  });
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult categoryDataClass(String id, String name,
+        @JsonKey(name: 'restaurant_id') String restaurantId),
+    @required TResult orElse(),
+  });
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult categoryDataClass(CategoryDataClass value),
+  });
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult categoryDataClass(CategoryDataClass value),
+    @required TResult orElse(),
+  });
   Map<String, dynamic> toJson();
   $CategoryDataCopyWith<CategoryData> get copyWith;
 }
 
+/// @nodoc
 abstract class $CategoryDataCopyWith<$Res> {
   factory $CategoryDataCopyWith(
           CategoryData value, $Res Function(CategoryData) then) =
@@ -50,6 +81,7 @@ abstract class $CategoryDataCopyWith<$Res> {
       @JsonKey(name: 'restaurant_id') String restaurantId});
 }
 
+/// @nodoc
 class _$CategoryDataCopyWithImpl<$Res> implements $CategoryDataCopyWith<$Res> {
   _$CategoryDataCopyWithImpl(this._value, this._then);
 
@@ -73,6 +105,7 @@ class _$CategoryDataCopyWithImpl<$Res> implements $CategoryDataCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class $CategoryDataClassCopyWith<$Res>
     implements $CategoryDataCopyWith<$Res> {
   factory $CategoryDataClassCopyWith(
@@ -85,6 +118,7 @@ abstract class $CategoryDataClassCopyWith<$Res>
       @JsonKey(name: 'restaurant_id') String restaurantId});
 }
 
+/// @nodoc
 class _$CategoryDataClassCopyWithImpl<$Res>
     extends _$CategoryDataCopyWithImpl<$Res>
     implements $CategoryDataClassCopyWith<$Res> {
@@ -112,6 +146,8 @@ class _$CategoryDataClassCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$CategoryDataClass implements CategoryDataClass {
   const _$CategoryDataClass(
       {this.id, this.name, @JsonKey(name: 'restaurant_id') this.restaurantId});
@@ -155,6 +191,53 @@ class _$CategoryDataClass implements CategoryDataClass {
   @override
   $CategoryDataClassCopyWith<CategoryDataClass> get copyWith =>
       _$CategoryDataClassCopyWithImpl<CategoryDataClass>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required
+        TResult categoryDataClass(String id, String name,
+            @JsonKey(name: 'restaurant_id') String restaurantId),
+  }) {
+    assert(categoryDataClass != null);
+    return categoryDataClass(id, name, restaurantId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult categoryDataClass(String id, String name,
+        @JsonKey(name: 'restaurant_id') String restaurantId),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (categoryDataClass != null) {
+      return categoryDataClass(id, name, restaurantId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult categoryDataClass(CategoryDataClass value),
+  }) {
+    assert(categoryDataClass != null);
+    return categoryDataClass(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult categoryDataClass(CategoryDataClass value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (categoryDataClass != null) {
+      return categoryDataClass(this);
+    }
+    return orElse();
+  }
 
   @override
   Map<String, dynamic> toJson() {

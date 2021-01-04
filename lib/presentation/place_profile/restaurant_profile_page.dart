@@ -11,6 +11,7 @@ import '../../injection.dart';
 import 'widgets/restaurant_profile_loading_widget.dart';
 
 class RestaurantProfilePage extends StatefulWidget {
+  static final  String TAG = '/restaurant_profile';  
   RestaurantProfilePage({Key key}) : super(key: key);
 
   @override

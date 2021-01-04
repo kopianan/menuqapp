@@ -14,7 +14,8 @@ class HomeMenuBookContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-         Get.toNamed('/restaurant_profile', arguments: menuBookData.restaurant.id);
+        Get.toNamed('/restaurant_profile',
+            arguments: menuBookData.restaurant.id);
       },
       child: Padding(
         padding: const EdgeInsets.only(right: 10),

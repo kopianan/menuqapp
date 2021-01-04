@@ -6,6 +6,8 @@ import '../../injection.dart';
 import 'widgets/see_all_book_menu_item_widget.dart';
 
 class SeeAllMenuBookPage extends StatefulWidget {
+     static final  String TAG = '/see_all_menu_book';
+
   SeeAllMenuBookPage({Key key}) : super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class _SeeAllMenuBookPageState extends State<SeeAllMenuBookPage> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          getIt<MenuBloc>()..add(MenuEvent.getAllMenuBook("5", "1")),
+          getIt<MenuBloc>()..add(MenuEvent.getAllMenuBook("10", "1")),
       child: BlocConsumer<MenuBloc, MenuState>(
         listener: (context, state) {
           state.maybeMap(

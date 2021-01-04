@@ -35,7 +35,7 @@ class _HomeFeedContentState extends State<HomeFeedContent> {
     super.initState();
   }
 
-  void _onPanDown(DragDownDetails dragDownDetails) {
+  void _onPanDown(DragDownDetails dragfDownDetails) {
     FocusScopeNode currentFocus = FocusScope.of(context);
     if (!currentFocus.hasPrimaryFocus) {
       currentFocus.unfocus();
@@ -98,7 +98,9 @@ class _HomeFeedContentState extends State<HomeFeedContent> {
                   allHomeDataOption: (dataOption) => dataOption.fold(
                         () => HomeLoadingPage(),
                         (a) => a.fold(
-                            (l) => HomeErrorPage(), (r) => HomeFeedContainer()),
+                          (l) => HomeErrorPage(),
+                          (r) => HomeFeedContainer(),
+                        ),
                       ));
             },
           ),

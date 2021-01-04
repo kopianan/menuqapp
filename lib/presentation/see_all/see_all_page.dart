@@ -12,6 +12,7 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../../injection.dart';
 
 class SeeAllPage extends StatefulWidget {
+  static final  String TAG = '/see_all';
   SeeAllPage({Key key}) : super(key: key);
 
   @override

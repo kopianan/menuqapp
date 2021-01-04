@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AppWidget extends StatelessWidget {
+  static final String TAG = '/app_widget';
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       initialRoute: '/splash_screen',
       debugShowCheckedModeBanner: false,
       title: 'Menuq',
-      getPages: RouterData().getAllPages,
+      getPages: getAllPages,
       defaultTransition: Transition.downToUp,
       theme: ThemeData(
         accentColor: Color(0xffF8DE44),

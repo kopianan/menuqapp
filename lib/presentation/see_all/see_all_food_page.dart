@@ -9,6 +9,7 @@ import '../../domain/menu/menu_data.dart';
 import '../../injection.dart';
 
 class SeeAllFoodPage extends StatefulWidget {
+  static final  String TAG = '/see_all_food';
   SeeAllFoodPage({Key key}) : super(key: key);
 
   @override

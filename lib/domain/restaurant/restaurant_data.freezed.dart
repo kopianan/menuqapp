@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'restaurant_data.dart';
 
@@ -12,9 +12,11 @@ RestaurantData _$RestaurantDataFromJson(Map<String, dynamic> json) {
   return RestaurantDataList.fromJson(json);
 }
 
+/// @nodoc
 class _$RestaurantDataTearOff {
   const _$RestaurantDataTearOff();
 
+// ignore: unused_element
   RestaurantDataList restaurantDataList(
       {String id,
       @JsonKey(name: 'owner_id') String ownerId,
@@ -41,11 +43,18 @@ class _$RestaurantDataTearOff {
       updatedAt: updatedAt,
     );
   }
+
+// ignore: unused_element
+  RestaurantData fromJson(Map<String, Object> json) {
+    return RestaurantData.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RestaurantData = _$RestaurantDataTearOff();
 
+/// @nodoc
 mixin _$RestaurantData {
   String get id;
   @JsonKey(name: 'owner_id')
@@ -64,10 +73,52 @@ mixin _$RestaurantData {
   @JsonKey(name: 'updated_at')
   String get updatedAt;
 
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required
+        TResult restaurantDataList(
+            String id,
+            @JsonKey(name: 'owner_id') String ownerId,
+            String name,
+            String address,
+            @JsonKey(name: 'phone_number') String phoneNumber,
+            String instagram,
+            String lat,
+            String lng,
+            @JsonKey(name: 'logo_url') String logoUrl,
+            @JsonKey(name: 'created_at') String createdAt,
+            @JsonKey(name: 'updated_at') String updatedAt),
+  });
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult restaurantDataList(
+        String id,
+        @JsonKey(name: 'owner_id') String ownerId,
+        String name,
+        String address,
+        @JsonKey(name: 'phone_number') String phoneNumber,
+        String instagram,
+        String lat,
+        String lng,
+        @JsonKey(name: 'logo_url') String logoUrl,
+        @JsonKey(name: 'created_at') String createdAt,
+        @JsonKey(name: 'updated_at') String updatedAt),
+    @required TResult orElse(),
+  });
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult restaurantDataList(RestaurantDataList value),
+  });
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult restaurantDataList(RestaurantDataList value),
+    @required TResult orElse(),
+  });
   Map<String, dynamic> toJson();
   $RestaurantDataCopyWith<RestaurantData> get copyWith;
 }
 
+/// @nodoc
 abstract class $RestaurantDataCopyWith<$Res> {
   factory $RestaurantDataCopyWith(
           RestaurantData value, $Res Function(RestaurantData) then) =
@@ -86,6 +137,7 @@ abstract class $RestaurantDataCopyWith<$Res> {
       @JsonKey(name: 'updated_at') String updatedAt});
 }
 
+/// @nodoc
 class _$RestaurantDataCopyWithImpl<$Res>
     implements $RestaurantDataCopyWith<$Res> {
   _$RestaurantDataCopyWithImpl(this._value, this._then);
@@ -125,6 +177,7 @@ class _$RestaurantDataCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class $RestaurantDataListCopyWith<$Res>
     implements $RestaurantDataCopyWith<$Res> {
   factory $RestaurantDataListCopyWith(
@@ -145,6 +198,7 @@ abstract class $RestaurantDataListCopyWith<$Res>
       @JsonKey(name: 'updated_at') String updatedAt});
 }
 
+/// @nodoc
 class _$RestaurantDataListCopyWithImpl<$Res>
     extends _$RestaurantDataCopyWithImpl<$Res>
     implements $RestaurantDataListCopyWith<$Res> {
@@ -187,6 +241,8 @@ class _$RestaurantDataListCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$RestaurantDataList implements RestaurantDataList {
   const _$RestaurantDataList(
       {this.id,
@@ -290,6 +346,75 @@ class _$RestaurantDataList implements RestaurantDataList {
   @override
   $RestaurantDataListCopyWith<RestaurantDataList> get copyWith =>
       _$RestaurantDataListCopyWithImpl<RestaurantDataList>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required
+        TResult restaurantDataList(
+            String id,
+            @JsonKey(name: 'owner_id') String ownerId,
+            String name,
+            String address,
+            @JsonKey(name: 'phone_number') String phoneNumber,
+            String instagram,
+            String lat,
+            String lng,
+            @JsonKey(name: 'logo_url') String logoUrl,
+            @JsonKey(name: 'created_at') String createdAt,
+            @JsonKey(name: 'updated_at') String updatedAt),
+  }) {
+    assert(restaurantDataList != null);
+    return restaurantDataList(id, ownerId, name, address, phoneNumber,
+        instagram, lat, lng, logoUrl, createdAt, updatedAt);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult restaurantDataList(
+        String id,
+        @JsonKey(name: 'owner_id') String ownerId,
+        String name,
+        String address,
+        @JsonKey(name: 'phone_number') String phoneNumber,
+        String instagram,
+        String lat,
+        String lng,
+        @JsonKey(name: 'logo_url') String logoUrl,
+        @JsonKey(name: 'created_at') String createdAt,
+        @JsonKey(name: 'updated_at') String updatedAt),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (restaurantDataList != null) {
+      return restaurantDataList(id, ownerId, name, address, phoneNumber,
+          instagram, lat, lng, logoUrl, createdAt, updatedAt);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult restaurantDataList(RestaurantDataList value),
+  }) {
+    assert(restaurantDataList != null);
+    return restaurantDataList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult restaurantDataList(RestaurantDataList value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (restaurantDataList != null) {
+      return restaurantDataList(this);
+    }
+    return orElse();
+  }
 
   @override
   Map<String, dynamic> toJson() {

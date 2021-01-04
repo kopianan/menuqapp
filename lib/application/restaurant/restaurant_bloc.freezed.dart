@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'restaurant_bloc.dart';
 
@@ -9,9 +9,11 @@ part of 'restaurant_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$RestaurantEventTearOff {
   const _$RestaurantEventTearOff();
 
+// ignore: unused_element
   _GetRestaurantList getRestaurantList(
       {@required GetRestaurantListRequest request}) {
     return _GetRestaurantList(
@@ -19,6 +21,7 @@ class _$RestaurantEventTearOff {
     );
   }
 
+// ignore: unused_element
   _GetNearbyRestaurantList getNearbyRestaurantList(
       {@required GetRestaurantListRequest request}) {
     return _GetNearbyRestaurantList(
@@ -26,6 +29,7 @@ class _$RestaurantEventTearOff {
     );
   }
 
+// ignore: unused_element
   _GetCompleteRestaurantData getCompleteRestaurantData(
       {@required String restaurantId}) {
     return _GetCompleteRestaurantData(
@@ -34,45 +38,49 @@ class _$RestaurantEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RestaurantEvent = _$RestaurantEventTearOff();
 
+/// @nodoc
 mixin _$RestaurantEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getRestaurantList(GetRestaurantListRequest request),
-    @required Result getNearbyRestaurantList(GetRestaurantListRequest request),
-    @required Result getCompleteRestaurantData(String restaurantId),
+  TResult when<TResult extends Object>({
+    @required TResult getRestaurantList(GetRestaurantListRequest request),
+    @required TResult getNearbyRestaurantList(GetRestaurantListRequest request),
+    @required TResult getCompleteRestaurantData(String restaurantId),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getRestaurantList(GetRestaurantListRequest request),
-    Result getNearbyRestaurantList(GetRestaurantListRequest request),
-    Result getCompleteRestaurantData(String restaurantId),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getRestaurantList(GetRestaurantListRequest request),
+    TResult getNearbyRestaurantList(GetRestaurantListRequest request),
+    TResult getCompleteRestaurantData(String restaurantId),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getRestaurantList(_GetRestaurantList value),
-    @required Result getNearbyRestaurantList(_GetNearbyRestaurantList value),
+  TResult map<TResult extends Object>({
+    @required TResult getRestaurantList(_GetRestaurantList value),
+    @required TResult getNearbyRestaurantList(_GetNearbyRestaurantList value),
     @required
-        Result getCompleteRestaurantData(_GetCompleteRestaurantData value),
+        TResult getCompleteRestaurantData(_GetCompleteRestaurantData value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getRestaurantList(_GetRestaurantList value),
-    Result getNearbyRestaurantList(_GetNearbyRestaurantList value),
-    Result getCompleteRestaurantData(_GetCompleteRestaurantData value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getRestaurantList(_GetRestaurantList value),
+    TResult getNearbyRestaurantList(_GetNearbyRestaurantList value),
+    TResult getCompleteRestaurantData(_GetCompleteRestaurantData value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $RestaurantEventCopyWith<$Res> {
   factory $RestaurantEventCopyWith(
           RestaurantEvent value, $Res Function(RestaurantEvent) then) =
       _$RestaurantEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$RestaurantEventCopyWithImpl<$Res>
     implements $RestaurantEventCopyWith<$Res> {
   _$RestaurantEventCopyWithImpl(this._value, this._then);
@@ -82,6 +90,7 @@ class _$RestaurantEventCopyWithImpl<$Res>
   final $Res Function(RestaurantEvent) _then;
 }
 
+/// @nodoc
 abstract class _$GetRestaurantListCopyWith<$Res> {
   factory _$GetRestaurantListCopyWith(
           _GetRestaurantList value, $Res Function(_GetRestaurantList) then) =
@@ -89,6 +98,7 @@ abstract class _$GetRestaurantListCopyWith<$Res> {
   $Res call({GetRestaurantListRequest request});
 }
 
+/// @nodoc
 class __$GetRestaurantListCopyWithImpl<$Res>
     extends _$RestaurantEventCopyWithImpl<$Res>
     implements _$GetRestaurantListCopyWith<$Res> {
@@ -111,6 +121,7 @@ class __$GetRestaurantListCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetRestaurantList
     with DiagnosticableTreeMixin
     implements _GetRestaurantList {
@@ -151,10 +162,10 @@ class _$_GetRestaurantList
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getRestaurantList(GetRestaurantListRequest request),
-    @required Result getNearbyRestaurantList(GetRestaurantListRequest request),
-    @required Result getCompleteRestaurantData(String restaurantId),
+  TResult when<TResult extends Object>({
+    @required TResult getRestaurantList(GetRestaurantListRequest request),
+    @required TResult getNearbyRestaurantList(GetRestaurantListRequest request),
+    @required TResult getCompleteRestaurantData(String restaurantId),
   }) {
     assert(getRestaurantList != null);
     assert(getNearbyRestaurantList != null);
@@ -164,11 +175,11 @@ class _$_GetRestaurantList
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getRestaurantList(GetRestaurantListRequest request),
-    Result getNearbyRestaurantList(GetRestaurantListRequest request),
-    Result getCompleteRestaurantData(String restaurantId),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getRestaurantList(GetRestaurantListRequest request),
+    TResult getNearbyRestaurantList(GetRestaurantListRequest request),
+    TResult getCompleteRestaurantData(String restaurantId),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRestaurantList != null) {
@@ -179,11 +190,11 @@ class _$_GetRestaurantList
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getRestaurantList(_GetRestaurantList value),
-    @required Result getNearbyRestaurantList(_GetNearbyRestaurantList value),
+  TResult map<TResult extends Object>({
+    @required TResult getRestaurantList(_GetRestaurantList value),
+    @required TResult getNearbyRestaurantList(_GetNearbyRestaurantList value),
     @required
-        Result getCompleteRestaurantData(_GetCompleteRestaurantData value),
+        TResult getCompleteRestaurantData(_GetCompleteRestaurantData value),
   }) {
     assert(getRestaurantList != null);
     assert(getNearbyRestaurantList != null);
@@ -193,11 +204,11 @@ class _$_GetRestaurantList
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getRestaurantList(_GetRestaurantList value),
-    Result getNearbyRestaurantList(_GetNearbyRestaurantList value),
-    Result getCompleteRestaurantData(_GetCompleteRestaurantData value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getRestaurantList(_GetRestaurantList value),
+    TResult getNearbyRestaurantList(_GetNearbyRestaurantList value),
+    TResult getCompleteRestaurantData(_GetCompleteRestaurantData value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRestaurantList != null) {
@@ -215,6 +226,7 @@ abstract class _GetRestaurantList implements RestaurantEvent {
   _$GetRestaurantListCopyWith<_GetRestaurantList> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetNearbyRestaurantListCopyWith<$Res> {
   factory _$GetNearbyRestaurantListCopyWith(_GetNearbyRestaurantList value,
           $Res Function(_GetNearbyRestaurantList) then) =
@@ -222,6 +234,7 @@ abstract class _$GetNearbyRestaurantListCopyWith<$Res> {
   $Res call({GetRestaurantListRequest request});
 }
 
+/// @nodoc
 class __$GetNearbyRestaurantListCopyWithImpl<$Res>
     extends _$RestaurantEventCopyWithImpl<$Res>
     implements _$GetNearbyRestaurantListCopyWith<$Res> {
@@ -245,6 +258,7 @@ class __$GetNearbyRestaurantListCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetNearbyRestaurantList
     with DiagnosticableTreeMixin
     implements _GetNearbyRestaurantList {
@@ -287,10 +301,10 @@ class _$_GetNearbyRestaurantList
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getRestaurantList(GetRestaurantListRequest request),
-    @required Result getNearbyRestaurantList(GetRestaurantListRequest request),
-    @required Result getCompleteRestaurantData(String restaurantId),
+  TResult when<TResult extends Object>({
+    @required TResult getRestaurantList(GetRestaurantListRequest request),
+    @required TResult getNearbyRestaurantList(GetRestaurantListRequest request),
+    @required TResult getCompleteRestaurantData(String restaurantId),
   }) {
     assert(getRestaurantList != null);
     assert(getNearbyRestaurantList != null);
@@ -300,11 +314,11 @@ class _$_GetNearbyRestaurantList
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getRestaurantList(GetRestaurantListRequest request),
-    Result getNearbyRestaurantList(GetRestaurantListRequest request),
-    Result getCompleteRestaurantData(String restaurantId),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getRestaurantList(GetRestaurantListRequest request),
+    TResult getNearbyRestaurantList(GetRestaurantListRequest request),
+    TResult getCompleteRestaurantData(String restaurantId),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getNearbyRestaurantList != null) {
@@ -315,11 +329,11 @@ class _$_GetNearbyRestaurantList
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getRestaurantList(_GetRestaurantList value),
-    @required Result getNearbyRestaurantList(_GetNearbyRestaurantList value),
+  TResult map<TResult extends Object>({
+    @required TResult getRestaurantList(_GetRestaurantList value),
+    @required TResult getNearbyRestaurantList(_GetNearbyRestaurantList value),
     @required
-        Result getCompleteRestaurantData(_GetCompleteRestaurantData value),
+        TResult getCompleteRestaurantData(_GetCompleteRestaurantData value),
   }) {
     assert(getRestaurantList != null);
     assert(getNearbyRestaurantList != null);
@@ -329,11 +343,11 @@ class _$_GetNearbyRestaurantList
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getRestaurantList(_GetRestaurantList value),
-    Result getNearbyRestaurantList(_GetNearbyRestaurantList value),
-    Result getCompleteRestaurantData(_GetCompleteRestaurantData value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getRestaurantList(_GetRestaurantList value),
+    TResult getNearbyRestaurantList(_GetNearbyRestaurantList value),
+    TResult getCompleteRestaurantData(_GetCompleteRestaurantData value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getNearbyRestaurantList != null) {
@@ -352,6 +366,7 @@ abstract class _GetNearbyRestaurantList implements RestaurantEvent {
   _$GetNearbyRestaurantListCopyWith<_GetNearbyRestaurantList> get copyWith;
 }
 
+/// @nodoc
 abstract class _$GetCompleteRestaurantDataCopyWith<$Res> {
   factory _$GetCompleteRestaurantDataCopyWith(_GetCompleteRestaurantData value,
           $Res Function(_GetCompleteRestaurantData) then) =
@@ -359,6 +374,7 @@ abstract class _$GetCompleteRestaurantDataCopyWith<$Res> {
   $Res call({String restaurantId});
 }
 
+/// @nodoc
 class __$GetCompleteRestaurantDataCopyWithImpl<$Res>
     extends _$RestaurantEventCopyWithImpl<$Res>
     implements _$GetCompleteRestaurantDataCopyWith<$Res> {
@@ -382,6 +398,7 @@ class __$GetCompleteRestaurantDataCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetCompleteRestaurantData
     with DiagnosticableTreeMixin
     implements _GetCompleteRestaurantData {
@@ -426,10 +443,10 @@ class _$_GetCompleteRestaurantData
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getRestaurantList(GetRestaurantListRequest request),
-    @required Result getNearbyRestaurantList(GetRestaurantListRequest request),
-    @required Result getCompleteRestaurantData(String restaurantId),
+  TResult when<TResult extends Object>({
+    @required TResult getRestaurantList(GetRestaurantListRequest request),
+    @required TResult getNearbyRestaurantList(GetRestaurantListRequest request),
+    @required TResult getCompleteRestaurantData(String restaurantId),
   }) {
     assert(getRestaurantList != null);
     assert(getNearbyRestaurantList != null);
@@ -439,11 +456,11 @@ class _$_GetCompleteRestaurantData
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getRestaurantList(GetRestaurantListRequest request),
-    Result getNearbyRestaurantList(GetRestaurantListRequest request),
-    Result getCompleteRestaurantData(String restaurantId),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult getRestaurantList(GetRestaurantListRequest request),
+    TResult getNearbyRestaurantList(GetRestaurantListRequest request),
+    TResult getCompleteRestaurantData(String restaurantId),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getCompleteRestaurantData != null) {
@@ -454,11 +471,11 @@ class _$_GetCompleteRestaurantData
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getRestaurantList(_GetRestaurantList value),
-    @required Result getNearbyRestaurantList(_GetNearbyRestaurantList value),
+  TResult map<TResult extends Object>({
+    @required TResult getRestaurantList(_GetRestaurantList value),
+    @required TResult getNearbyRestaurantList(_GetNearbyRestaurantList value),
     @required
-        Result getCompleteRestaurantData(_GetCompleteRestaurantData value),
+        TResult getCompleteRestaurantData(_GetCompleteRestaurantData value),
   }) {
     assert(getRestaurantList != null);
     assert(getNearbyRestaurantList != null);
@@ -468,11 +485,11 @@ class _$_GetCompleteRestaurantData
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getRestaurantList(_GetRestaurantList value),
-    Result getNearbyRestaurantList(_GetNearbyRestaurantList value),
-    Result getCompleteRestaurantData(_GetCompleteRestaurantData value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult getRestaurantList(_GetRestaurantList value),
+    TResult getNearbyRestaurantList(_GetNearbyRestaurantList value),
+    TResult getCompleteRestaurantData(_GetCompleteRestaurantData value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getCompleteRestaurantData != null) {
@@ -490,13 +507,16 @@ abstract class _GetCompleteRestaurantData implements RestaurantEvent {
   _$GetCompleteRestaurantDataCopyWith<_GetCompleteRestaurantData> get copyWith;
 }
 
+/// @nodoc
 class _$RestaurantStateTearOff {
   const _$RestaurantStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _GetRestaurantListOption getRestarurantListOption(
       {@required
           bool isLoading,
@@ -509,6 +529,7 @@ class _$RestaurantStateTearOff {
     );
   }
 
+// ignore: unused_element
   _CompleteRestaurantDataOption completeRestaurantDataOption(
       {@required
           bool isLoading,
@@ -522,60 +543,64 @@ class _$RestaurantStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $RestaurantState = _$RestaurantStateTearOff();
 
+/// @nodoc
 mixin _$RestaurantState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result getRestarurantListOption(
+        TResult getRestarurantListOption(
             bool isLoading,
             Option<Either<RestaurantFailure, GetRestaurantListResponse>>
                 restaurantList),
     @required
-        Result completeRestaurantDataOption(
+        TResult completeRestaurantDataOption(
             bool isLoading,
             Option<Either<RestaurantFailure, GetAllRestaurantDataResponse>>
                 restaurantList),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result getRestarurantListOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult getRestarurantListOption(
         bool isLoading,
         Option<Either<RestaurantFailure, GetRestaurantListResponse>>
             restaurantList),
-    Result completeRestaurantDataOption(
+    TResult completeRestaurantDataOption(
         bool isLoading,
         Option<Either<RestaurantFailure, GetAllRestaurantDataResponse>>
             restaurantList),
-    @required Result orElse(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result getRestarurantListOption(_GetRestaurantListOption value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult getRestarurantListOption(_GetRestaurantListOption value),
     @required
-        Result completeRestaurantDataOption(
+        TResult completeRestaurantDataOption(
             _CompleteRestaurantDataOption value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result getRestarurantListOption(_GetRestaurantListOption value),
-    Result completeRestaurantDataOption(_CompleteRestaurantDataOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult getRestarurantListOption(_GetRestaurantListOption value),
+    TResult completeRestaurantDataOption(_CompleteRestaurantDataOption value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $RestaurantStateCopyWith<$Res> {
   factory $RestaurantStateCopyWith(
           RestaurantState value, $Res Function(RestaurantState) then) =
       _$RestaurantStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$RestaurantStateCopyWithImpl<$Res>
     implements $RestaurantStateCopyWith<$Res> {
   _$RestaurantStateCopyWithImpl(this._value, this._then);
@@ -585,11 +610,13 @@ class _$RestaurantStateCopyWithImpl<$Res>
   final $Res Function(RestaurantState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res> extends _$RestaurantStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
@@ -599,6 +626,7 @@ class __$InitialCopyWithImpl<$Res> extends _$RestaurantStateCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   const _$_Initial();
 
@@ -623,15 +651,15 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result getRestarurantListOption(
+        TResult getRestarurantListOption(
             bool isLoading,
             Option<Either<RestaurantFailure, GetRestaurantListResponse>>
                 restaurantList),
     @required
-        Result completeRestaurantDataOption(
+        TResult completeRestaurantDataOption(
             bool isLoading,
             Option<Either<RestaurantFailure, GetAllRestaurantDataResponse>>
                 restaurantList),
@@ -644,17 +672,17 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result getRestarurantListOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult getRestarurantListOption(
         bool isLoading,
         Option<Either<RestaurantFailure, GetRestaurantListResponse>>
             restaurantList),
-    Result completeRestaurantDataOption(
+    TResult completeRestaurantDataOption(
         bool isLoading,
         Option<Either<RestaurantFailure, GetAllRestaurantDataResponse>>
             restaurantList),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -665,11 +693,11 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result getRestarurantListOption(_GetRestaurantListOption value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult getRestarurantListOption(_GetRestaurantListOption value),
     @required
-        Result completeRestaurantDataOption(
+        TResult completeRestaurantDataOption(
             _CompleteRestaurantDataOption value),
   }) {
     assert(initial != null);
@@ -680,11 +708,11 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result getRestarurantListOption(_GetRestaurantListOption value),
-    Result completeRestaurantDataOption(_CompleteRestaurantDataOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult getRestarurantListOption(_GetRestaurantListOption value),
+    TResult completeRestaurantDataOption(_CompleteRestaurantDataOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -698,6 +726,7 @@ abstract class _Initial implements RestaurantState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$GetRestaurantListOptionCopyWith<$Res> {
   factory _$GetRestaurantListOptionCopyWith(_GetRestaurantListOption value,
           $Res Function(_GetRestaurantListOption) then) =
@@ -708,6 +737,7 @@ abstract class _$GetRestaurantListOptionCopyWith<$Res> {
           restaurantList});
 }
 
+/// @nodoc
 class __$GetRestaurantListOptionCopyWithImpl<$Res>
     extends _$RestaurantStateCopyWithImpl<$Res>
     implements _$GetRestaurantListOptionCopyWith<$Res> {
@@ -734,6 +764,7 @@ class __$GetRestaurantListOptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_GetRestaurantListOption
     with DiagnosticableTreeMixin
     implements _GetRestaurantListOption {
@@ -788,15 +819,15 @@ class _$_GetRestaurantListOption
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result getRestarurantListOption(
+        TResult getRestarurantListOption(
             bool isLoading,
             Option<Either<RestaurantFailure, GetRestaurantListResponse>>
                 restaurantList),
     @required
-        Result completeRestaurantDataOption(
+        TResult completeRestaurantDataOption(
             bool isLoading,
             Option<Either<RestaurantFailure, GetAllRestaurantDataResponse>>
                 restaurantList),
@@ -809,17 +840,17 @@ class _$_GetRestaurantListOption
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result getRestarurantListOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult getRestarurantListOption(
         bool isLoading,
         Option<Either<RestaurantFailure, GetRestaurantListResponse>>
             restaurantList),
-    Result completeRestaurantDataOption(
+    TResult completeRestaurantDataOption(
         bool isLoading,
         Option<Either<RestaurantFailure, GetAllRestaurantDataResponse>>
             restaurantList),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRestarurantListOption != null) {
@@ -830,11 +861,11 @@ class _$_GetRestaurantListOption
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result getRestarurantListOption(_GetRestaurantListOption value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult getRestarurantListOption(_GetRestaurantListOption value),
     @required
-        Result completeRestaurantDataOption(
+        TResult completeRestaurantDataOption(
             _CompleteRestaurantDataOption value),
   }) {
     assert(initial != null);
@@ -845,11 +876,11 @@ class _$_GetRestaurantListOption
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result getRestarurantListOption(_GetRestaurantListOption value),
-    Result completeRestaurantDataOption(_CompleteRestaurantDataOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult getRestarurantListOption(_GetRestaurantListOption value),
+    TResult completeRestaurantDataOption(_CompleteRestaurantDataOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getRestarurantListOption != null) {
@@ -873,6 +904,7 @@ abstract class _GetRestaurantListOption implements RestaurantState {
   _$GetRestaurantListOptionCopyWith<_GetRestaurantListOption> get copyWith;
 }
 
+/// @nodoc
 abstract class _$CompleteRestaurantDataOptionCopyWith<$Res> {
   factory _$CompleteRestaurantDataOptionCopyWith(
           _CompleteRestaurantDataOption value,
@@ -884,6 +916,7 @@ abstract class _$CompleteRestaurantDataOptionCopyWith<$Res> {
           restaurantList});
 }
 
+/// @nodoc
 class __$CompleteRestaurantDataOptionCopyWithImpl<$Res>
     extends _$RestaurantStateCopyWithImpl<$Res>
     implements _$CompleteRestaurantDataOptionCopyWith<$Res> {
@@ -911,6 +944,7 @@ class __$CompleteRestaurantDataOptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_CompleteRestaurantDataOption
     with DiagnosticableTreeMixin
     implements _CompleteRestaurantDataOption {
@@ -965,15 +999,15 @@ class _$_CompleteRestaurantDataOption
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
     @required
-        Result getRestarurantListOption(
+        TResult getRestarurantListOption(
             bool isLoading,
             Option<Either<RestaurantFailure, GetRestaurantListResponse>>
                 restaurantList),
     @required
-        Result completeRestaurantDataOption(
+        TResult completeRestaurantDataOption(
             bool isLoading,
             Option<Either<RestaurantFailure, GetAllRestaurantDataResponse>>
                 restaurantList),
@@ -986,17 +1020,17 @@ class _$_CompleteRestaurantDataOption
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result getRestarurantListOption(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult getRestarurantListOption(
         bool isLoading,
         Option<Either<RestaurantFailure, GetRestaurantListResponse>>
             restaurantList),
-    Result completeRestaurantDataOption(
+    TResult completeRestaurantDataOption(
         bool isLoading,
         Option<Either<RestaurantFailure, GetAllRestaurantDataResponse>>
             restaurantList),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (completeRestaurantDataOption != null) {
@@ -1007,11 +1041,11 @@ class _$_CompleteRestaurantDataOption
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result getRestarurantListOption(_GetRestaurantListOption value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult getRestarurantListOption(_GetRestaurantListOption value),
     @required
-        Result completeRestaurantDataOption(
+        TResult completeRestaurantDataOption(
             _CompleteRestaurantDataOption value),
   }) {
     assert(initial != null);
@@ -1022,11 +1056,11 @@ class _$_CompleteRestaurantDataOption
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result getRestarurantListOption(_GetRestaurantListOption value),
-    Result completeRestaurantDataOption(_CompleteRestaurantDataOption value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult getRestarurantListOption(_GetRestaurantListOption value),
+    TResult completeRestaurantDataOption(_CompleteRestaurantDataOption value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (completeRestaurantDataOption != null) {

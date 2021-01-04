@@ -11,6 +11,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'home_feed_content_page.dart';
 
 class MainHome extends StatefulWidget {
+  static final  String TAG = '/main_home'; 
   MainHome({Key key}) : super(key: key);
 
   @override
@@ -23,6 +24,7 @@ class _MainHomeState extends State<MainHome> {
   @override
   void initState() {
     locationController.setCurrentPosition("9,9");
+    print("TEST"); 
     super.initState();
   }
 

@@ -10,6 +10,8 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import '../../injection.dart';
 
 class SplashScreenPage extends StatefulWidget {
+  static final String TAG = '/splash_screen';
+
   SplashScreenPage({Key key}) : super(key: key);
 
   @override
@@ -36,10 +38,14 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
             },
             registerDeviceOption: (value) => value.option.fold(
                 () => () {},
-                (a) => a.fold((l) => print("Error"), (r) {
-                      Get.offAllNamed('/main_home');
-                      // Get.to(MainHome());
-                    })),
+                (a) => a.fold(
+                      (l) => print("Error"),
+                      (r) {
+                        // Get.offAllNamed('/main_home');
+                        Get.offNamed(MainHome.TAG);
+                        print("TO MAIN HOME");
+                      },
+                    )),
           );
         },
         builder: (context, state) {

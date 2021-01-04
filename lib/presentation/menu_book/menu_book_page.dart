@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:feroza/domain/menu/menu_data.dart';
 
 class MenuBookPage extends StatefulWidget {
+     static final  String TAG = '/menu_book';
   MenuBookPage({Key key}) : super(key: key);
 
   @override
