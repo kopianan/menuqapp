@@ -9,6 +9,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../../injection.dart';
 import 'container/home_feed_container.dart';
 import 'widgets/home_error_page.dart';
@@ -28,7 +29,6 @@ class _HomeFeedContentState extends State<HomeFeedContent> {
       Get.put(RestaurantController());
   final MenuController menuController = Get.put(MenuController());
   LocationController locationController;
-
   @override
   void initState() {
     locationController = Get.put(LocationController());
@@ -64,7 +64,7 @@ class _HomeFeedContentState extends State<HomeFeedContent> {
             listener: (context, state) {
               state.maybeWhen(
                 orElse: () {},
-                allHomeDataOption: (dataOption) => {
+                allHomeDataOption: (dataOption) {
                   dataOption.fold(
                       () => print("nothing"),
                       (a) => a.fold(
@@ -87,7 +87,7 @@ class _HomeFeedContentState extends State<HomeFeedContent> {
                                   .setRestaurantData(_firstData);
                               menuController.setMenuBook(_thirdData);
                             },
-                          ))
+                          ));
                 },
               );
             },
@@ -98,9 +98,7 @@ class _HomeFeedContentState extends State<HomeFeedContent> {
                   allHomeDataOption: (dataOption) => dataOption.fold(
                         () => HomeLoadingPage(),
                         (a) => a.fold(
-                          (l) => HomeErrorPage(),
-                          (r) => HomeFeedContainer(),
-                        ),
+                            (l) => HomeErrorPage(), (r) => HomeFeedContainer()),
                       ));
             },
           ),
