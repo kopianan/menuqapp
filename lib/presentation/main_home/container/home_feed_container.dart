@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:feroza/application/home/bloc/home_bloc.dart';
 import 'package:feroza/application/location/cubit/location_cubit.dart';
 import 'package:feroza/infrastructure/location/location_service.dart';
+import 'package:feroza/presentation/chart/chart_page.dart';
 import 'package:feroza/presentation/main_home/widgets/card_menu_list.dart';
 import 'package:feroza/presentation/main_home/widgets/home_food_card_item.dart';
 import 'package:feroza/presentation/main_home/widgets/home_restaurant_card_item.dart';
@@ -74,6 +75,14 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
         return Scaffold(
           backgroundColor: Color(0xfff6f5fa),
           appBar: AppBar(
+            actions: [
+              IconButton(
+                icon: Icon(Icons.shopping_cart),
+                onPressed: () {
+                  Get.toNamed(ChartPage.TAG); 
+                },
+              )
+            ],
             textTheme: TextTheme(
                 headline6: TextStyle(
                     color: Colors.black, fontWeight: FontWeight.bold)),
@@ -191,7 +200,7 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
                 elevation: 4,
                 splashColor: Colors.yellow,
                 onPressed: () {
-                  Get.toNamed(ScannerPage.TAG); 
+                  Get.toNamed(ScannerPage.TAG);
                 },
                 child: Icon(
                   MdiIcons.barcodeScan,
