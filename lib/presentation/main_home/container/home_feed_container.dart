@@ -8,6 +8,7 @@ import 'package:feroza/presentation/main_home/widgets/card_menu_list.dart';
 import 'package:feroza/presentation/main_home/widgets/home_food_card_item.dart';
 import 'package:feroza/presentation/main_home/widgets/home_restaurant_card_item.dart';
 import 'package:feroza/presentation/main_home/widgets/home_sub_title_container.dart';
+import 'package:feroza/presentation/scanner/scanner_page.dart';
 import 'package:feroza/presentation/see_all/see_all_food_page.dart';
 import 'package:feroza/presentation/see_all/see_all_menu_book_page.dart';
 import 'package:feroza/presentation/see_all/see_all_page.dart';
@@ -84,7 +85,6 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
                 headline6: TextStyle(
                     color: Colors.black, fontWeight: FontWeight.bold)),
             backgroundColor: Colors.yellow,
-            
             elevation: 0,
             centerTitle: true,
             title: Column(children: <Widget>[
@@ -208,15 +208,8 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
                 backgroundColor: Colors.white,
                 elevation: 4,
                 splashColor: Colors.yellow,
-                onPressed: () async {
-                  try {
-                    // var result = await BarcodeScanner.scan();
-                    // String _id = result.rawContent.split("/").last;
-
-                    // Get.toNamed('/restaurant_profile', arguments: _id);
-                  } catch (e) {
-                    print(e.toString());
-                  }
+                onPressed: () {
+                  Get.toNamed(ScannerPage.TAG); 
                 },
                 child: Icon(
                   MdiIcons.barcodeScan,

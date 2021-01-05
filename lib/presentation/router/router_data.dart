@@ -1,6 +1,7 @@
 import 'package:feroza/presentation/app_widget.dart';
 import 'package:feroza/presentation/menu_book/menu_book_page.dart';
 import 'package:feroza/presentation/place_profile/restaurant_profile_page.dart';
+import 'package:feroza/presentation/scanner/scanner_page.dart';
 import 'package:feroza/presentation/see_all/see_all_food_page.dart';
 import 'package:feroza/presentation/see_all/see_all_menu_book_page.dart';
 import 'package:feroza/presentation/see_all/see_all_page.dart';
@@ -27,5 +28,6 @@ List<GetPage> get getAllPages {
     GetPage(name: AppWidget.TAG, page: () => AppWidget()),
     GetPage(name: SeeAllFoodPage.TAG, page: () => SeeAllFoodPage()),
     GetPage(name: SeeAllMenuBookPage.TAG, page: () => SeeAllMenuBookPage()),
+    GetPage(name: ScannerPage.TAG, page: () => ScannerPage()),
   ];
 }
