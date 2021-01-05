@@ -50,14 +50,20 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
         },
         builder: (context, state) {
           return Scaffold(
-              body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Icon(
-                MdiIcons.foodForkDrink,
-                size: 100,
+              body: Stack(
+            children: [
+              Positioned(
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  bottom: 0,
+                  child: Image.asset(
+                    'assets/images/loading.png',
+                    fit: BoxFit.cover,
+                  )),
+              Center(
+                child: CircularProgressIndicator(),
               ),
-              Center(child: CircularProgressIndicator())
             ],
           ));
         },
@@ -72,7 +78,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       platformImei =
           await ImeiPlugin.getImei(shouldShowRequestPermissionRationale: false);
       print(platformImei);
-      context.bloc<AuthenticationBloc>()
+      context.read<AuthenticationBloc>()
         ..add(AuthenticationEvent.registerDevice(platformImei));
     } on PlatformException {
       platformImei = 'Failed to get platform version.';

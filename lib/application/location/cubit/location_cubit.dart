@@ -37,7 +37,7 @@ class LocationCubit extends Cubit<LocationState> {
     final _currLocation = await Geolocator.getCurrentPosition();
     List<Placemark> placemarks = await placemarkFromCoordinates(
         _currLocation.latitude, _currLocation.longitude);
-
+print(placemarks[1].toJson()); 
     emit(LocationState.onSuccess(placemarks));
   }
 }

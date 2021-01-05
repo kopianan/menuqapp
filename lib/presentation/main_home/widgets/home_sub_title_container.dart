@@ -13,11 +13,13 @@ class HomeSubTitleContainer extends StatelessWidget {
       contentPadding: EdgeInsets.only(right: 20, left: 20),
       title: Text(title,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-      trailing: InkWell(
-          onTap: onSeeAll,
-          child: Text("See All",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, color: Colors.orange[300]))),
+      trailing: (onSeeAll == null)
+          ? null
+          : InkWell(
+              onTap: onSeeAll,
+              child: Text("See All",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.orange[300]))),
     );
   }
 }

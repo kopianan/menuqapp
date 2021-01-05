@@ -30,11 +30,10 @@ import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeFeedContainer extends StatefulWidget {
-  const HomeFeedContainer({
-    Key key,
-  }) : super(key: key);
+  const HomeFeedContainer();
 
   @override
   _HomeFeedContainerState createState() => _HomeFeedContainerState();
@@ -57,13 +56,7 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
     super.initState();
   }
 
-  List<String> imageUrl = [
-    "https://suneducationgroup.com/wp-content/uploads/2019/11/WEB-BANNER-YEAR-END-PROMO-SUN-ENGLISH-2019-Copy-1.jpg",
-    "https://www.acerid.com/wp-content/uploads/2019/07/Acer-Day-2019-banner.jpg",
-    "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/hair-salon-summer-promo-banner-design-template-528ff4abd3f1db406d83eab50d1f7994_screen.jpg?ts=1561539295",
-    "https://snipped-d4559.firebaseapp.com/images/slider5.jpg",
-    "https://sslindonesia.com/wp-content/uploads/2018/11/banner-promo.jpg"
-  ];
+  List<String> imageUrl = ["assets/images/banner1.png"];
   Stream stream;
 
   @override
@@ -122,25 +115,14 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
                   SliverToBoxAdapter(
                     child: Column(
                       children: [
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  "Welcome!",
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            ],
-                          ),
+                        HomeSubTitleContainer(
+                          onSeeAll: null,
+                          title: "Offering Today",
                         ),
                         _promoCarousel(),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Column(
                           children: <Widget>[
                             HomeSubTitleContainer(
@@ -230,20 +212,28 @@ class _HomeFeedContainerState extends State<HomeFeedContainer> {
         children: [
           CarouselSlider(
             options: CarouselOptions(
-                height: 100.0,
+                // height: 100.0,
+
+                aspectRatio: 350 / 100,
                 enlargeStrategy: CenterPageEnlargeStrategy.scale,
+                height: 90,
                 enlargeCenterPage: false),
             items: imageUrl.map((i) {
               return Builder(
                 builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: NetworkImage(i), fit: BoxFit.cover)),
+                  return InkWell(
+                    onTap: () async {
+                      await launch('http://menuq.co');
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      margin: EdgeInsets.symmetric(horizontal: 5.0),
+                      decoration: BoxDecoration(
+                          color: Colors.amber,
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage(i), fit: BoxFit.cover)),
+                    ),
                   );
                 },
               );
