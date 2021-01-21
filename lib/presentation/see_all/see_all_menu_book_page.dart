@@ -1,3 +1,4 @@
+import 'package:feroza/functions/widget_function.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../application/menu/menu_bloc.dart';
@@ -6,7 +7,7 @@ import '../../injection.dart';
 import 'widgets/see_all_book_menu_item_widget.dart';
 
 class SeeAllMenuBookPage extends StatefulWidget {
-     static final  String TAG = '/see_all_menu_book';
+  static final String TAG = '/see_all_menu_book';
 
   SeeAllMenuBookPage({Key key}) : super(key: key);
 
@@ -62,9 +63,7 @@ class _SeeAllMenuBookPageState extends State<SeeAllMenuBookPage> {
 
   Scaffold _seeAllMenuBookData(List<MenuBookData> testData) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Nearby Menu"),
-        ),
+        appBar: WidgetFunction().appBarWithChartIcon("Nearby Menu"),
         body: Container(
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: CustomScrollView(

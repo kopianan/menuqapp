@@ -17,10 +17,12 @@ class _$ChartDataModelTearOff {
   const _$ChartDataModelTearOff();
 
 // ignore: unused_element
-  _ChartDataModel call({MenuData menuData, int quantity}) {
+  _ChartDataModel call(
+      {MenuClassData menuData, int quantity, String restaurantId}) {
     return _ChartDataModel(
       menuData: menuData,
       quantity: quantity,
+      restaurantId: restaurantId,
     );
   }
 
@@ -36,8 +38,9 @@ const $ChartDataModel = _$ChartDataModelTearOff();
 
 /// @nodoc
 mixin _$ChartDataModel {
-  MenuData get menuData;
+  MenuClassData get menuData;
   int get quantity;
+  String get restaurantId;
 
   Map<String, dynamic> toJson();
   $ChartDataModelCopyWith<ChartDataModel> get copyWith;
@@ -48,9 +51,7 @@ abstract class $ChartDataModelCopyWith<$Res> {
   factory $ChartDataModelCopyWith(
           ChartDataModel value, $Res Function(ChartDataModel) then) =
       _$ChartDataModelCopyWithImpl<$Res>;
-  $Res call({MenuData menuData, int quantity});
-
-  $MenuDataCopyWith<$Res> get menuData;
+  $Res call({MenuClassData menuData, int quantity, String restaurantId});
 }
 
 /// @nodoc
@@ -66,21 +67,16 @@ class _$ChartDataModelCopyWithImpl<$Res>
   $Res call({
     Object menuData = freezed,
     Object quantity = freezed,
+    Object restaurantId = freezed,
   }) {
     return _then(_value.copyWith(
-      menuData: menuData == freezed ? _value.menuData : menuData as MenuData,
+      menuData:
+          menuData == freezed ? _value.menuData : menuData as MenuClassData,
       quantity: quantity == freezed ? _value.quantity : quantity as int,
+      restaurantId: restaurantId == freezed
+          ? _value.restaurantId
+          : restaurantId as String,
     ));
-  }
-
-  @override
-  $MenuDataCopyWith<$Res> get menuData {
-    if (_value.menuData == null) {
-      return null;
-    }
-    return $MenuDataCopyWith<$Res>(_value.menuData, (value) {
-      return _then(_value.copyWith(menuData: value));
-    });
   }
 }
 
@@ -91,10 +87,7 @@ abstract class _$ChartDataModelCopyWith<$Res>
           _ChartDataModel value, $Res Function(_ChartDataModel) then) =
       __$ChartDataModelCopyWithImpl<$Res>;
   @override
-  $Res call({MenuData menuData, int quantity});
-
-  @override
-  $MenuDataCopyWith<$Res> get menuData;
+  $Res call({MenuClassData menuData, int quantity, String restaurantId});
 }
 
 /// @nodoc
@@ -112,10 +105,15 @@ class __$ChartDataModelCopyWithImpl<$Res>
   $Res call({
     Object menuData = freezed,
     Object quantity = freezed,
+    Object restaurantId = freezed,
   }) {
     return _then(_ChartDataModel(
-      menuData: menuData == freezed ? _value.menuData : menuData as MenuData,
+      menuData:
+          menuData == freezed ? _value.menuData : menuData as MenuClassData,
       quantity: quantity == freezed ? _value.quantity : quantity as int,
+      restaurantId: restaurantId == freezed
+          ? _value.restaurantId
+          : restaurantId as String,
     ));
   }
 }
@@ -124,19 +122,21 @@ class __$ChartDataModelCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ChartDataModel implements _ChartDataModel {
-  const _$_ChartDataModel({this.menuData, this.quantity});
+  _$_ChartDataModel({this.menuData, this.quantity, this.restaurantId});
 
   factory _$_ChartDataModel.fromJson(Map<String, dynamic> json) =>
       _$_$_ChartDataModelFromJson(json);
 
   @override
-  final MenuData menuData;
+  final MenuClassData menuData;
   @override
   final int quantity;
+  @override
+  final String restaurantId;
 
   @override
   String toString() {
-    return 'ChartDataModel(menuData: $menuData, quantity: $quantity)';
+    return 'ChartDataModel(menuData: $menuData, quantity: $quantity, restaurantId: $restaurantId)';
   }
 
   @override
@@ -148,14 +148,18 @@ class _$_ChartDataModel implements _ChartDataModel {
                     .equals(other.menuData, menuData)) &&
             (identical(other.quantity, quantity) ||
                 const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)));
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.restaurantId, restaurantId) ||
+                const DeepCollectionEquality()
+                    .equals(other.restaurantId, restaurantId)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(menuData) ^
-      const DeepCollectionEquality().hash(quantity);
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(restaurantId);
 
   @override
   _$ChartDataModelCopyWith<_ChartDataModel> get copyWith =>
@@ -168,16 +172,20 @@ class _$_ChartDataModel implements _ChartDataModel {
 }
 
 abstract class _ChartDataModel implements ChartDataModel {
-  const factory _ChartDataModel({MenuData menuData, int quantity}) =
-      _$_ChartDataModel;
+  factory _ChartDataModel(
+      {MenuClassData menuData,
+      int quantity,
+      String restaurantId}) = _$_ChartDataModel;
 
   factory _ChartDataModel.fromJson(Map<String, dynamic> json) =
       _$_ChartDataModel.fromJson;
 
   @override
-  MenuData get menuData;
+  MenuClassData get menuData;
   @override
   int get quantity;
+  @override
+  String get restaurantId;
   @override
   _$ChartDataModelCopyWith<_ChartDataModel> get copyWith;
 }

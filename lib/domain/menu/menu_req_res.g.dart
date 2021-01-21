@@ -57,8 +57,7 @@ _$MenuBookResponseWithRestaurant _$_$MenuBookResponseWithRestaurantFromJson(
   return _$MenuBookResponseWithRestaurant(
     data: json['data'] == null
         ? null
-        : MenuClassDataWithRestaurant.fromJson(
-            json['data'] as Map<String, dynamic>),
+        : MenuClassData.fromJson(json['data'] as Map<String, dynamic>),
   );
 }
 

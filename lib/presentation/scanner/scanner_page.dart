@@ -11,14 +11,26 @@ class ScannerPage extends StatefulWidget {
 
 class _ScannerPageState extends State<ScannerPage> {
   @override
+  void initState() {
+    // Get.back(result: "5f716892aeab2513574a2d1e");
+    super.initState();
+  }
+
+  int count = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Container(
           child: QrCamera(
             qrCodeCallback: (data) {
-              if (data != null) {
-                Get.back(closeOverlays: false);
+              if (count == 0) {
+                if (data != null) {
+                  print("TEST");
+                  Get.back(result: data);
+                  count++;
+                }
               }
             },
             formats: [BarcodeFormats.QR_CODE],

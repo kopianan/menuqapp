@@ -16,7 +16,7 @@ abstract class MenuReqRes implements _$MenuReqRes {
   const factory MenuReqRes.menuBookResponse({List<MenuBookData> data}) =
       MenuBookResponse;
   const factory MenuReqRes.menuBookResponseWithRestaurant(
-      {MenuClassDataWithRestaurant data}) = MenuBookResponseWithRestaurant;
+      {MenuClassData data}) = MenuBookResponseWithRestaurant;
 
   const factory MenuReqRes.menuBookRequest({
     int paginate,

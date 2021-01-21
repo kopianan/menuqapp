@@ -4,6 +4,7 @@ import 'package:feroza/domain/restaurant/restaurant_req_res.dart';
 import 'package:feroza/presentation/place_profile/restaurant_information_page.dart';
 import 'package:feroza/presentation/place_profile/widgets/menu_book_container.dart';
 import 'package:feroza/presentation/place_profile/widgets/menu_list_container.dart';
+import 'package:feroza/presentation/widgets/chart_icon_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -43,23 +44,21 @@ class _RestaurantProfileWidgetState extends State<RestaurantProfileWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
         backgroundColor: Color(0xfff6f5fa),
         bottomNavigationBar: BottomNavigationBar(
             onTap: onTabTapped,
             type: BottomNavigationBarType.fixed,
-
             selectedIconTheme: IconThemeData(color: Colors.yellow[700]),
             selectedLabelStyle: TextStyle(color: Colors.yellow[700]),
             currentIndex: _currentIndex,
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.list),
-                title: Text("Detail"),
+                label: "Detail",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.info),
-                title: Text("Info"),
+                label: "Info",
               ),
             ]),
         body: restaurantPage[_currentIndex]);
@@ -144,6 +143,7 @@ class _RestaurantFoodDataState extends State<RestaurantFoodData> {
           ), // This is the title in the app bar.
           pinned: true,
           forceElevated: innerBoxIsScrolled,
+          actions: [ChartIcon()],
 
           bottom: TabBar(
             // indicator: BoxDecoration(color: Colors.green),

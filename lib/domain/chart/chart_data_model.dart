@@ -5,8 +5,10 @@ part 'chart_data_model.g.dart';
 
 @freezed
 abstract class ChartDataModel implements _$ChartDataModel {
-  const factory ChartDataModel({MenuData menuData, int quantity}) =
-      _ChartDataModel;
+  factory ChartDataModel(
+      {MenuClassData menuData,
+      int quantity,
+      String restaurantId}) = _ChartDataModel;
   factory ChartDataModel.fromJson(Map<String, dynamic> json) =>
       _$ChartDataModelFromJson(json);
 }

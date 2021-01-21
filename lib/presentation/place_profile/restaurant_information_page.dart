@@ -1,4 +1,5 @@
 import 'package:feroza/domain/restaurant/restaurant_req_res.dart';
+import 'package:feroza/functions/widget_function.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/route_manager.dart';
@@ -25,9 +26,7 @@ class _RestaurantInformationPageState extends State<RestaurantInformationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(_restoData.data.name),
-        ),
+        appBar: WidgetFunction().appBarWithChartIcon(_restoData.data.name),
         body: SingleChildScrollView(
           child: Container(
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),

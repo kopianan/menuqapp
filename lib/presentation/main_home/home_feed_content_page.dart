@@ -9,7 +9,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../../injection.dart';
 import 'container/home_feed_container.dart';
 import 'widgets/home_error_page.dart';
@@ -28,10 +27,11 @@ class _HomeFeedContentState extends State<HomeFeedContent> {
   final RestaurantController restaurantController =
       Get.put(RestaurantController());
   final MenuController menuController = Get.put(MenuController());
-  LocationController locationController;
+  LocationController locationController = Get.put(LocationController());
   @override
   void initState() {
-    locationController = Get.put(LocationController());
+    print("Location Controller" +
+        locationController.getCurrentPosition.toString());
     super.initState();
   }
 

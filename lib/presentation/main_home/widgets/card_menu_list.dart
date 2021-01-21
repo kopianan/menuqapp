@@ -1,14 +1,26 @@
+import 'package:feroza/application/chart/chart_controller.dart';
+import 'package:feroza/domain/chart/chart_data_model.dart';
 import 'package:feroza/domain/menu/menu_data.dart';
 import 'package:feroza/infrastructure/core/formatter.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 
-class CardMenuList extends StatelessWidget {
+class CardMenuList extends StatefulWidget {
   const CardMenuList({
     Key key,
     @required this.menuClassData,
   }) : super(key: key);
 
   final MenuClassData menuClassData;
+
+  @override
+  _CardMenuListState createState() => _CardMenuListState();
+}
+
+class _CardMenuListState extends State<CardMenuList> {
+  final ChartController _chartController = Get.put(ChartController());
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,56 +44,87 @@ class CardMenuList extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: NetworkImage(menuClassData.mediumUrl))),
+                        image: NetworkImage(widget.menuClassData.mediumUrl))),
               ),
               flex: 4,
             ),
             Expanded(
-              child: Container(
-                width: double.infinity,
-                margin: EdgeInsets.only(top: 10, left: 10),
-                child: Flex(
-                  mainAxisSize: MainAxisSize.max,
-                  direction: Axis.vertical,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      child: Text(
-                        menuClassData.name,
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w500),
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Expanded(
+                    child: Container(
+                      width: double.infinity,
+                      margin: EdgeInsets.only(top: 10, left: 10),
+                      child: Flex(
+                        mainAxisSize: MainAxisSize.max,
+                        direction: Axis.vertical,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            child: Text(
+                              widget.menuClassData.name,
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.w500),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                child: Text(
+                                  Formatter().formatCurrency(
+                                      double.parse(widget.menuClassData.price)),
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  //save food id and restaurant id.
+
+                                  ChartDataModel _data = ChartDataModel(
+                                      menuData: widget.menuClassData,
+                                      restaurantId:
+                                          widget.menuClassData.restaurantId,
+                                      quantity: 1);
+                                  _chartController.addItemToChart(_data);
+                                  Fluttertoast.showToast(
+                                      msg: "Menu Ditambahkan Ke Chart");
+                                },
+                                child: Container(
+                                    margin: EdgeInsets.only(right: 5),
+                                    decoration: BoxDecoration(
+                                        color: Colors.green[400],
+                                        border: Border.all(
+                                            color: Colors.green[800], width: 1),
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 7, vertical: 5),
+                                    alignment: Alignment.topRight,
+                                    child: Text(
+                                      "Add To Chart",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold),
+                                    )),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      child: Text(
-                        Formatter().formatCurrency(
-                            double.parse(menuClassData.price)),
-                        style: TextStyle(
-                            fontSize: 13, fontWeight: FontWeight.w700),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      child: Text(
-                        menuClassData.description,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               flex: 7,
             )

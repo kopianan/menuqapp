@@ -10,8 +10,9 @@ _$_ChartDataModel _$_$_ChartDataModelFromJson(Map<String, dynamic> json) {
   return _$_ChartDataModel(
     menuData: json['menuData'] == null
         ? null
-        : MenuData.fromJson(json['menuData'] as Map<String, dynamic>),
+        : MenuClassData.fromJson(json['menuData'] as Map<String, dynamic>),
     quantity: json['quantity'] as int,
+    restaurantId: json['restaurantId'] as String,
   );
 }
 
@@ -19,4 +20,5 @@ Map<String, dynamic> _$_$_ChartDataModelToJson(_$_ChartDataModel instance) =>
     <String, dynamic>{
       'menuData': instance.menuData,
       'quantity': instance.quantity,
+      'restaurantId': instance.restaurantId,
     };

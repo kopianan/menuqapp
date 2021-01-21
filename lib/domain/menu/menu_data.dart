@@ -15,21 +15,9 @@ abstract class MenuData implements _$MenuData {
     @JsonKey(name: "small_url") String smallUrl,
     @JsonKey(name: "medium_url") String mediumUrl,
     @JsonKey(name: "large_url") String largeUrl,
-    int sorting,
-  }) = MenuClassData;
-  const factory MenuData.menuClassDataWithRestaurant({
-    String id,
-    @JsonKey(name: "category_id") String categoryId,
-    @JsonKey(name: "restaurant_id") String restaurantId,
-    String name,
-    String description,
-    String price,
-    @JsonKey(name: "small_url") String smallUrl,
-    @JsonKey(name: "medium_url") String mediumUrl,
-    @JsonKey(name: "large_url") String largeUrl,
     @JsonKey(name: "restaurant") RestaurantData restaurant,
     int sorting,
-  }) = MenuClassDataWithRestaurant;
+  }) = MenuClassData;
 
   const factory MenuData.menuBookData({
     @JsonKey(name: "id") String id,

@@ -25,7 +25,7 @@ class HomeRepository implements IHomeFacade {
                 "page": 1,
                 "paginate": 10
               }),
-          _dio.get(Setting().getUrl + "app/v1/api/menu", queryParameters: {
+          _dio.get(Setting().getUrl + "app/v1/api/menu?with=restaurants", queryParameters: {
             "latLang": latLang,
             "page": 1,
             "paginate": 10

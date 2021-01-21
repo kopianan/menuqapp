@@ -1,7 +1,11 @@
+import 'package:feroza/application/chart/chart_controller.dart';
+import 'package:feroza/functions/widget_function.dart';
+import 'package:feroza/presentation/chart/chart_page.dart';
 import 'package:feroza/presentation/see_all/widgets/see_all_food_item_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../../application/menu/menu_bloc.dart';
@@ -9,7 +13,7 @@ import '../../domain/menu/menu_data.dart';
 import '../../injection.dart';
 
 class SeeAllFoodPage extends StatefulWidget {
-  static final  String TAG = '/see_all_food';
+  static final String TAG = '/see_all_food';
   SeeAllFoodPage({Key key}) : super(key: key);
 
   @override
@@ -107,15 +111,13 @@ class _SeeAllFoodMenuContainerState extends State<SeeAllFoodMenuContainer> {
   }
 
   void _onLoading(BuildContext context) async {
-    context.bloc<MenuBloc>().add(MenuEvent.getAllMenu("5", page.toString()));
+    context.read<MenuBloc>().add(MenuEvent.getAllMenu("5", page.toString()));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Nearby Food"),
-        ),
+        appBar: WidgetFunction().appBarWithChartIcon("Nearby Food"),
         body: BlocProvider(
           create: (context) => getIt<MenuBloc>(),
           child: BlocConsumer<MenuBloc, MenuState>(
@@ -164,7 +166,7 @@ class _SeeAllFoodMenuContainerState extends State<SeeAllFoodMenuContainer> {
                     } else if (mode == LoadStatus.canLoading) {
                       body = Text("release to load more");
                     } else {
-                      body = Text("Abis CUKKK");
+                      body = Text("All Data Loaded");
                     }
                     return Container(
                       height: 55.0,
@@ -172,22 +174,25 @@ class _SeeAllFoodMenuContainerState extends State<SeeAllFoodMenuContainer> {
                     );
                   },
                 ),
-                child: CustomScrollView(
-                  slivers: [
-                    SliverGrid(
-                      delegate: SliverChildBuilderDelegate((context, index) {
-                        return SeeAllFoodItemWidget(
-                          menuClassDataWithRestaurant:
-                              widget.menuClassDataList[index],
-                        );
-                      }, childCount: widget.menuClassDataList.length),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisSpacing: 10,
-                          crossAxisSpacing: 10,
-                          childAspectRatio: 1),
-                    )
-                  ],
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  child: CustomScrollView(
+                    slivers: [
+                      SliverGrid(
+                        delegate: SliverChildBuilderDelegate((context, index) {
+                          return SeeAllFoodItemWidget(
+                            menuClassDataWithRestaurant:
+                                widget.menuClassDataList[index],
+                          );
+                        }, childCount: widget.menuClassDataList.length),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            mainAxisSpacing: 10,
+                            crossAxisSpacing: 10,
+                            childAspectRatio: 1),
+                      )
+                    ],
+                  ),
                 ),
               );
             },

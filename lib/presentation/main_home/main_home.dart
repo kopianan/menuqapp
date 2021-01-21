@@ -1,17 +1,20 @@
 import 'dart:io';
 
+import 'package:feroza/application/chart/chart_controller.dart';
 import 'package:feroza/application/core/controller/location_controller.dart';
+import 'package:feroza/application/location/cubit/location_cubit.dart';
 import 'package:feroza/presentation/splash_screen/splash_screen_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:geolocator/geolocator.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+import '../../injection.dart';
 import 'home_feed_content_page.dart';
 
 class MainHome extends StatefulWidget {
-  static final  String TAG = '/main_home'; 
+  static final String TAG = '/main_home';
   MainHome({Key key}) : super(key: key);
 
   @override
@@ -20,17 +23,16 @@ class MainHome extends StatefulWidget {
 
 class _MainHomeState extends State<MainHome> {
   final LocationController locationController = Get.put(LocationController());
-
+  final ChartController menuController = Get.put(ChartController());
   @override
   void initState() {
-    locationController.setCurrentPosition("9,9");
-    print("TEST"); 
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return HomeFeedContent();
+    return   HomeFeedContent();
   }
 }
 

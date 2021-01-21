@@ -58,7 +58,7 @@ class _$MenuReqResTearOff {
 
 // ignore: unused_element
   MenuBookResponseWithRestaurant menuBookResponseWithRestaurant(
-      {MenuClassDataWithRestaurant data}) {
+      {MenuClassData data}) {
     return MenuBookResponseWithRestaurant(
       data: data,
     );
@@ -91,9 +91,7 @@ mixin _$MenuReqRes {
         TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
-    @required
-        TResult menuBookResponseWithRestaurant(
-            MenuClassDataWithRestaurant data),
+    @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
   });
   @optionalTypeArgs
@@ -102,7 +100,7 @@ mixin _$MenuReqRes {
     TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
-    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
     @required TResult orElse(),
   });
@@ -214,9 +212,7 @@ class _$MenuResponse implements MenuResponse {
         TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
-    @required
-        TResult menuBookResponseWithRestaurant(
-            MenuClassDataWithRestaurant data),
+    @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
@@ -234,7 +230,7 @@ class _$MenuResponse implements MenuResponse {
     TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
-    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
     @required TResult orElse(),
   }) {
@@ -391,9 +387,7 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
         TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
-    @required
-        TResult menuBookResponseWithRestaurant(
-            MenuClassDataWithRestaurant data),
+    @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
@@ -411,7 +405,7 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
     TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
-    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
     @required TResult orElse(),
   }) {
@@ -553,9 +547,7 @@ class _$MenuBookResponse implements MenuBookResponse {
         TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
-    @required
-        TResult menuBookResponseWithRestaurant(
-            MenuClassDataWithRestaurant data),
+    @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
@@ -573,7 +565,7 @@ class _$MenuBookResponse implements MenuBookResponse {
     TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
-    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
     @required TResult orElse(),
   }) {
@@ -645,7 +637,7 @@ abstract class $MenuBookResponseWithRestaurantCopyWith<$Res> {
           MenuBookResponseWithRestaurant value,
           $Res Function(MenuBookResponseWithRestaurant) then) =
       _$MenuBookResponseWithRestaurantCopyWithImpl<$Res>;
-  $Res call({MenuClassDataWithRestaurant data});
+  $Res call({MenuClassData data});
 }
 
 /// @nodoc
@@ -666,7 +658,7 @@ class _$MenuBookResponseWithRestaurantCopyWithImpl<$Res>
     Object data = freezed,
   }) {
     return _then(MenuBookResponseWithRestaurant(
-      data: data == freezed ? _value.data : data as MenuClassDataWithRestaurant,
+      data: data == freezed ? _value.data : data as MenuClassData,
     ));
   }
 }
@@ -683,7 +675,7 @@ class _$MenuBookResponseWithRestaurant
       _$_$MenuBookResponseWithRestaurantFromJson(json);
 
   @override
-  final MenuClassDataWithRestaurant data;
+  final MenuClassData data;
 
   @override
   String toString() {
@@ -715,9 +707,7 @@ class _$MenuBookResponseWithRestaurant
         TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
-    @required
-        TResult menuBookResponseWithRestaurant(
-            MenuClassDataWithRestaurant data),
+    @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
@@ -735,7 +725,7 @@ class _$MenuBookResponseWithRestaurant
     TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
-    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
     @required TResult orElse(),
   }) {
@@ -791,13 +781,13 @@ class _$MenuBookResponseWithRestaurant
 }
 
 abstract class MenuBookResponseWithRestaurant implements MenuReqRes {
-  const factory MenuBookResponseWithRestaurant(
-      {MenuClassDataWithRestaurant data}) = _$MenuBookResponseWithRestaurant;
+  const factory MenuBookResponseWithRestaurant({MenuClassData data}) =
+      _$MenuBookResponseWithRestaurant;
 
   factory MenuBookResponseWithRestaurant.fromJson(Map<String, dynamic> json) =
       _$MenuBookResponseWithRestaurant.fromJson;
 
-  MenuClassDataWithRestaurant get data;
+  MenuClassData get data;
   $MenuBookResponseWithRestaurantCopyWith<MenuBookResponseWithRestaurant>
       get copyWith;
 }
@@ -880,9 +870,7 @@ class _$MenuBookRequest implements MenuBookRequest {
         TResult menuRequestByNearby(int paginate, int page,
             @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
-    @required
-        TResult menuBookResponseWithRestaurant(
-            MenuClassDataWithRestaurant data),
+    @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
   }) {
     assert(menuResponse != null);
@@ -900,7 +888,7 @@ class _$MenuBookRequest implements MenuBookRequest {
     TResult menuRequestByNearby(int paginate, int page,
         @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
-    TResult menuBookResponseWithRestaurant(MenuClassDataWithRestaurant data),
+    TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
     @required TResult orElse(),
   }) {

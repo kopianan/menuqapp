@@ -2,6 +2,7 @@ import 'package:feroza/application/core/controller/location_controller.dart';
 import 'package:feroza/application/restaurant/restaurant_bloc.dart';
 import 'package:feroza/domain/restaurant/restaurant_data.dart';
 import 'package:feroza/domain/restaurant/restaurant_req_res.dart';
+import 'package:feroza/functions/widget_function.dart';
 import 'package:feroza/presentation/see_all/widgets/see_all_restaurant_item_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../../injection.dart';
 
 class SeeAllPage extends StatefulWidget {
-  static final  String TAG = '/see_all';
+  static final String TAG = '/see_all';
   SeeAllPage({Key key}) : super(key: key);
 
   @override
@@ -73,9 +74,7 @@ class _SeeAllPageState extends State<SeeAllPage> {
           },
           builder: (context, state) {
             return Scaffold(
-              appBar: AppBar(
-                title: Text("Nearby Restaurant"),
-              ),
+              appBar: WidgetFunction().appBarWithChartIcon("Nearby Restaurant"),
               body: SafeArea(
                   child: Container(
                 margin: EdgeInsets.only(top: 10, left: 10, right: 10),
@@ -109,7 +108,7 @@ class _SeeAllPageState extends State<SeeAllPage> {
                         paginate: 5,
                         latLang: "${_locationController.getCurrentPosition}");
                     print("onLoading");
-                    context.bloc<RestaurantBloc>().add(
+                    context.read<RestaurantBloc>().add(
                         RestaurantEvent.getRestaurantList(request: _request));
                   },
                   child: GridView.builder(

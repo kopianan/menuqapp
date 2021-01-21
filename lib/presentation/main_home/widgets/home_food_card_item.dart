@@ -1,7 +1,6 @@
 import 'package:feroza/domain/menu/menu_data.dart';
 import 'package:feroza/infrastructure/core/formatter.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeFoodCardItem extends StatelessWidget {
   const HomeFoodCardItem({
