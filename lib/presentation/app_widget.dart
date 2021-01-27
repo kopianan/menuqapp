@@ -1,5 +1,5 @@
-import 'package:feroza/application/chart/chart_controller.dart';
 import 'package:feroza/presentation/router/router_data.dart';
+import 'package:feroza/util/menuq_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,23 +16,24 @@ class AppWidget extends StatelessWidget {
       getPages: getAllPages,
       defaultTransition: Transition.downToUp,
       theme: ThemeData(
-        accentColor: Color(0xffF8DE44),
+        appBarTheme: AppBarTheme(color: primaryColor),
+        primaryColorLight: primaryColor,
+        accentColor: secondaryColor,
         buttonTheme: ButtonThemeData(
           height: 50,
-          buttonColor: Color(0xff28334A),
+          buttonColor: accentColor,
           textTheme: ButtonTextTheme.primary,
         ),
         textTheme: GoogleFonts.firaSansTextTheme(
           TextTheme(
               button: TextStyle(fontSize: 20),
+              
               headline3: TextStyle(
-                  fontSize: 16,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold),
-              headline4: TextStyle(fontSize: 15, color: Colors.black),
-              headline5: TextStyle(fontSize: 14, color: Colors.grey)),
+                  fontSize: 16, color: blackColor, fontWeight: FontWeight.bold),
+              headline4: TextStyle(fontSize: 15, color: blackColor),
+              headline5: TextStyle(fontSize: 14, color: blackColor)),
         ),
-        primaryColor: Color(0xff28334A),
+        primaryColor: primaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
     );

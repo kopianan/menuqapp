@@ -1,16 +1,26 @@
+import 'package:feroza/application/chart/chart_controller.dart';
+import 'package:feroza/domain/chart/chart_data_model.dart';
 import 'package:feroza/domain/menu/menu_data.dart';
 import 'package:feroza/infrastructure/core/formatter.dart';
+import 'package:feroza/presentation/widgets/add_to_chart_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_money_formatter/flutter_money_formatter.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
-class MenuSingleListItem extends StatelessWidget {
-  const MenuSingleListItem({
-    Key key,
-    @required this.menuClassData,
-  }) : super(key: key);
+class MenuSingleListItem extends StatefulWidget {
+  const MenuSingleListItem(
+      {Key key, @required this.menuClassData, @required this.restaurantId})
+      : super(key: key);
 
   final MenuClassData menuClassData;
+  final String restaurantId;
+
+  @override
+  _MenuSingleListItemState createState() => _MenuSingleListItemState();
+}
+
+class _MenuSingleListItemState extends State<MenuSingleListItem> {
+  final controller = Get.put(ChartController());
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +42,7 @@ class MenuSingleListItem extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: NetworkImage(menuClassData.mediumUrl))),
+                        image: NetworkImage(widget.menuClassData.mediumUrl))),
               ),
               flex: 4,
             ),
@@ -48,7 +58,7 @@ class MenuSingleListItem extends StatelessWidget {
                   children: [
                     Container(
                       child: Text(
-                        menuClassData.name,
+                        widget.menuClassData.name,
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w500),
                         maxLines: 2,
@@ -61,7 +71,7 @@ class MenuSingleListItem extends StatelessWidget {
                     Container(
                       child: Text(
                         Formatter().formatCurrency(
-                            double.parse(menuClassData.price)),
+                            double.parse(widget.menuClassData.price)),
                         style: TextStyle(
                             fontSize: 13, fontWeight: FontWeight.w700),
                       ),
@@ -69,17 +79,15 @@ class MenuSingleListItem extends StatelessWidget {
                     SizedBox(
                       height: 10,
                     ),
-                    Container(
-                      child: Text(
-                        menuClassData.description,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.grey,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ),
+                    addToChartButton(() {
+                      final _data = ChartDataModel(
+                          menuData: widget.menuClassData,
+                          restaurantId: widget.restaurantId,
+                          quantity: 1);
+                      controller.addItemToChart(_data);
+
+                      Fluttertoast.showToast(msg: "Menu Ditambahkan Ke Chart");
+                    })
                   ],
                 ),
               ),

@@ -2,6 +2,7 @@ import 'package:feroza/application/chart/chart_controller.dart';
 import 'package:feroza/application/restaurant/restaurant_bloc.dart';
 import 'package:feroza/domain/restaurant/restaurant_req_res.dart';
 import 'package:feroza/injection.dart';
+import 'package:feroza/util/menuq_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
@@ -227,9 +228,9 @@ class ScaffoldContainData extends StatelessWidget {
                         },
                         child: Text(
                           "Hubungi Penjual",
-                          style: TextStyle(color: Colors.black45),
+                          style: TextStyle(color: Colors.black),
                         ),
-                        color: Colors.yellowAccent[400]),
+                        color: accentColor),
                   )
                 ],
               )),

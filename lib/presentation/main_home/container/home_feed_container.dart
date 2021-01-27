@@ -58,11 +58,13 @@ class _HomeFeedContainerState extends State<HomeFeedContainer>
   void dispose() {
     _scrollController.dispose();
     _hideFabAnimController.dispose();
+  
     super.dispose();
   }
 
   void initState() {
     super.initState();
+    
 
     _scrollController = ScrollController();
     _hideFabAnimController = AnimationController(

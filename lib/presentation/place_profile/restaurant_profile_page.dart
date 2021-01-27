@@ -66,6 +66,7 @@ class _RestaurantProfilePageState extends State<RestaurantProfilePage> {
                         (l) => RestaurantProfileLoadingWidget(),
                         (r) => RestaurantProfileWidget(
                               getAllRestaurantDataResponse: r,
+                              restaurantId: restaurantId,
                             )));
               }
             },

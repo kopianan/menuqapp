@@ -2,6 +2,7 @@ import 'package:feroza/application/chart/chart_controller.dart';
 import 'package:feroza/domain/chart/chart_data_model.dart';
 import 'package:feroza/domain/menu/menu_data.dart';
 import 'package:feroza/infrastructure/core/formatter.dart';
+import 'package:feroza/presentation/widgets/add_to_chart_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -75,34 +76,15 @@ class SeeAllFoodItemWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              InkWell(
-                onTap: () {
-                  //save food id and restaurant id.
+              addToChartButton(() {
+                final _data = ChartDataModel(
+                    menuData: menuClassDataWithRestaurant,
+                    restaurantId: menuClassDataWithRestaurant.restaurantId,
+                    quantity: 1);
+                _controller.addItemToChart(_data);
 
-                  final _data = ChartDataModel(
-                      menuData: menuClassDataWithRestaurant,
-                      restaurantId: menuClassDataWithRestaurant.restaurantId,
-                      quantity: 1);
-                  _controller.addItemToChart(_data);
-
-                  Fluttertoast.showToast(msg: "Menu Ditambahkan Ke Chart");
-                },
-                child: Container(
-                    margin: EdgeInsets.only(bottom: 5, top: 5, right: 5),
-                    decoration: BoxDecoration(
-                        color: Colors.green[400],
-                        border: Border.all(color: Colors.green[800], width: 1),
-                        borderRadius: BorderRadius.circular(20)),
-                    padding: EdgeInsets.all(5),
-                    alignment: Alignment.topRight,
-                    child: Text(
-                      "Add To Chart",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold),
-                    )),
-              ),
+                Fluttertoast.showToast(msg: "Menu Ditambahkan Ke Chart");
+              })
             ],
           )
         ],

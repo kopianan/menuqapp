@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:feroza/application/chart/chart_controller.dart';
 import 'package:feroza/application/core/controller/location_controller.dart';
 import 'package:feroza/application/home/bloc/home_bloc.dart';
 import 'package:feroza/application/menu/controller/menu_controller.dart';
@@ -28,10 +29,10 @@ class _HomeFeedContentState extends State<HomeFeedContent> {
       Get.put(RestaurantController());
   final MenuController menuController = Get.put(MenuController());
   LocationController locationController = Get.put(LocationController());
+  
+  final ChartController chartController = Get.put(ChartController());
   @override
   void initState() {
-    print("Location Controller" +
-        locationController.getCurrentPosition.toString());
     super.initState();
   }
 

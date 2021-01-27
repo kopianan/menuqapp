@@ -6,10 +6,14 @@ import 'menu_single_list_item.dart';
 
 class MenuListContainer extends StatefulWidget {
   const MenuListContainer(
-      {Key key, @required this.pageKey, @required this.menuClassDataList})
+      {Key key,
+      @required this.pageKey,
+      @required this.menuClassDataList,
+      @required this.restaurantId})
       : super(key: key);
   final String pageKey;
   final List<MenuClassData> menuClassDataList;
+  final String restaurantId;
 
   @override
   _MenuListContainerState createState() => _MenuListContainerState();
@@ -40,6 +44,7 @@ class _MenuListContainerState extends State<MenuListContainer> {
                   delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   return MenuSingleListItem(
+                      restaurantId: widget.restaurantId,
                       menuClassData: _filteredList[index]);
                 },
                 childCount: _filteredList.length,

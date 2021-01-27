@@ -5,15 +5,19 @@ import 'package:feroza/presentation/place_profile/restaurant_information_page.da
 import 'package:feroza/presentation/place_profile/widgets/menu_book_container.dart';
 import 'package:feroza/presentation/place_profile/widgets/menu_list_container.dart';
 import 'package:feroza/presentation/widgets/chart_icon_widget.dart';
+import 'package:feroza/util/menuq_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class RestaurantProfileWidget extends StatefulWidget {
-  const RestaurantProfileWidget({
-    Key key,
-    @required this.getAllRestaurantDataResponse,
-  }) : super(key: key);
+  const RestaurantProfileWidget(
+      {Key key,
+      @required this.getAllRestaurantDataResponse,
+      @required this.restaurantId})
+      : super(key: key);
   final GetAllRestaurantDataResponse getAllRestaurantDataResponse;
+  final String restaurantId;
   @override
   _RestaurantProfileWidgetState createState() =>
       _RestaurantProfileWidgetState();
@@ -47,17 +51,24 @@ class _RestaurantProfileWidgetState extends State<RestaurantProfileWidget> {
         backgroundColor: Color(0xfff6f5fa),
         bottomNavigationBar: BottomNavigationBar(
             onTap: onTabTapped,
+            elevation: 4,
             type: BottomNavigationBarType.fixed,
-            selectedIconTheme: IconThemeData(color: Colors.yellow[700]),
-            selectedLabelStyle: TextStyle(color: Colors.yellow[700]),
+            selectedIconTheme: IconThemeData(color: secondaryColor),
+            selectedLabelStyle: TextStyle(color: secondaryColor),
+            selectedItemColor: secondaryColor,
+            unselectedItemColor: blackColor,
             currentIndex: _currentIndex,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.list),
+                icon: SvgPicture.asset('assets/icons/menu.svg',
+                    height: 30,
+                    color: (_currentIndex == 0) ? secondaryColor : blackColor),
                 label: "Detail",
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.info),
+                icon: SvgPicture.asset('assets/icons/home.svg',
+                    height: 30,
+                    color: (_currentIndex == 1) ? secondaryColor : blackColor),
                 label: "Info",
               ),
             ]),
@@ -119,6 +130,7 @@ class _RestaurantFoodDataState extends State<RestaurantFoodData> {
                   } else {
                     return MenuListContainer(
                         pageKey: categoryDataClass.id,
+                        restaurantId: _getAllRestaurantDataResponse.data.id,
                         menuClassDataList: widget._getAllRestaurantDataResponse
                             .data.menuClassDataList);
                   }

@@ -1,3 +1,4 @@
+import 'package:feroza/util/menuq_color.dart';
 import 'package:flutter/material.dart';
 
 class HomeSubTitleContainer extends StatelessWidget {
@@ -19,7 +20,7 @@ class HomeSubTitleContainer extends StatelessWidget {
               onTap: onSeeAll,
               child: Text("See All",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.orange[300]))),
+                      fontWeight: FontWeight.bold, color: secondaryColor))),
     );
   }
 }

@@ -68,6 +68,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                 onLoading: (e) => Fluttertoast.showToast(msg: "Loading..."),
                 onError: (e) => Fluttertoast.showToast(msg: e.message),
                 onSuccess: (e) {
+                  location.setCurrentPosition(e.position[0].locality); 
                   Get.offNamed(MainHome.TAG);
                 },
               );

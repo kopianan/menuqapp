@@ -34,7 +34,7 @@ class _SeeAllPageState extends State<SeeAllPage> {
     _request = GetRestaurantListRequest(
         page: _page,
         paginate: 8,
-        latLang: "${_locationController.getCurrentPosition}");
+        latLang: "");
     print(_request.toJson());
     super.initState();
   }
@@ -106,7 +106,7 @@ class _SeeAllPageState extends State<SeeAllPage> {
                     _request = GetRestaurantListRequest(
                         page: _page,
                         paginate: 5,
-                        latLang: "${_locationController.getCurrentPosition}");
+                        latLang: "");
                     print("onLoading");
                     context.read<RestaurantBloc>().add(
                         RestaurantEvent.getRestaurantList(request: _request));
