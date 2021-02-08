@@ -7,7 +7,7 @@ Container addToChartButton(Function onTap) {
     padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
     alignment: Alignment.topRight,
     child: InkWell(
-        splashColor: primaryColor,
+        splashColor: kPrimaryColor,
         onTap: () {
           //save food id and restaurant id.
           onTap();
@@ -15,7 +15,7 @@ Container addToChartButton(Function onTap) {
         child: Text(
           "Add To Chart",
           style: TextStyle(
-            color: secondaryColor,
+            color: kSecondaryColor,
             fontSize: 12,
           ),
         )),

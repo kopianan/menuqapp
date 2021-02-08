@@ -230,7 +230,7 @@ class ScaffoldContainData extends StatelessWidget {
                           "Hubungi Penjual",
                           style: TextStyle(color: Colors.black),
                         ),
-                        color: accentColor),
+                        color: kAccentColor),
                   )
                 ],
               )),

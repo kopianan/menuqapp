@@ -20,7 +20,7 @@ class HomeSubTitleContainer extends StatelessWidget {
               onTap: onSeeAll,
               child: Text("See All",
                   style: TextStyle(
-                      fontWeight: FontWeight.bold, color: secondaryColor))),
+                      fontWeight: FontWeight.bold, color: kSecondaryColor))),
     );
   }
 }

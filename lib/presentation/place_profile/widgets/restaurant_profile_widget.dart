@@ -53,22 +53,24 @@ class _RestaurantProfileWidgetState extends State<RestaurantProfileWidget> {
             onTap: onTabTapped,
             elevation: 4,
             type: BottomNavigationBarType.fixed,
-            selectedIconTheme: IconThemeData(color: secondaryColor),
-            selectedLabelStyle: TextStyle(color: secondaryColor),
-            selectedItemColor: secondaryColor,
-            unselectedItemColor: blackColor,
+            selectedIconTheme: IconThemeData(color: kSecondaryColor),
+            selectedLabelStyle: TextStyle(color: kSecondaryColor),
+            selectedItemColor: kSecondaryColor,
+            unselectedItemColor: kBlackColor,
             currentIndex: _currentIndex,
             items: [
               BottomNavigationBarItem(
                 icon: SvgPicture.asset('assets/icons/menu.svg',
                     height: 30,
-                    color: (_currentIndex == 0) ? secondaryColor : blackColor),
+                    color:
+                        (_currentIndex == 0) ? kSecondaryColor : kBlackColor),
                 label: "Detail",
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset('assets/icons/home.svg',
                     height: 30,
-                    color: (_currentIndex == 1) ? secondaryColor : blackColor),
+                    color:
+                        (_currentIndex == 1) ? kSecondaryColor : kBlackColor),
                 label: "Info",
               ),
             ]),

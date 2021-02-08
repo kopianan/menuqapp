@@ -11,7 +11,6 @@ import 'package:feroza/presentation/main_home/widgets/home_food_card_item.dart';
 import 'package:feroza/presentation/main_home/widgets/home_restaurant_card_item.dart';
 import 'package:feroza/presentation/main_home/widgets/home_sub_title_container.dart';
 import 'package:feroza/presentation/place_profile/restaurant_profile_page.dart';
-import 'package:feroza/presentation/scanner/scanner_page.dart';
 import 'package:feroza/presentation/see_all/see_all_food_page.dart';
 import 'package:feroza/presentation/see_all/see_all_menu_book_page.dart';
 import 'package:feroza/presentation/see_all/see_all_page.dart';
@@ -58,13 +57,12 @@ class _HomeFeedContainerState extends State<HomeFeedContainer>
   void dispose() {
     _scrollController.dispose();
     _hideFabAnimController.dispose();
-  
+
     super.dispose();
   }
 
   void initState() {
     super.initState();
-    
 
     _scrollController = ScrollController();
     _hideFabAnimController = AnimationController(
@@ -266,30 +264,6 @@ class _HomeFeedContainerState extends State<HomeFeedContainer>
                     )
                   ],
                 ),
-              ),
-            ),
-          ),
-          floatingActionButton: FadeTransition(
-            opacity: _hideFabAnimController,
-            child: ScaleTransition(
-              scale: _hideFabAnimController,
-              child: FloatingActionButton(
-                backgroundColor: Colors.white,
-                elevation: 4,
-                splashColor: Colors.yellow,
-                onPressed: () async {
-                  var restaurantId = await Get.toNamed(ScannerPage.TAG);
-                  try {
-                    if (restaurantId == null) return;
-                    Get.toNamed(RestaurantProfilePage.TAG,
-                        arguments: restaurantId);
-                  } catch (e) {}
-                },
-                child: Icon(
-                  MdiIcons.barcodeScan,
-                  color: Colors.black,
-                ),
-                // elevation: 5.0,
               ),
             ),
           ),

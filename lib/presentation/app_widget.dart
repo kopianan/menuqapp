@@ -1,4 +1,7 @@
+import 'package:feroza/presentation/authentication/sign_in/sign_in_page.dart';
+import 'package:feroza/presentation/authentication/sign_up/sign_up_page.dart';
 import 'package:feroza/presentation/router/router_data.dart';
+import 'package:feroza/presentation/theme.dart';
 import 'package:feroza/util/menuq_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,32 +13,13 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: '/splash_screen',
+      // initialRoute: '/splash_screen',
+      home: SignUpPage(),
       debugShowCheckedModeBanner: false,
       title: 'Menuq',
       getPages: getAllPages,
       defaultTransition: Transition.downToUp,
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(color: primaryColor),
-        primaryColorLight: primaryColor,
-        accentColor: secondaryColor,
-        buttonTheme: ButtonThemeData(
-          height: 50,
-          buttonColor: accentColor,
-          textTheme: ButtonTextTheme.primary,
-        ),
-        textTheme: GoogleFonts.firaSansTextTheme(
-          TextTheme(
-              button: TextStyle(fontSize: 20),
-              
-              headline3: TextStyle(
-                  fontSize: 16, color: blackColor, fontWeight: FontWeight.bold),
-              headline4: TextStyle(fontSize: 15, color: blackColor),
-              headline5: TextStyle(fontSize: 14, color: blackColor)),
-        ),
-        primaryColor: primaryColor,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: theme(),
     );
   }
 }
