@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
     Key key,
-    this.text,
-    this.press,
+    @required this.text,
+    @required this.press,
   }) : super(key: key);
   final String text;
   final Function press;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        width: double.infinity,
+    return Container(
         height: 50,
         child: FlatButton(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),

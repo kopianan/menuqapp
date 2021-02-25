@@ -1,4 +1,5 @@
 import 'package:feroza/domain/restaurant/restaurant_data.dart';
+import 'package:feroza/presentation/place_profile/restaurant_profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,7 +11,7 @@ class HomeRestaurantCardItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () =>
-          Get.toNamed('/restaurant_profile', arguments: restaurantData.id),
+          Get.toNamed(RestaurantProfilePage.TAG, arguments: restaurantData.id),
       child: Container(
         width: 160,
         margin: EdgeInsets.only(right: 15),
@@ -27,7 +28,7 @@ class HomeRestaurantCardItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: (restaurantData.logoUrl  == null)
+                      image: (restaurantData.logoUrl == null)
                           ? AssetImage(
                               "assets/images/placeholder.jpg",
                             )
@@ -35,10 +36,7 @@ class HomeRestaurantCardItem extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                margin: EdgeInsets.only(
-                    top: 8,
-                    left: 5,
-                    right: 5),
+                margin: EdgeInsets.only(top: 8, left: 5, right: 5),
                 child: Text(
                   restaurantData.name,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),

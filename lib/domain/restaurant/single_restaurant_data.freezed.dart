@@ -19,16 +19,16 @@ class _$SingleRestaurantDataTearOff {
 // ignore: unused_element
   SingleRestaurantCompleteData singleRestaurantCompleteData(
       {String id,
-      @JsonKey(name: 'owner_id') String ownerId,
+      @JsonKey(name: "owner_id") String ownerId,
       String name,
       String address,
-      @JsonKey(name: 'phone_number') String phoneNumber,
+      @JsonKey(name: "phone_number") String phoneNumber,
       String instagram,
       String lat,
       String lng,
-      @JsonKey(name: 'created_at') String createdAt,
-      @JsonKey(name: 'logo_url') String logoUrl,
-      @JsonKey(name: 'updated_at') String updatedAt,
+      @JsonKey(name: "created_at") String createdAt,
+      @JsonKey(name: "logo_url") String logoUrl,
+      @JsonKey(name: "updated_at") String updatedAt,
       @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
       @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
       @JsonKey(name: 'categories') List<CategoryDataClass> categoryList}) {
@@ -63,20 +63,20 @@ const $SingleRestaurantData = _$SingleRestaurantDataTearOff();
 /// @nodoc
 mixin _$SingleRestaurantData {
   String get id;
-  @JsonKey(name: 'owner_id')
+  @JsonKey(name: "owner_id")
   String get ownerId;
   String get name;
   String get address;
-  @JsonKey(name: 'phone_number')
+  @JsonKey(name: "phone_number")
   String get phoneNumber;
   String get instagram;
   String get lat;
   String get lng;
-  @JsonKey(name: 'created_at')
+  @JsonKey(name: "created_at")
   String get createdAt;
-  @JsonKey(name: 'logo_url')
+  @JsonKey(name: "logo_url")
   String get logoUrl;
-  @JsonKey(name: 'updated_at')
+  @JsonKey(name: "updated_at")
   String get updatedAt;
   @JsonKey(name: 'menus')
   List<MenuClassData> get menuClassDataList;
@@ -90,16 +90,16 @@ mixin _$SingleRestaurantData {
     @required
         TResult singleRestaurantCompleteData(
             String id,
-            @JsonKey(name: 'owner_id') String ownerId,
+            @JsonKey(name: "owner_id") String ownerId,
             String name,
             String address,
-            @JsonKey(name: 'phone_number') String phoneNumber,
+            @JsonKey(name: "phone_number") String phoneNumber,
             String instagram,
             String lat,
             String lng,
-            @JsonKey(name: 'created_at') String createdAt,
-            @JsonKey(name: 'logo_url') String logoUrl,
-            @JsonKey(name: 'updated_at') String updatedAt,
+            @JsonKey(name: "created_at") String createdAt,
+            @JsonKey(name: "logo_url") String logoUrl,
+            @JsonKey(name: "updated_at") String updatedAt,
             @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
             @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
             @JsonKey(name: 'categories') List<CategoryDataClass> categoryList),
@@ -108,16 +108,16 @@ mixin _$SingleRestaurantData {
   TResult maybeWhen<TResult extends Object>({
     TResult singleRestaurantCompleteData(
         String id,
-        @JsonKey(name: 'owner_id') String ownerId,
+        @JsonKey(name: "owner_id") String ownerId,
         String name,
         String address,
-        @JsonKey(name: 'phone_number') String phoneNumber,
+        @JsonKey(name: "phone_number") String phoneNumber,
         String instagram,
         String lat,
         String lng,
-        @JsonKey(name: 'created_at') String createdAt,
-        @JsonKey(name: 'logo_url') String logoUrl,
-        @JsonKey(name: 'updated_at') String updatedAt,
+        @JsonKey(name: "created_at") String createdAt,
+        @JsonKey(name: "logo_url") String logoUrl,
+        @JsonKey(name: "updated_at") String updatedAt,
         @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
         @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
         @JsonKey(name: 'categories') List<CategoryDataClass> categoryList),
@@ -145,16 +145,16 @@ abstract class $SingleRestaurantDataCopyWith<$Res> {
       _$SingleRestaurantDataCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'owner_id') String ownerId,
+      @JsonKey(name: "owner_id") String ownerId,
       String name,
       String address,
-      @JsonKey(name: 'phone_number') String phoneNumber,
+      @JsonKey(name: "phone_number") String phoneNumber,
       String instagram,
       String lat,
       String lng,
-      @JsonKey(name: 'created_at') String createdAt,
-      @JsonKey(name: 'logo_url') String logoUrl,
-      @JsonKey(name: 'updated_at') String updatedAt,
+      @JsonKey(name: "created_at") String createdAt,
+      @JsonKey(name: "logo_url") String logoUrl,
+      @JsonKey(name: "updated_at") String updatedAt,
       @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
       @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
       @JsonKey(name: 'categories') List<CategoryDataClass> categoryList});
@@ -222,16 +222,16 @@ abstract class $SingleRestaurantCompleteDataCopyWith<$Res>
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'owner_id') String ownerId,
+      @JsonKey(name: "owner_id") String ownerId,
       String name,
       String address,
-      @JsonKey(name: 'phone_number') String phoneNumber,
+      @JsonKey(name: "phone_number") String phoneNumber,
       String instagram,
       String lat,
       String lng,
-      @JsonKey(name: 'created_at') String createdAt,
-      @JsonKey(name: 'logo_url') String logoUrl,
-      @JsonKey(name: 'updated_at') String updatedAt,
+      @JsonKey(name: "created_at") String createdAt,
+      @JsonKey(name: "logo_url") String logoUrl,
+      @JsonKey(name: "updated_at") String updatedAt,
       @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
       @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
       @JsonKey(name: 'categories') List<CategoryDataClass> categoryList});
@@ -299,16 +299,16 @@ class _$SingleRestaurantCompleteDataCopyWithImpl<$Res>
 class _$SingleRestaurantCompleteData implements SingleRestaurantCompleteData {
   const _$SingleRestaurantCompleteData(
       {this.id,
-      @JsonKey(name: 'owner_id') this.ownerId,
+      @JsonKey(name: "owner_id") this.ownerId,
       this.name,
       this.address,
-      @JsonKey(name: 'phone_number') this.phoneNumber,
+      @JsonKey(name: "phone_number") this.phoneNumber,
       this.instagram,
       this.lat,
       this.lng,
-      @JsonKey(name: 'created_at') this.createdAt,
-      @JsonKey(name: 'logo_url') this.logoUrl,
-      @JsonKey(name: 'updated_at') this.updatedAt,
+      @JsonKey(name: "created_at") this.createdAt,
+      @JsonKey(name: "logo_url") this.logoUrl,
+      @JsonKey(name: "updated_at") this.updatedAt,
       @JsonKey(name: 'menus') this.menuClassDataList,
       @JsonKey(name: 'menuBooks') this.menuBookDataList,
       @JsonKey(name: 'categories') this.categoryList});
@@ -319,14 +319,14 @@ class _$SingleRestaurantCompleteData implements SingleRestaurantCompleteData {
   @override
   final String id;
   @override
-  @JsonKey(name: 'owner_id')
+  @JsonKey(name: "owner_id")
   final String ownerId;
   @override
   final String name;
   @override
   final String address;
   @override
-  @JsonKey(name: 'phone_number')
+  @JsonKey(name: "phone_number")
   final String phoneNumber;
   @override
   final String instagram;
@@ -335,13 +335,13 @@ class _$SingleRestaurantCompleteData implements SingleRestaurantCompleteData {
   @override
   final String lng;
   @override
-  @JsonKey(name: 'created_at')
+  @JsonKey(name: "created_at")
   final String createdAt;
   @override
-  @JsonKey(name: 'logo_url')
+  @JsonKey(name: "logo_url")
   final String logoUrl;
   @override
-  @JsonKey(name: 'updated_at')
+  @JsonKey(name: "updated_at")
   final String updatedAt;
   @override
   @JsonKey(name: 'menus')
@@ -431,16 +431,16 @@ class _$SingleRestaurantCompleteData implements SingleRestaurantCompleteData {
     @required
         TResult singleRestaurantCompleteData(
             String id,
-            @JsonKey(name: 'owner_id') String ownerId,
+            @JsonKey(name: "owner_id") String ownerId,
             String name,
             String address,
-            @JsonKey(name: 'phone_number') String phoneNumber,
+            @JsonKey(name: "phone_number") String phoneNumber,
             String instagram,
             String lat,
             String lng,
-            @JsonKey(name: 'created_at') String createdAt,
-            @JsonKey(name: 'logo_url') String logoUrl,
-            @JsonKey(name: 'updated_at') String updatedAt,
+            @JsonKey(name: "created_at") String createdAt,
+            @JsonKey(name: "logo_url") String logoUrl,
+            @JsonKey(name: "updated_at") String updatedAt,
             @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
             @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
             @JsonKey(name: 'categories') List<CategoryDataClass> categoryList),
@@ -468,16 +468,16 @@ class _$SingleRestaurantCompleteData implements SingleRestaurantCompleteData {
   TResult maybeWhen<TResult extends Object>({
     TResult singleRestaurantCompleteData(
         String id,
-        @JsonKey(name: 'owner_id') String ownerId,
+        @JsonKey(name: "owner_id") String ownerId,
         String name,
         String address,
-        @JsonKey(name: 'phone_number') String phoneNumber,
+        @JsonKey(name: "phone_number") String phoneNumber,
         String instagram,
         String lat,
         String lng,
-        @JsonKey(name: 'created_at') String createdAt,
-        @JsonKey(name: 'logo_url') String logoUrl,
-        @JsonKey(name: 'updated_at') String updatedAt,
+        @JsonKey(name: "created_at") String createdAt,
+        @JsonKey(name: "logo_url") String logoUrl,
+        @JsonKey(name: "updated_at") String updatedAt,
         @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
         @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
         @JsonKey(name: 'categories') List<CategoryDataClass> categoryList),
@@ -537,16 +537,16 @@ class _$SingleRestaurantCompleteData implements SingleRestaurantCompleteData {
 abstract class SingleRestaurantCompleteData implements SingleRestaurantData {
   const factory SingleRestaurantCompleteData(
           {String id,
-          @JsonKey(name: 'owner_id') String ownerId,
+          @JsonKey(name: "owner_id") String ownerId,
           String name,
           String address,
-          @JsonKey(name: 'phone_number') String phoneNumber,
+          @JsonKey(name: "phone_number") String phoneNumber,
           String instagram,
           String lat,
           String lng,
-          @JsonKey(name: 'created_at') String createdAt,
-          @JsonKey(name: 'logo_url') String logoUrl,
-          @JsonKey(name: 'updated_at') String updatedAt,
+          @JsonKey(name: "created_at") String createdAt,
+          @JsonKey(name: "logo_url") String logoUrl,
+          @JsonKey(name: "updated_at") String updatedAt,
           @JsonKey(name: 'menus') List<MenuClassData> menuClassDataList,
           @JsonKey(name: 'menuBooks') List<MenuBookData> menuBookDataList,
           @JsonKey(name: 'categories') List<CategoryDataClass> categoryList}) =
@@ -558,14 +558,14 @@ abstract class SingleRestaurantCompleteData implements SingleRestaurantData {
   @override
   String get id;
   @override
-  @JsonKey(name: 'owner_id')
+  @JsonKey(name: "owner_id")
   String get ownerId;
   @override
   String get name;
   @override
   String get address;
   @override
-  @JsonKey(name: 'phone_number')
+  @JsonKey(name: "phone_number")
   String get phoneNumber;
   @override
   String get instagram;
@@ -574,13 +574,13 @@ abstract class SingleRestaurantCompleteData implements SingleRestaurantData {
   @override
   String get lng;
   @override
-  @JsonKey(name: 'created_at')
+  @JsonKey(name: "created_at")
   String get createdAt;
   @override
-  @JsonKey(name: 'logo_url')
+  @JsonKey(name: "logo_url")
   String get logoUrl;
   @override
-  @JsonKey(name: 'updated_at')
+  @JsonKey(name: "updated_at")
   String get updatedAt;
   @override
   @JsonKey(name: 'menus')

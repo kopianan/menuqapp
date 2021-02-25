@@ -27,15 +27,15 @@ class _$MenuDataTearOff {
 // ignore: unused_element
   MenuClassData menuClassData(
       {String id,
-      @JsonKey(name: 'category_id') String categoryId,
-      @JsonKey(name: 'restaurant_id') String restaurantId,
+      @JsonKey(name: "category_id") String categoryId,
+      @JsonKey(name: "restaurant_id") String restaurantId,
       String name,
       String description,
       String price,
-      @JsonKey(name: 'small_url') String smallUrl,
-      @JsonKey(name: 'medium_url') String mediumUrl,
-      @JsonKey(name: 'large_url') String largeUrl,
-      @JsonKey(name: 'restaurant') RestaurantData restaurant,
+      @JsonKey(name: "small_url", nullable: true) String smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) String largeUrl,
+      @JsonKey(name: "restaurant") RestaurantData restaurant,
       int sorting}) {
     return MenuClassData(
       id: id,
@@ -54,16 +54,16 @@ class _$MenuDataTearOff {
 
 // ignore: unused_element
   MenuBookData menuBookData(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'category_id') String categoryId,
-      @JsonKey(name: 'small_url') String smallUrl,
-      @JsonKey(name: 'medium_url') String mediumUrl,
-      @JsonKey(name: 'large_url') String largeUrl,
-      @JsonKey(name: 'sorting') String sorting,
-      @JsonKey(name: 'created_at') String createdAt,
-      @JsonKey(name: 'updated_at') String updatedAt,
-      @JsonKey(name: 'restaurant') RestaurantData restaurant}) {
+      {@JsonKey(name: "id") String id,
+      @JsonKey(name: "name", nullable: true) String name,
+      @JsonKey(name: "category_id") String categoryId,
+      @JsonKey(name: "small_url", nullable: true) String smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) String largeUrl,
+      @JsonKey(name: "sorting") String sorting,
+      @JsonKey(name: "created_at") String createdAt,
+      @JsonKey(name: "updated_at") String updatedAt,
+      @JsonKey(name: "restaurant") RestaurantData restaurant}) {
     return MenuBookData(
       id: id,
       name: name,
@@ -91,16 +91,16 @@ const $MenuData = _$MenuDataTearOff();
 /// @nodoc
 mixin _$MenuData {
   String get id;
-  @JsonKey(name: 'category_id')
+  @JsonKey(name: "category_id")
   String get categoryId;
   String get name;
-  @JsonKey(name: 'small_url')
+  @JsonKey(name: "small_url", nullable: true)
   String get smallUrl;
-  @JsonKey(name: 'medium_url')
+  @JsonKey(name: "medium_url", nullable: true)
   String get mediumUrl;
-  @JsonKey(name: 'large_url')
+  @JsonKey(name: "large_url", nullable: true)
   String get largeUrl;
-  @JsonKey(name: 'restaurant')
+  @JsonKey(name: "restaurant")
   RestaurantData get restaurant;
 
   @optionalTypeArgs
@@ -108,54 +108,54 @@ mixin _$MenuData {
     @required
         TResult menuClassData(
             String id,
-            @JsonKey(name: 'category_id') String categoryId,
-            @JsonKey(name: 'restaurant_id') String restaurantId,
+            @JsonKey(name: "category_id") String categoryId,
+            @JsonKey(name: "restaurant_id") String restaurantId,
             String name,
             String description,
             String price,
-            @JsonKey(name: 'small_url') String smallUrl,
-            @JsonKey(name: 'medium_url') String mediumUrl,
-            @JsonKey(name: 'large_url') String largeUrl,
-            @JsonKey(name: 'restaurant') RestaurantData restaurant,
+            @JsonKey(name: "small_url", nullable: true) String smallUrl,
+            @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+            @JsonKey(name: "large_url", nullable: true) String largeUrl,
+            @JsonKey(name: "restaurant") RestaurantData restaurant,
             int sorting),
     @required
         TResult menuBookData(
-            @JsonKey(name: 'id') String id,
-            @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'category_id') String categoryId,
-            @JsonKey(name: 'small_url') String smallUrl,
-            @JsonKey(name: 'medium_url') String mediumUrl,
-            @JsonKey(name: 'large_url') String largeUrl,
-            @JsonKey(name: 'sorting') String sorting,
-            @JsonKey(name: 'created_at') String createdAt,
-            @JsonKey(name: 'updated_at') String updatedAt,
-            @JsonKey(name: 'restaurant') RestaurantData restaurant),
+            @JsonKey(name: "id") String id,
+            @JsonKey(name: "name", nullable: true) String name,
+            @JsonKey(name: "category_id") String categoryId,
+            @JsonKey(name: "small_url", nullable: true) String smallUrl,
+            @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+            @JsonKey(name: "large_url", nullable: true) String largeUrl,
+            @JsonKey(name: "sorting") String sorting,
+            @JsonKey(name: "created_at") String createdAt,
+            @JsonKey(name: "updated_at") String updatedAt,
+            @JsonKey(name: "restaurant") RestaurantData restaurant),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult menuClassData(
         String id,
-        @JsonKey(name: 'category_id') String categoryId,
-        @JsonKey(name: 'restaurant_id') String restaurantId,
+        @JsonKey(name: "category_id") String categoryId,
+        @JsonKey(name: "restaurant_id") String restaurantId,
         String name,
         String description,
         String price,
-        @JsonKey(name: 'small_url') String smallUrl,
-        @JsonKey(name: 'medium_url') String mediumUrl,
-        @JsonKey(name: 'large_url') String largeUrl,
-        @JsonKey(name: 'restaurant') RestaurantData restaurant,
+        @JsonKey(name: "small_url", nullable: true) String smallUrl,
+        @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+        @JsonKey(name: "large_url", nullable: true) String largeUrl,
+        @JsonKey(name: "restaurant") RestaurantData restaurant,
         int sorting),
     TResult menuBookData(
-        @JsonKey(name: 'id') String id,
-        @JsonKey(name: 'name') String name,
-        @JsonKey(name: 'category_id') String categoryId,
-        @JsonKey(name: 'small_url') String smallUrl,
-        @JsonKey(name: 'medium_url') String mediumUrl,
-        @JsonKey(name: 'large_url') String largeUrl,
-        @JsonKey(name: 'sorting') String sorting,
-        @JsonKey(name: 'created_at') String createdAt,
-        @JsonKey(name: 'updated_at') String updatedAt,
-        @JsonKey(name: 'restaurant') RestaurantData restaurant),
+        @JsonKey(name: "id") String id,
+        @JsonKey(name: "name", nullable: true) String name,
+        @JsonKey(name: "category_id") String categoryId,
+        @JsonKey(name: "small_url", nullable: true) String smallUrl,
+        @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+        @JsonKey(name: "large_url", nullable: true) String largeUrl,
+        @JsonKey(name: "sorting") String sorting,
+        @JsonKey(name: "created_at") String createdAt,
+        @JsonKey(name: "updated_at") String updatedAt,
+        @JsonKey(name: "restaurant") RestaurantData restaurant),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -179,12 +179,12 @@ abstract class $MenuDataCopyWith<$Res> {
       _$MenuDataCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      @JsonKey(name: 'category_id') String categoryId,
+      @JsonKey(name: "category_id") String categoryId,
       String name,
-      @JsonKey(name: 'small_url') String smallUrl,
-      @JsonKey(name: 'medium_url') String mediumUrl,
-      @JsonKey(name: 'large_url') String largeUrl,
-      @JsonKey(name: 'restaurant') RestaurantData restaurant});
+      @JsonKey(name: "small_url", nullable: true) String smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) String largeUrl,
+      @JsonKey(name: "restaurant") RestaurantData restaurant});
 
   $RestaurantDataCopyWith<$Res> get restaurant;
 }
@@ -240,15 +240,15 @@ abstract class $MenuClassDataCopyWith<$Res> implements $MenuDataCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      @JsonKey(name: 'category_id') String categoryId,
-      @JsonKey(name: 'restaurant_id') String restaurantId,
+      @JsonKey(name: "category_id") String categoryId,
+      @JsonKey(name: "restaurant_id") String restaurantId,
       String name,
       String description,
       String price,
-      @JsonKey(name: 'small_url') String smallUrl,
-      @JsonKey(name: 'medium_url') String mediumUrl,
-      @JsonKey(name: 'large_url') String largeUrl,
-      @JsonKey(name: 'restaurant') RestaurantData restaurant,
+      @JsonKey(name: "small_url", nullable: true) String smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) String largeUrl,
+      @JsonKey(name: "restaurant") RestaurantData restaurant,
       int sorting});
 
   @override
@@ -307,15 +307,15 @@ class _$MenuClassDataCopyWithImpl<$Res> extends _$MenuDataCopyWithImpl<$Res>
 class _$MenuClassData implements MenuClassData {
   const _$MenuClassData(
       {this.id,
-      @JsonKey(name: 'category_id') this.categoryId,
-      @JsonKey(name: 'restaurant_id') this.restaurantId,
+      @JsonKey(name: "category_id") this.categoryId,
+      @JsonKey(name: "restaurant_id") this.restaurantId,
       this.name,
       this.description,
       this.price,
-      @JsonKey(name: 'small_url') this.smallUrl,
-      @JsonKey(name: 'medium_url') this.mediumUrl,
-      @JsonKey(name: 'large_url') this.largeUrl,
-      @JsonKey(name: 'restaurant') this.restaurant,
+      @JsonKey(name: "small_url", nullable: true) this.smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) this.mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) this.largeUrl,
+      @JsonKey(name: "restaurant") this.restaurant,
       this.sorting});
 
   factory _$MenuClassData.fromJson(Map<String, dynamic> json) =>
@@ -324,10 +324,10 @@ class _$MenuClassData implements MenuClassData {
   @override
   final String id;
   @override
-  @JsonKey(name: 'category_id')
+  @JsonKey(name: "category_id")
   final String categoryId;
   @override
-  @JsonKey(name: 'restaurant_id')
+  @JsonKey(name: "restaurant_id")
   final String restaurantId;
   @override
   final String name;
@@ -336,16 +336,16 @@ class _$MenuClassData implements MenuClassData {
   @override
   final String price;
   @override
-  @JsonKey(name: 'small_url')
+  @JsonKey(name: "small_url", nullable: true)
   final String smallUrl;
   @override
-  @JsonKey(name: 'medium_url')
+  @JsonKey(name: "medium_url", nullable: true)
   final String mediumUrl;
   @override
-  @JsonKey(name: 'large_url')
+  @JsonKey(name: "large_url", nullable: true)
   final String largeUrl;
   @override
-  @JsonKey(name: 'restaurant')
+  @JsonKey(name: "restaurant")
   final RestaurantData restaurant;
   @override
   final int sorting;
@@ -415,28 +415,28 @@ class _$MenuClassData implements MenuClassData {
     @required
         TResult menuClassData(
             String id,
-            @JsonKey(name: 'category_id') String categoryId,
-            @JsonKey(name: 'restaurant_id') String restaurantId,
+            @JsonKey(name: "category_id") String categoryId,
+            @JsonKey(name: "restaurant_id") String restaurantId,
             String name,
             String description,
             String price,
-            @JsonKey(name: 'small_url') String smallUrl,
-            @JsonKey(name: 'medium_url') String mediumUrl,
-            @JsonKey(name: 'large_url') String largeUrl,
-            @JsonKey(name: 'restaurant') RestaurantData restaurant,
+            @JsonKey(name: "small_url", nullable: true) String smallUrl,
+            @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+            @JsonKey(name: "large_url", nullable: true) String largeUrl,
+            @JsonKey(name: "restaurant") RestaurantData restaurant,
             int sorting),
     @required
         TResult menuBookData(
-            @JsonKey(name: 'id') String id,
-            @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'category_id') String categoryId,
-            @JsonKey(name: 'small_url') String smallUrl,
-            @JsonKey(name: 'medium_url') String mediumUrl,
-            @JsonKey(name: 'large_url') String largeUrl,
-            @JsonKey(name: 'sorting') String sorting,
-            @JsonKey(name: 'created_at') String createdAt,
-            @JsonKey(name: 'updated_at') String updatedAt,
-            @JsonKey(name: 'restaurant') RestaurantData restaurant),
+            @JsonKey(name: "id") String id,
+            @JsonKey(name: "name", nullable: true) String name,
+            @JsonKey(name: "category_id") String categoryId,
+            @JsonKey(name: "small_url", nullable: true) String smallUrl,
+            @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+            @JsonKey(name: "large_url", nullable: true) String largeUrl,
+            @JsonKey(name: "sorting") String sorting,
+            @JsonKey(name: "created_at") String createdAt,
+            @JsonKey(name: "updated_at") String updatedAt,
+            @JsonKey(name: "restaurant") RestaurantData restaurant),
   }) {
     assert(menuClassData != null);
     assert(menuBookData != null);
@@ -449,27 +449,27 @@ class _$MenuClassData implements MenuClassData {
   TResult maybeWhen<TResult extends Object>({
     TResult menuClassData(
         String id,
-        @JsonKey(name: 'category_id') String categoryId,
-        @JsonKey(name: 'restaurant_id') String restaurantId,
+        @JsonKey(name: "category_id") String categoryId,
+        @JsonKey(name: "restaurant_id") String restaurantId,
         String name,
         String description,
         String price,
-        @JsonKey(name: 'small_url') String smallUrl,
-        @JsonKey(name: 'medium_url') String mediumUrl,
-        @JsonKey(name: 'large_url') String largeUrl,
-        @JsonKey(name: 'restaurant') RestaurantData restaurant,
+        @JsonKey(name: "small_url", nullable: true) String smallUrl,
+        @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+        @JsonKey(name: "large_url", nullable: true) String largeUrl,
+        @JsonKey(name: "restaurant") RestaurantData restaurant,
         int sorting),
     TResult menuBookData(
-        @JsonKey(name: 'id') String id,
-        @JsonKey(name: 'name') String name,
-        @JsonKey(name: 'category_id') String categoryId,
-        @JsonKey(name: 'small_url') String smallUrl,
-        @JsonKey(name: 'medium_url') String mediumUrl,
-        @JsonKey(name: 'large_url') String largeUrl,
-        @JsonKey(name: 'sorting') String sorting,
-        @JsonKey(name: 'created_at') String createdAt,
-        @JsonKey(name: 'updated_at') String updatedAt,
-        @JsonKey(name: 'restaurant') RestaurantData restaurant),
+        @JsonKey(name: "id") String id,
+        @JsonKey(name: "name", nullable: true) String name,
+        @JsonKey(name: "category_id") String categoryId,
+        @JsonKey(name: "small_url", nullable: true) String smallUrl,
+        @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+        @JsonKey(name: "large_url", nullable: true) String largeUrl,
+        @JsonKey(name: "sorting") String sorting,
+        @JsonKey(name: "created_at") String createdAt,
+        @JsonKey(name: "updated_at") String updatedAt,
+        @JsonKey(name: "restaurant") RestaurantData restaurant),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -514,15 +514,15 @@ class _$MenuClassData implements MenuClassData {
 abstract class MenuClassData implements MenuData {
   const factory MenuClassData(
       {String id,
-      @JsonKey(name: 'category_id') String categoryId,
-      @JsonKey(name: 'restaurant_id') String restaurantId,
+      @JsonKey(name: "category_id") String categoryId,
+      @JsonKey(name: "restaurant_id") String restaurantId,
       String name,
       String description,
       String price,
-      @JsonKey(name: 'small_url') String smallUrl,
-      @JsonKey(name: 'medium_url') String mediumUrl,
-      @JsonKey(name: 'large_url') String largeUrl,
-      @JsonKey(name: 'restaurant') RestaurantData restaurant,
+      @JsonKey(name: "small_url", nullable: true) String smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) String largeUrl,
+      @JsonKey(name: "restaurant") RestaurantData restaurant,
       int sorting}) = _$MenuClassData;
 
   factory MenuClassData.fromJson(Map<String, dynamic> json) =
@@ -531,25 +531,25 @@ abstract class MenuClassData implements MenuData {
   @override
   String get id;
   @override
-  @JsonKey(name: 'category_id')
+  @JsonKey(name: "category_id")
   String get categoryId;
-  @JsonKey(name: 'restaurant_id')
+  @JsonKey(name: "restaurant_id")
   String get restaurantId;
   @override
   String get name;
   String get description;
   String get price;
   @override
-  @JsonKey(name: 'small_url')
+  @JsonKey(name: "small_url", nullable: true)
   String get smallUrl;
   @override
-  @JsonKey(name: 'medium_url')
+  @JsonKey(name: "medium_url", nullable: true)
   String get mediumUrl;
   @override
-  @JsonKey(name: 'large_url')
+  @JsonKey(name: "large_url", nullable: true)
   String get largeUrl;
   @override
-  @JsonKey(name: 'restaurant')
+  @JsonKey(name: "restaurant")
   RestaurantData get restaurant;
   int get sorting;
   @override
@@ -563,16 +563,16 @@ abstract class $MenuBookDataCopyWith<$Res> implements $MenuDataCopyWith<$Res> {
       _$MenuBookDataCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'category_id') String categoryId,
-      @JsonKey(name: 'small_url') String smallUrl,
-      @JsonKey(name: 'medium_url') String mediumUrl,
-      @JsonKey(name: 'large_url') String largeUrl,
-      @JsonKey(name: 'sorting') String sorting,
-      @JsonKey(name: 'created_at') String createdAt,
-      @JsonKey(name: 'updated_at') String updatedAt,
-      @JsonKey(name: 'restaurant') RestaurantData restaurant});
+      {@JsonKey(name: "id") String id,
+      @JsonKey(name: "name", nullable: true) String name,
+      @JsonKey(name: "category_id") String categoryId,
+      @JsonKey(name: "small_url", nullable: true) String smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) String largeUrl,
+      @JsonKey(name: "sorting") String sorting,
+      @JsonKey(name: "created_at") String createdAt,
+      @JsonKey(name: "updated_at") String updatedAt,
+      @JsonKey(name: "restaurant") RestaurantData restaurant});
 
   @override
   $RestaurantDataCopyWith<$Res> get restaurant;
@@ -624,49 +624,49 @@ class _$MenuBookDataCopyWithImpl<$Res> extends _$MenuDataCopyWithImpl<$Res>
 /// @nodoc
 class _$MenuBookData implements MenuBookData {
   const _$MenuBookData(
-      {@JsonKey(name: 'id') this.id,
-      @JsonKey(name: 'name') this.name,
-      @JsonKey(name: 'category_id') this.categoryId,
-      @JsonKey(name: 'small_url') this.smallUrl,
-      @JsonKey(name: 'medium_url') this.mediumUrl,
-      @JsonKey(name: 'large_url') this.largeUrl,
-      @JsonKey(name: 'sorting') this.sorting,
-      @JsonKey(name: 'created_at') this.createdAt,
-      @JsonKey(name: 'updated_at') this.updatedAt,
-      @JsonKey(name: 'restaurant') this.restaurant});
+      {@JsonKey(name: "id") this.id,
+      @JsonKey(name: "name", nullable: true) this.name,
+      @JsonKey(name: "category_id") this.categoryId,
+      @JsonKey(name: "small_url", nullable: true) this.smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) this.mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) this.largeUrl,
+      @JsonKey(name: "sorting") this.sorting,
+      @JsonKey(name: "created_at") this.createdAt,
+      @JsonKey(name: "updated_at") this.updatedAt,
+      @JsonKey(name: "restaurant") this.restaurant});
 
   factory _$MenuBookData.fromJson(Map<String, dynamic> json) =>
       _$_$MenuBookDataFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   final String id;
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name", nullable: true)
   final String name;
   @override
-  @JsonKey(name: 'category_id')
+  @JsonKey(name: "category_id")
   final String categoryId;
   @override
-  @JsonKey(name: 'small_url')
+  @JsonKey(name: "small_url", nullable: true)
   final String smallUrl;
   @override
-  @JsonKey(name: 'medium_url')
+  @JsonKey(name: "medium_url", nullable: true)
   final String mediumUrl;
   @override
-  @JsonKey(name: 'large_url')
+  @JsonKey(name: "large_url", nullable: true)
   final String largeUrl;
   @override
-  @JsonKey(name: 'sorting')
+  @JsonKey(name: "sorting")
   final String sorting;
   @override
-  @JsonKey(name: 'created_at')
+  @JsonKey(name: "created_at")
   final String createdAt;
   @override
-  @JsonKey(name: 'updated_at')
+  @JsonKey(name: "updated_at")
   final String updatedAt;
   @override
-  @JsonKey(name: 'restaurant')
+  @JsonKey(name: "restaurant")
   final RestaurantData restaurant;
 
   @override
@@ -732,28 +732,28 @@ class _$MenuBookData implements MenuBookData {
     @required
         TResult menuClassData(
             String id,
-            @JsonKey(name: 'category_id') String categoryId,
-            @JsonKey(name: 'restaurant_id') String restaurantId,
+            @JsonKey(name: "category_id") String categoryId,
+            @JsonKey(name: "restaurant_id") String restaurantId,
             String name,
             String description,
             String price,
-            @JsonKey(name: 'small_url') String smallUrl,
-            @JsonKey(name: 'medium_url') String mediumUrl,
-            @JsonKey(name: 'large_url') String largeUrl,
-            @JsonKey(name: 'restaurant') RestaurantData restaurant,
+            @JsonKey(name: "small_url", nullable: true) String smallUrl,
+            @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+            @JsonKey(name: "large_url", nullable: true) String largeUrl,
+            @JsonKey(name: "restaurant") RestaurantData restaurant,
             int sorting),
     @required
         TResult menuBookData(
-            @JsonKey(name: 'id') String id,
-            @JsonKey(name: 'name') String name,
-            @JsonKey(name: 'category_id') String categoryId,
-            @JsonKey(name: 'small_url') String smallUrl,
-            @JsonKey(name: 'medium_url') String mediumUrl,
-            @JsonKey(name: 'large_url') String largeUrl,
-            @JsonKey(name: 'sorting') String sorting,
-            @JsonKey(name: 'created_at') String createdAt,
-            @JsonKey(name: 'updated_at') String updatedAt,
-            @JsonKey(name: 'restaurant') RestaurantData restaurant),
+            @JsonKey(name: "id") String id,
+            @JsonKey(name: "name", nullable: true) String name,
+            @JsonKey(name: "category_id") String categoryId,
+            @JsonKey(name: "small_url", nullable: true) String smallUrl,
+            @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+            @JsonKey(name: "large_url", nullable: true) String largeUrl,
+            @JsonKey(name: "sorting") String sorting,
+            @JsonKey(name: "created_at") String createdAt,
+            @JsonKey(name: "updated_at") String updatedAt,
+            @JsonKey(name: "restaurant") RestaurantData restaurant),
   }) {
     assert(menuClassData != null);
     assert(menuBookData != null);
@@ -766,27 +766,27 @@ class _$MenuBookData implements MenuBookData {
   TResult maybeWhen<TResult extends Object>({
     TResult menuClassData(
         String id,
-        @JsonKey(name: 'category_id') String categoryId,
-        @JsonKey(name: 'restaurant_id') String restaurantId,
+        @JsonKey(name: "category_id") String categoryId,
+        @JsonKey(name: "restaurant_id") String restaurantId,
         String name,
         String description,
         String price,
-        @JsonKey(name: 'small_url') String smallUrl,
-        @JsonKey(name: 'medium_url') String mediumUrl,
-        @JsonKey(name: 'large_url') String largeUrl,
-        @JsonKey(name: 'restaurant') RestaurantData restaurant,
+        @JsonKey(name: "small_url", nullable: true) String smallUrl,
+        @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+        @JsonKey(name: "large_url", nullable: true) String largeUrl,
+        @JsonKey(name: "restaurant") RestaurantData restaurant,
         int sorting),
     TResult menuBookData(
-        @JsonKey(name: 'id') String id,
-        @JsonKey(name: 'name') String name,
-        @JsonKey(name: 'category_id') String categoryId,
-        @JsonKey(name: 'small_url') String smallUrl,
-        @JsonKey(name: 'medium_url') String mediumUrl,
-        @JsonKey(name: 'large_url') String largeUrl,
-        @JsonKey(name: 'sorting') String sorting,
-        @JsonKey(name: 'created_at') String createdAt,
-        @JsonKey(name: 'updated_at') String updatedAt,
-        @JsonKey(name: 'restaurant') RestaurantData restaurant),
+        @JsonKey(name: "id") String id,
+        @JsonKey(name: "name", nullable: true) String name,
+        @JsonKey(name: "category_id") String categoryId,
+        @JsonKey(name: "small_url", nullable: true) String smallUrl,
+        @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+        @JsonKey(name: "large_url", nullable: true) String largeUrl,
+        @JsonKey(name: "sorting") String sorting,
+        @JsonKey(name: "created_at") String createdAt,
+        @JsonKey(name: "updated_at") String updatedAt,
+        @JsonKey(name: "restaurant") RestaurantData restaurant),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -830,46 +830,46 @@ class _$MenuBookData implements MenuBookData {
 
 abstract class MenuBookData implements MenuData {
   const factory MenuBookData(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'category_id') String categoryId,
-      @JsonKey(name: 'small_url') String smallUrl,
-      @JsonKey(name: 'medium_url') String mediumUrl,
-      @JsonKey(name: 'large_url') String largeUrl,
-      @JsonKey(name: 'sorting') String sorting,
-      @JsonKey(name: 'created_at') String createdAt,
-      @JsonKey(name: 'updated_at') String updatedAt,
-      @JsonKey(name: 'restaurant') RestaurantData restaurant}) = _$MenuBookData;
+      {@JsonKey(name: "id") String id,
+      @JsonKey(name: "name", nullable: true) String name,
+      @JsonKey(name: "category_id") String categoryId,
+      @JsonKey(name: "small_url", nullable: true) String smallUrl,
+      @JsonKey(name: "medium_url", nullable: true) String mediumUrl,
+      @JsonKey(name: "large_url", nullable: true) String largeUrl,
+      @JsonKey(name: "sorting") String sorting,
+      @JsonKey(name: "created_at") String createdAt,
+      @JsonKey(name: "updated_at") String updatedAt,
+      @JsonKey(name: "restaurant") RestaurantData restaurant}) = _$MenuBookData;
 
   factory MenuBookData.fromJson(Map<String, dynamic> json) =
       _$MenuBookData.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: "id")
   String get id;
   @override
-  @JsonKey(name: 'name')
+  @JsonKey(name: "name", nullable: true)
   String get name;
   @override
-  @JsonKey(name: 'category_id')
+  @JsonKey(name: "category_id")
   String get categoryId;
   @override
-  @JsonKey(name: 'small_url')
+  @JsonKey(name: "small_url", nullable: true)
   String get smallUrl;
   @override
-  @JsonKey(name: 'medium_url')
+  @JsonKey(name: "medium_url", nullable: true)
   String get mediumUrl;
   @override
-  @JsonKey(name: 'large_url')
+  @JsonKey(name: "large_url", nullable: true)
   String get largeUrl;
-  @JsonKey(name: 'sorting')
+  @JsonKey(name: "sorting")
   String get sorting;
-  @JsonKey(name: 'created_at')
+  @JsonKey(name: "created_at")
   String get createdAt;
-  @JsonKey(name: 'updated_at')
+  @JsonKey(name: "updated_at")
   String get updatedAt;
   @override
-  @JsonKey(name: 'restaurant')
+  @JsonKey(name: "restaurant")
   RestaurantData get restaurant;
   @override
   $MenuBookDataCopyWith<MenuBookData> get copyWith;

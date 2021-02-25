@@ -28,8 +28,16 @@ class HomeMenuBookContainer extends StatelessWidget {
                 height: 150,
                 decoration: BoxDecoration(
                   image: DecorationImage(
+                      onError: (context, trace) {
+                        return Container(
+                          color: Colors.red,
+                          child: Text("404"),
+                        );
+                      },
                       image: NetworkImage(
-                        menuBookData.mediumUrl,
+                        (menuBookData.mediumUrl == null)
+                            ? "error"
+                            : menuBookData.mediumUrl,
                       ),
                       fit: BoxFit.cover),
                 ),
@@ -63,7 +71,7 @@ class HomeMenuBookContainer extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        menuBookData.restaurant.name,
+                        'Tsest',
                         maxLines: 2,
                         style: TextStyle(
                           color: Colors.white,

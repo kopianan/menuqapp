@@ -4,7 +4,10 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:feroza/domain/authentication/authentication_failure.dart';
 import 'package:feroza/domain/home/i_home_facade.dart';
+import 'package:feroza/util/constants.dart';
+import 'package:feroza/util/pref.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
 
@@ -26,6 +29,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       requestHomeData: (value) async* {
         yield HomeState.isLoading();
         final _result = await _iHomeFacade.getAllMenuData(value.lantLong);
+        //save all data to storage here.
         yield HomeState.allHomeDataOption(some(_result));
       },
     );

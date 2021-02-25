@@ -1,39 +1,32 @@
-import 'dart:async';
+import 'dart:math';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:feroza/application/chart/chart_controller.dart';
 import 'package:feroza/application/home/bloc/home_bloc.dart';
 import 'package:feroza/application/location/cubit/location_cubit.dart';
-import 'package:feroza/infrastructure/location/location_service.dart';
+import 'package:feroza/domain/menu/menu_req_res.dart';
+import 'package:feroza/domain/restaurant/restaurant_req_res.dart';
 import 'package:feroza/presentation/chart/chart_page.dart';
 import 'package:feroza/presentation/main_home/widgets/card_menu_list.dart';
 import 'package:feroza/presentation/main_home/widgets/home_food_card_item.dart';
 import 'package:feroza/presentation/main_home/widgets/home_restaurant_card_item.dart';
 import 'package:feroza/presentation/main_home/widgets/home_sub_title_container.dart';
-import 'package:feroza/presentation/place_profile/restaurant_profile_page.dart';
 import 'package:feroza/presentation/see_all/see_all_food_page.dart';
 import 'package:feroza/presentation/see_all/see_all_menu_book_page.dart';
 import 'package:feroza/presentation/see_all/see_all_page.dart';
+import 'package:feroza/util/pref.dart';
 import 'package:flutter/material.dart';
-// import 'package:barcode_scan/barcode_scan.dart';
-import 'package:feroza/application/core/controller/location_controller.dart';
-import 'package:feroza/application/core/cubit/location_cubit.dart';
-import 'package:feroza/application/menu/controller/menu_controller.dart';
-import 'package:feroza/application/restaurant/controller/restuarant_controller.dart';
 import 'package:feroza/domain/menu/menu_data.dart';
 import 'package:feroza/domain/restaurant/restaurant_data.dart';
 import 'package:feroza/presentation/main_home/widgets/home_menu_book_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:geolocator/geolocator.dart';
-// import 'package:geolocator/geolocator.dart';
-
 import 'package:get/get.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../injection.dart';
 
 class HomeFeedContainer extends StatefulWidget {
   const HomeFeedContainer();
@@ -44,231 +37,126 @@ class HomeFeedContainer extends StatefulWidget {
 
 class _HomeFeedContainerState extends State<HomeFeedContainer>
     with SingleTickerProviderStateMixin {
-  ScrollController _scrollController;
-  AnimationController _hideFabAnimController;
-
-  RestaurantController restaurantController = Get.put(RestaurantController());
-  MenuController menuController = Get.put(MenuController());
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
   final locationCubit = LocationCubit();
 
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    _hideFabAnimController.dispose();
-
-    super.dispose();
-  }
-
   void initState() {
     super.initState();
-
-    _scrollController = ScrollController();
-    _hideFabAnimController = AnimationController(
-      vsync: this,
-      duration: kThemeAnimationDuration,
-      value: 1, // initially visible
-    );
-
-    _scrollController.addListener(() {
-      switch (_scrollController.position.userScrollDirection) {
-        // Scrolling up - forward the animation (value goes to 1)
-        case ScrollDirection.forward:
-          _hideFabAnimController.forward();
-          break;
-        // Scrolling down - reverse the animation (value goes to 0)
-        case ScrollDirection.reverse:
-          _hideFabAnimController.reverse();
-          break;
-        // Idle - keep FAB visibility unchanged
-        case ScrollDirection.idle:
-          break;
-      }
-    });
   }
 
-  List<String> imageUrl = ["assets/images/banner1.png"];
-  Stream stream;
-
+  final homeBloc = getIt<HomeBloc>();
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => locationCubit..getCurrentLocation(),
-      child: BlocConsumer<LocationCubit, LocationState>(
+      create: (context) => homeBloc,
+      child: BlocConsumer<HomeBloc, HomeState>(
           listener: (context, state) {
-        state.maybeMap(
-            orElse: () {},
-            onSuccess: (e) {
-              //get location
-              print(e.position[0].street);
-            });
-      }, builder: (context, state) {
-        return Scaffold(
-          backgroundColor: Color(0xfff6f5fa),
-          body: SafeArea(
-            child: GetBuilder<LocationController>(
-              builder: (locationController) => SmartRefresher(
-                enablePullUp: false,
-                enablePullDown: true,
-                header: WaterDropHeader(),
-                controller: _refreshController,
-                onLoading: () {},
-                onRefresh: () {
-                  locationCubit.getCurrentLocation();
-                  context.read<HomeBloc>()
-                    ..add(HomeEvent.requestHomeData(
-                        locationController.getCurrentPosition));
-                },
-                child: CustomScrollView(
-                  controller: _scrollController,
-                  slivers: <Widget>[
-                    SliverToBoxAdapter(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Expanded(
-                            child: Container(
-                              margin: EdgeInsets.all(10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("WELCOME",
-                                      style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold)),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    state.maybeMap(
-                                        orElse: () => "Loading...",
-                                        onSuccess: (e) {
-                                          return e.position[0].street
-                                              .toString();
-                                        }),
-                                    style: TextStyle(fontSize: 16),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 15),
-                            alignment: Alignment.center,
-                            child: Stack(
-                              children: [
-                                IconButton(
-                                  icon: Icon(
-                                    Icons.list_alt,
-                                    size: 30,
-                                  ),
-                                  onPressed: () {
-                                    Get.toNamed(ChartPage.TAG);
-                                  },
-                                ),
-                                GetBuilder<ChartController>(
-                                  builder: (chart) => (chart.isNullOrBlank)
-                                      ? Container()
-                                      : Positioned(
-                                          top: 0,
-                                          right: 0,
-                                          child: CircleAvatar(
-                                            radius: 12,
-                                            child: Text(
-                                                chart.chartDataModel.length
-                                                    .toString(),
-                                                style: TextStyle(
-                                                  fontSize: 13,
-                                                  color: Colors.white,
-                                                )),
-                                            backgroundColor: Colors.red,
-                                          ),
-                                        ),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    SliverToBoxAdapter(
-                      child: Column(
-                        children: [
-                          HomeSubTitleContainer(
-                            onSeeAll: null,
-                            title: "Offering Today",
-                          ),
-                          _promoCarousel(),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Column(
-                            children: <Widget>[
-                              HomeSubTitleContainer(
-                                onSeeAll: () {
-                                  Get.toNamed(SeeAllPage.TAG);
-                                },
-                                title: "Nearby Place",
-                              ),
-                              listPlace(
-                                  restaurantController.getRestaurantData.data),
-                            ],
-                          ),
-                          // Column(
-                          //   children: <Widget>[
-                          //     HomeSubTitleContainer(
-                          //       onSeeAll: () {
-                          //         Get.toNamed(SeeAllFoodPage.TAG);
-                          //       },
-                          //       title: "Nearby Food",
-                          //     ),
-                          //     listItem(menuController.getMenuData.data),
-                          //   ],
-                          // ),
-                          // SizedBox(
-                          //   height: 20,
-                          // ),
-                          Column(
-                            children: <Widget>[
-                              HomeSubTitleContainer(
-                                onSeeAll: () {
-                                  Get.toNamed(SeeAllMenuBookPage.TAG);
-                                },
-                                title: "Book Menu",
-                              ),
-                              listMenuBookData(menuController.getMenuBook.data),
-                              // Container(child: ,)
-                            ],
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Column(
-                            children: [
-                              HomeSubTitleContainer(
-                                onSeeAll: () {
-                                  Get.toNamed(SeeAllFoodPage.TAG);
-                                },
-                                title: "Food List",
-                              ),
-                              listAllMenu(),
-                            ],
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            state.maybeMap(
+                orElse: () {},
+                allHomeDataOption: (e) {
+                  e.dataOption.fold(
+                    () => {},
+                    (a) => _refreshController.refreshCompleted(),
+                  );
+                });
+          },
+          builder: (context, state) => SafeArea(
+                child: SmartRefresher(
+                    enablePullUp: false,
+                    enablePullDown: true,
+                    header: WaterDropHeader(),
+                    controller: _refreshController,
+                    onLoading: () {},
+                    onRefresh: () {
+                      homeBloc.add(HomeEvent.requestHomeData("3,3"));
+                    },
+                    child: CustomScrollView(
+                      slivers: [HomeAppBar(), HomeBody()],
+                    )),
+              )),
+    );
+  }
+
+  List<Widget> scrollViewList = [];
+}
+
+class HomeBody extends StatefulWidget {
+  const HomeBody({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  _HomeBodyState createState() => _HomeBodyState();
+}
+
+class _HomeBodyState extends State<HomeBody> {
+  List<String> imageUrl = ['assets/images/banner1.png'];
+  GetRestaurantListResponse restaurantData;
+  MenuBookResponse menuBookResponse;
+  MenuResponse menuResponse;
+  @override
+  void initState() {
+    restaurantData = loadRestaurantListData();
+    menuBookResponse = loadMenuBookListData();
+    menuResponse = loadMenuListData();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverToBoxAdapter(
+      child: Column(
+        children: [
+          HomeSubTitleContainer(
+            onSeeAll: null,
+            title: "Offering Today",
           ),
-        );
-      }),
+          _promoCarousel(),
+          SizedBox(
+            height: 10,
+          ),
+          Column(
+            children: <Widget>[
+              HomeSubTitleContainer(
+                onSeeAll: () {
+                  Get.toNamed(SeeAllPage.TAG);
+                },
+                title: "Nearby Place",
+              ),
+              listPlace(restaurantData.data),
+            ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Column(
+            children: <Widget>[
+              HomeSubTitleContainer(
+                onSeeAll: () {
+                  Get.toNamed(SeeAllPage.TAG);
+                },
+                title: "Open Now",
+              ),
+              listPlace(restaurantData.data),
+            ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Column(
+            children: [
+              HomeSubTitleContainer(
+                onSeeAll: () {
+                  Get.toNamed(SeeAllFoodPage.TAG);
+                },
+                title: "Food List",
+              ),
+              listAllMenu(menuResponse.data),
+            ],
+          )
+        ],
+      ),
     );
   }
 
@@ -310,15 +198,15 @@ class _HomeFeedContainerState extends State<HomeFeedContainer>
     );
   }
 
-  Container listAllMenu() {
+  Container listAllMenu(List<MenuData> listMenu) {
     return Container(
       margin: EdgeInsets.only(left: 20, right: 20),
       child: ListView.builder(
-          itemCount: menuController.getMenuData.data.length,
+          itemCount: listMenu.length,
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           itemBuilder: (context, index) => CardMenuList(
-                menuClassData: menuController.getMenuData.data[index],
+                menuClassData: listMenu[index],
               )),
     );
   }
@@ -335,13 +223,13 @@ class _HomeFeedContainerState extends State<HomeFeedContainer>
       alignment: Alignment.centerLeft,
       height: 210,
       margin: EdgeInsets.only(left: 20),
-      child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: dataList.length,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => HomeFoodCardItem(
-                menuClassData: dataList[index],
-              )),
+      // child: ListView.builder(
+      //     shrinkWrap: true,
+      //     itemCount: dataList.length,
+      //     scrollDirection: Axis.horizontal,
+      //     itemBuilder: (context, index) => HomeFoodCardItem(
+      //           menuClassData: dataList[index],
+      //         )),
     );
   }
 
@@ -370,6 +258,71 @@ class _HomeFeedContainerState extends State<HomeFeedContainer>
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) =>
               HomeRestaurantCardItem(restaurantData: data[index])),
+    );
+  }
+}
+
+class HomeAppBar extends StatelessWidget {
+  HomeAppBar({
+    Key key,
+  }) : super(key: key);
+
+  final List<String> chars = [
+    'assets/images/char1.png',
+    'assets/images/char2.png',
+    'assets/images/char3.png',
+    'assets/images/char4.png',
+    'assets/images/char5.png',
+    'assets/images/char6.png',
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return SliverToBoxAdapter(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.all(10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Welcome",
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w400)),
+                  Text("Alamant saat ini, no 54")
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            height: 50,
+            width: 50,
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey[200],
+                  spreadRadius: 3,
+                  blurRadius: 4,
+                )
+              ],
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                image: AssetImage(chars[Random().nextInt(chars.length)]),
+                fit: BoxFit.fitHeight,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

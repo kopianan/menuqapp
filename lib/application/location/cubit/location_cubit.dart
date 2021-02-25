@@ -1,9 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:feroza/application/core/controller/location_controller.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:get/get.dart';
 
 part 'location_state.dart';
 part 'location_cubit.freezed.dart';

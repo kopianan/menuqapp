@@ -1,4 +1,5 @@
 import 'package:feroza/presentation/app_widget.dart';
+import 'package:feroza/presentation/cart/cart_page.dart';
 import 'package:feroza/presentation/chart/chart_page.dart';
 import 'package:feroza/presentation/menu_book/menu_book_page.dart';
 import 'package:feroza/presentation/place_profile/restaurant_profile_page.dart';
@@ -25,5 +26,6 @@ List<GetPage> get getAllPages {
     GetPage(name: SeeAllFoodPage.TAG, page: () => SeeAllFoodPage()),
     GetPage(name: SeeAllMenuBookPage.TAG, page: () => SeeAllMenuBookPage()),
     GetPage(name: ChartPage.TAG, page: () => ChartPage()),
+    GetPage(name: CartPage.TAG, page: () => CartPage()),
   ];
 }

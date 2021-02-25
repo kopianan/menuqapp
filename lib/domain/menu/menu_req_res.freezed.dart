@@ -41,7 +41,7 @@ class _$MenuReqResTearOff {
   MenuRequestByNearby menuRequestByNearby(
       {int paginate,
       int page,
-      @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang}) {
+      @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang}) {
     return MenuRequestByNearby(
       paginate: paginate,
       page: page,
@@ -89,7 +89,7 @@ mixin _$MenuReqRes {
     @required TResult menuResponse(List<MenuClassData> data),
     @required
         TResult menuRequestByNearby(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
     @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
@@ -98,7 +98,7 @@ mixin _$MenuReqRes {
   TResult maybeWhen<TResult extends Object>({
     TResult menuResponse(List<MenuClassData> data),
     TResult menuRequestByNearby(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
     TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
@@ -210,7 +210,7 @@ class _$MenuResponse implements MenuResponse {
     @required TResult menuResponse(List<MenuClassData> data),
     @required
         TResult menuRequestByNearby(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
     @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
@@ -228,7 +228,7 @@ class _$MenuResponse implements MenuResponse {
   TResult maybeWhen<TResult extends Object>({
     TResult menuResponse(List<MenuClassData> data),
     TResult menuRequestByNearby(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
     TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
@@ -302,7 +302,7 @@ abstract class $MenuRequestByNearbyCopyWith<$Res> {
   $Res call(
       {int paginate,
       int page,
-      @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang});
+      @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang});
 }
 
 /// @nodoc
@@ -337,7 +337,7 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
   const _$MenuRequestByNearby(
       {this.paginate,
       this.page,
-      @JsonKey(name: 'order_by_nearest_to_lat_lng') this.latLang});
+      @JsonKey(name: "order_by_nearest_to_lat_lng") this.latLang});
 
   factory _$MenuRequestByNearby.fromJson(Map<String, dynamic> json) =>
       _$_$MenuRequestByNearbyFromJson(json);
@@ -347,7 +347,7 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
   @override
   final int page;
   @override
-  @JsonKey(name: 'order_by_nearest_to_lat_lng')
+  @JsonKey(name: "order_by_nearest_to_lat_lng")
   final String latLang;
 
   @override
@@ -385,7 +385,7 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
     @required TResult menuResponse(List<MenuClassData> data),
     @required
         TResult menuRequestByNearby(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
     @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
@@ -403,7 +403,7 @@ class _$MenuRequestByNearby implements MenuRequestByNearby {
   TResult maybeWhen<TResult extends Object>({
     TResult menuResponse(List<MenuClassData> data),
     TResult menuRequestByNearby(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
     TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
@@ -464,7 +464,7 @@ abstract class MenuRequestByNearby implements MenuReqRes {
   const factory MenuRequestByNearby(
           {int paginate,
           int page,
-          @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang}) =
+          @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang}) =
       _$MenuRequestByNearby;
 
   factory MenuRequestByNearby.fromJson(Map<String, dynamic> json) =
@@ -472,7 +472,7 @@ abstract class MenuRequestByNearby implements MenuReqRes {
 
   int get paginate;
   int get page;
-  @JsonKey(name: 'order_by_nearest_to_lat_lng')
+  @JsonKey(name: "order_by_nearest_to_lat_lng")
   String get latLang;
   $MenuRequestByNearbyCopyWith<MenuRequestByNearby> get copyWith;
 }
@@ -545,7 +545,7 @@ class _$MenuBookResponse implements MenuBookResponse {
     @required TResult menuResponse(List<MenuClassData> data),
     @required
         TResult menuRequestByNearby(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
     @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
@@ -563,7 +563,7 @@ class _$MenuBookResponse implements MenuBookResponse {
   TResult maybeWhen<TResult extends Object>({
     TResult menuResponse(List<MenuClassData> data),
     TResult menuRequestByNearby(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
     TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
@@ -705,7 +705,7 @@ class _$MenuBookResponseWithRestaurant
     @required TResult menuResponse(List<MenuClassData> data),
     @required
         TResult menuRequestByNearby(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
     @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
@@ -723,7 +723,7 @@ class _$MenuBookResponseWithRestaurant
   TResult maybeWhen<TResult extends Object>({
     TResult menuResponse(List<MenuClassData> data),
     TResult menuRequestByNearby(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
     TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),
@@ -868,7 +868,7 @@ class _$MenuBookRequest implements MenuBookRequest {
     @required TResult menuResponse(List<MenuClassData> data),
     @required
         TResult menuRequestByNearby(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult menuBookResponse(List<MenuBookData> data),
     @required TResult menuBookResponseWithRestaurant(MenuClassData data),
     @required TResult menuBookRequest(int paginate, int page),
@@ -886,7 +886,7 @@ class _$MenuBookRequest implements MenuBookRequest {
   TResult maybeWhen<TResult extends Object>({
     TResult menuResponse(List<MenuClassData> data),
     TResult menuRequestByNearby(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     TResult menuBookResponse(List<MenuBookData> data),
     TResult menuBookResponseWithRestaurant(MenuClassData data),
     TResult menuBookRequest(int paginate, int page),

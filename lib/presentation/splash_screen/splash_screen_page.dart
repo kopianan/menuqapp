@@ -1,14 +1,12 @@
-import 'package:feroza/application/bloc/authentication_bloc.dart';
-import 'package:feroza/application/core/controller/location_controller.dart';
-import 'package:feroza/application/location/cubit/location_cubit.dart';
+import 'package:feroza/application/home/bloc/home_bloc.dart';
 import 'package:feroza/presentation/main_home/main_home.dart';
+import 'package:feroza/presentation/main_home/widgets/home_error_page.dart';
+import 'package:feroza/util/pref.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:imei_plugin/imei_plugin.dart';
-
 import '../../injection.dart';
 
 class SplashScreenPage extends StatefulWidget {
@@ -21,93 +19,80 @@ class SplashScreenPage extends StatefulWidget {
 }
 
 class _SplashScreenPageState extends State<SplashScreenPage> {
-  final authBloc = getIt<AuthenticationBloc>();
-  final locationBloc = LocationCubit();
-  final location = Get.put(LocationController()) ; 
+  final FirebaseMessaging firebaseMessaging = FirebaseMessaging();
+
   @override
-  Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) =>
-              authBloc..add(AuthenticationEvent.authenticate()),
-        ),
-        BlocProvider(
-          create: (context) => locationBloc,
-        )
-      ],
-      child: MultiBlocListener(
-        listeners: [
-          BlocListener<AuthenticationBloc, AuthenticationState>(
-            listener: (context, state) {
-              state.maybeMap(
-                orElse: () {},
-                authStatus: (e) {
-                  // print(e.isAuthenticate);
-                  // if (e.isAuthenticate)
-                  //   Get.offAll(MainHome());
-                  // else
-                  //   registerNewDevice(context);
-                  registerNewDevice(context);
-                },
-                registerDeviceOption: (value) => value.option.fold(
-                    () => () {},
-                    (a) => a.fold(
-                          (l) => print("Error"),
-                          (r) {
-                            locationBloc.getCurrentLocation();
-                          },
-                        )),
-              );
-            },
-          ),
-          BlocListener<LocationCubit, LocationState>(
-            listener: (context, state) {
-              state.map(
-                initial: (e) => Fluttertoast.showToast(msg: "Initial"),
-                onLoading: (e) => Fluttertoast.showToast(msg: "Loading..."),
-                onError: (e) => Fluttertoast.showToast(msg: e.message),
-                onSuccess: (e) {
-                  location.setCurrentPosition(e.position[0].locality); 
-                  Get.offNamed(MainHome.TAG);
-                },
-              );
-            },
-          )
-        ],
-        child: Scaffold(
-            body: Stack(
-          children: [
-            Positioned(
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
-                child: Image.asset(
-                  'assets/images/loading.png',
-                  fit: BoxFit.cover,
-                )),
-            Center(
-              child: CircularProgressIndicator(),
-            ),
-          ],
-        )),
-      ),
-    );
+  void initState() {
+    firebaseMessaging.getToken().then((value) => print(value));
+    super.initState();
   }
 
-  Future<void> registerNewDevice(BuildContext context) async {
-    String platformImei;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      platformImei =
-          await ImeiPlugin.getImei(shouldShowRequestPermissionRationale: false);
-      print(platformImei);
-      context.read<AuthenticationBloc>()
-        ..add(AuthenticationEvent.registerDevice(platformImei));
-    } on PlatformException {
-      platformImei = 'Failed to get platform version.';
-    }
-    if (!mounted) return;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: BlocProvider(
+            create: (context) =>
+                getIt<HomeBloc>()..add(HomeEvent.requestHomeData("2,3")),
+            child:
+                BlocConsumer<HomeBloc, HomeState>(listener: (context, state) {
+              state.maybeWhen(
+                orElse: () {},
+                allHomeDataOption: (dataOption) {
+                  dataOption.fold(
+                      () => print("nothing"),
+                      (a) => a.fold(
+                            (l) => Fluttertoast.showToast(msg: "Error Data"),
+                            (r) {
+                              print(r);
+                              //save data to storage.
+                              saveHomeData(r).then(
+                                (value) {
+                                  Get.offNamed(MainHome.TAG);
+                                },
+                              ).catchError((onError) {
+                                Fluttertoast.showToast(msg: onError.toString());
+                              });
+                            },
+                          ));
+                },
+              );
+            }, builder: (context, state) {
+              return state.maybeMap(
+                orElse: () => SplashScreenLoading(),
+                isLoading: (loading) => SplashScreenLoading(),
+                allHomeDataOption: (data) {
+                  return data.dataOption.fold(
+                      () => SplashScreenLoading(),
+                      (a) => a.fold((l) => HomeErrorPage(),
+                          (r) => SplashScreenLoading()));
+                },
+              );
+            })));
+  }
+}
+
+class SplashScreenLoading extends StatelessWidget {
+  const SplashScreenLoading({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Positioned(
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            child: Image.asset(
+              'assets/images/loading.png',
+              fit: BoxFit.cover,
+            )),
+        Center(
+          child: CircularProgressIndicator(),
+        ),
+      ],
+    );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:feroza/application/core/controller/location_controller.dart';
+
 import 'package:feroza/application/restaurant/restaurant_bloc.dart';
 import 'package:feroza/domain/restaurant/restaurant_data.dart';
 import 'package:feroza/domain/restaurant/restaurant_req_res.dart';
@@ -22,7 +22,6 @@ class SeeAllPage extends StatefulWidget {
 
 class _SeeAllPageState extends State<SeeAllPage> {
   GetRestaurantListRequest _request;
-  LocationController _locationController = Get.put(LocationController());
   List<RestaurantData> data;
   int _page;
 
@@ -31,10 +30,7 @@ class _SeeAllPageState extends State<SeeAllPage> {
     _page = 1;
     data = List<RestaurantData>();
     _refreshController = RefreshController(initialRefresh: false);
-    _request = GetRestaurantListRequest(
-        page: _page,
-        paginate: 8,
-        latLang: "");
+    _request = GetRestaurantListRequest(page: _page, paginate: 8, latLang: "");
     print(_request.toJson());
     super.initState();
   }
@@ -104,9 +100,7 @@ class _SeeAllPageState extends State<SeeAllPage> {
                   controller: _refreshController,
                   onLoading: () {
                     _request = GetRestaurantListRequest(
-                        page: _page,
-                        paginate: 5,
-                        latLang: "");
+                        page: _page, paginate: 5, latLang: "");
                     print("onLoading");
                     context.read<RestaurantBloc>().add(
                         RestaurantEvent.getRestaurantList(request: _request));

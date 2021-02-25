@@ -1,12 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:feroza/application/menu/controller/menu_controller.dart';
-import 'package:feroza/application/restaurant/controller/restuarant_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:feroza/domain/menu/menu_data.dart';
 
 class MenuBookPage extends StatefulWidget {
-     static final  String TAG = '/menu_book';
+  static final String TAG = '/menu_book';
   MenuBookPage({Key key}) : super(key: key);
 
   @override
@@ -18,7 +16,6 @@ class _MenuBookPageState extends State<MenuBookPage> {
   String title;
   List<MenuBookData> _menuBookData;
   CarouselController carouselController = CarouselController();
-  RestaurantController _restaurantController = Get.put(RestaurantController());
 
   @override
   void initState() {
@@ -26,8 +23,6 @@ class _MenuBookPageState extends State<MenuBookPage> {
 
     //get from previouse page and get the selected index for the carousel
 
-    _menuBookData =
-        _restaurantController.getAllRestaurantData.data.menuBookDataList;
     title = _menuBookData[_current].name;
 
     super.initState();

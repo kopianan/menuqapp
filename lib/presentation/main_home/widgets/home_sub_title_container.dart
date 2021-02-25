@@ -18,7 +18,7 @@ class HomeSubTitleContainer extends StatelessWidget {
           ? null
           : InkWell(
               onTap: onSeeAll,
-              child: Text("See All",
+              child: Text("View All",
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: kSecondaryColor))),
     );

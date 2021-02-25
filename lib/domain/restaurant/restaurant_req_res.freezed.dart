@@ -46,7 +46,7 @@ class _$RestaurantReqResTearOff {
   GetRestaurantListRequest getRestaurantListRequest(
       {@required int paginate,
       @required int page,
-      @required @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang}) {
+      @required @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang}) {
     return GetRestaurantListRequest(
       paginate: paginate,
       page: page,
@@ -73,14 +73,14 @@ mixin _$RestaurantReqRes {
         TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     @required
         TResult getRestaurantListRequest(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult getRestaurantListResponse(List<RestaurantData> data),
     TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     TResult getRestaurantListRequest(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -191,7 +191,7 @@ class _$GetRestaurantListResponse implements GetRestaurantListResponse {
         TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     @required
         TResult getRestaurantListRequest(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
   }) {
     assert(getRestaurantListResponse != null);
     assert(getAllRestaurantDataResponse != null);
@@ -205,7 +205,7 @@ class _$GetRestaurantListResponse implements GetRestaurantListResponse {
     TResult getRestaurantListResponse(List<RestaurantData> data),
     TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     TResult getRestaurantListRequest(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -338,7 +338,7 @@ class _$GetAllRestaurantDataResponse implements GetAllRestaurantDataResponse {
         TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     @required
         TResult getRestaurantListRequest(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
   }) {
     assert(getRestaurantListResponse != null);
     assert(getAllRestaurantDataResponse != null);
@@ -352,7 +352,7 @@ class _$GetAllRestaurantDataResponse implements GetAllRestaurantDataResponse {
     TResult getRestaurantListResponse(List<RestaurantData> data),
     TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     TResult getRestaurantListRequest(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -420,7 +420,7 @@ abstract class $GetRestaurantListRequestCopyWith<$Res> {
   $Res call(
       {int paginate,
       int page,
-      @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang});
+      @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang});
 }
 
 /// @nodoc
@@ -456,7 +456,7 @@ class _$GetRestaurantListRequest implements GetRestaurantListRequest {
   const _$GetRestaurantListRequest(
       {@required this.paginate,
       @required this.page,
-      @required @JsonKey(name: 'order_by_nearest_to_lat_lng') this.latLang})
+      @required @JsonKey(name: "order_by_nearest_to_lat_lng") this.latLang})
       : assert(paginate != null),
         assert(page != null),
         assert(latLang != null);
@@ -469,7 +469,7 @@ class _$GetRestaurantListRequest implements GetRestaurantListRequest {
   @override
   final int page;
   @override
-  @JsonKey(name: 'order_by_nearest_to_lat_lng')
+  @JsonKey(name: "order_by_nearest_to_lat_lng")
   final String latLang;
 
   @override
@@ -510,7 +510,7 @@ class _$GetRestaurantListRequest implements GetRestaurantListRequest {
         TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     @required
         TResult getRestaurantListRequest(int paginate, int page,
-            @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+            @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
   }) {
     assert(getRestaurantListResponse != null);
     assert(getAllRestaurantDataResponse != null);
@@ -524,7 +524,7 @@ class _$GetRestaurantListRequest implements GetRestaurantListRequest {
     TResult getRestaurantListResponse(List<RestaurantData> data),
     TResult getAllRestaurantDataResponse(SingleRestaurantCompleteData data),
     TResult getRestaurantListRequest(int paginate, int page,
-        @JsonKey(name: 'order_by_nearest_to_lat_lng') String latLang),
+        @JsonKey(name: "order_by_nearest_to_lat_lng") String latLang),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -579,7 +579,7 @@ abstract class GetRestaurantListRequest implements RestaurantReqRes {
       @required
           int page,
       @required
-      @JsonKey(name: 'order_by_nearest_to_lat_lng')
+      @JsonKey(name: "order_by_nearest_to_lat_lng")
           String latLang}) = _$GetRestaurantListRequest;
 
   factory GetRestaurantListRequest.fromJson(Map<String, dynamic> json) =
@@ -587,7 +587,7 @@ abstract class GetRestaurantListRequest implements RestaurantReqRes {
 
   int get paginate;
   int get page;
-  @JsonKey(name: 'order_by_nearest_to_lat_lng')
+  @JsonKey(name: "order_by_nearest_to_lat_lng")
   String get latLang;
   $GetRestaurantListRequestCopyWith<GetRestaurantListRequest> get copyWith;
 }

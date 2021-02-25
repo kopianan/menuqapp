@@ -1,5 +1,3 @@
-import 'package:feroza/application/restaurant/controller/restuarant_controller.dart';
-import 'package:feroza/domain/restaurant/restaurant_data.dart';
 import 'package:feroza/domain/restaurant/single_restaurant_data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,11 +13,9 @@ class MenuBookContainer extends StatefulWidget {
 }
 
 class _MenuBookContainerState extends State<MenuBookContainer> {
-  RestaurantController restaurantController = Get.put(RestaurantController());
   SingleRestaurantCompleteData _allRestaurantData;
   @override
   void initState() {
-    _allRestaurantData = restaurantController.getAllRestaurantData.data;
     super.initState();
   }
 

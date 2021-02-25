@@ -1,4 +1,3 @@
-import 'package:feroza/application/restaurant/controller/restuarant_controller.dart';
 import 'package:feroza/domain/category/category_data.dart';
 import 'package:feroza/domain/restaurant/restaurant_req_res.dart';
 import 'package:feroza/presentation/place_profile/restaurant_information_page.dart';
@@ -94,11 +93,9 @@ class RestaurantFoodData extends StatefulWidget {
 class _RestaurantFoodDataState extends State<RestaurantFoodData> {
   List<CategoryDataClass> tabs;
   GetAllRestaurantDataResponse _getAllRestaurantDataResponse;
-  RestaurantController restaurantController = Get.put(RestaurantController());
   @override
   void initState() {
     _getAllRestaurantDataResponse = widget._getAllRestaurantDataResponse;
-    restaurantController.setAllRestaurantData(_getAllRestaurantDataResponse);
     tabs = null;
     tabs = _getAllRestaurantDataResponse.data.categoryList;
     if (tabs.length == 0 || tabs[0].id != "no_id")

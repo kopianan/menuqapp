@@ -1,17 +1,20 @@
-import 'package:feroza/application/menu/controller/menu_controller.dart';
+import 'package:feroza/application/restaurant/controller/restaurant_controller.dart';
 import 'package:feroza/application/restaurant/restaurant_bloc.dart';
-import 'package:feroza/domain/menu/menu_req_res.dart';
-import 'package:feroza/domain/restaurant/restaurant_data.dart';
-import 'package:feroza/presentation/place_profile/widgets/restaurant_profile_widget.dart';
-import 'package:flutter/material.dart';
+import 'package:feroza/injection.dart';
+import 'package:feroza/presentation/components/default_button.dart';
+import 'package:feroza/presentation/components/default_outline_button.dart';
+import 'package:feroza/presentation/main_home/widgets/home_food_card_item.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
 
-import '../../injection.dart';
-import 'widgets/restaurant_profile_loading_widget.dart';
+import 'components/products_page.dart';
 
 class RestaurantProfilePage extends StatefulWidget {
-  static final  String TAG = '/restaurant_profile';  
+  static final String TAG = '/restaurant_profile';
   RestaurantProfilePage({Key key}) : super(key: key);
 
   @override
@@ -19,30 +22,12 @@ class RestaurantProfilePage extends StatefulWidget {
 }
 
 class _RestaurantProfilePageState extends State<RestaurantProfilePage> {
-  String restaurantId;
-  MenuBookRequest _menuBookRequest;
-
-  final MenuController menuController = Get.put(MenuController());
-
+  final restaurantController = Get.put(RestaurantController());
+  String _restaurantId;
   @override
   void initState() {
-    _menuBookRequest = MenuBookRequest(page: 1, paginate: 10);
-    restaurantId = Get.arguments as String;
+    _restaurantId = Get.arguments as String;
     super.initState();
-  }
-
-  menuBlocListener(BuildContext context, RestaurantState state) {
-    state.maybeMap(
-      orElse: () {},
-      completeRestaurantDataOption: (value) => {
-        value.restaurantList.fold(
-            () => print("None"),
-            (a) => a.fold(
-                  (l) => print("Error"),
-                  (r) => print(r.data.toString()),
-                ))
-      },
-    );
   }
 
   @override
@@ -50,29 +35,82 @@ class _RestaurantProfilePageState extends State<RestaurantProfilePage> {
     return BlocProvider(
       create: (context) => getIt<RestaurantBloc>()
         ..add(RestaurantEvent.getCompleteRestaurantData(
-            restaurantId: restaurantId)),
+            restaurantId: _restaurantId)),
       child: BlocConsumer<RestaurantBloc, RestaurantState>(
-        listener: menuBlocListener,
-        builder: (context, state) {
-          return state.maybeMap(
-            orElse: () => RestaurantProfileLoadingWidget(),
-            completeRestaurantDataOption: (value) {
-              if (value.isLoading) {
-                return RestaurantProfileLoadingWidget();
-              } else {
-                return value.restaurantList.fold(
-                    () => RestaurantProfileLoadingWidget(),
-                    (a) => a.fold(
-                        (l) => RestaurantProfileLoadingWidget(),
-                        (r) => RestaurantProfileWidget(
-                              getAllRestaurantDataResponse: r,
-                              restaurantId: restaurantId,
-                            )));
-              }
-            },
-          );
+        listener: (context, state) {
+          state.maybeMap(
+              orElse: () {},
+              completeRestaurantDataOption: (e) {
+                e.restaurantList.fold(
+                  () => {},
+                  (a) => a.fold(
+                    (l) => {},
+                    (r) =>
+                        restaurantController.setDataCurrentRestaurant(r.data),
+                  ),
+                );
+              });
         },
+        builder: (context, state) => state.maybeMap(
+            orElse: () => Scaffold(
+                  body: CircularProgressIndicator(),
+                ),
+            completeRestaurantDataOption: (e) {
+              if (e.isLoading) {
+                return Scaffold(
+                  body: CircularProgressIndicator(),
+                );
+              } else {
+                return Scaffold(
+                    body: DefaultTabController(
+                  length: 2,
+                  child: CustomScrollView(slivers: [
+                    sliverAppBar(),
+                    buildSliverFillRemaining(),
+                  ]),
+                ));
+              }
+            }),
       ),
+    );
+  }
+
+  SliverFillRemaining buildSliverFillRemaining() {
+    return SliverFillRemaining(
+      hasScrollBody: true,
+      fillOverscroll: true,
+      child: TabBarView(
+        children: [ProductsPage(), Container(color: Colors.pink)],
+      ),
+    );
+  }
+
+  SliverAppBar sliverAppBar() {
+    return SliverAppBar(
+      flexibleSpace: FlexibleSpaceBar(
+        centerTitle: true,
+        collapseMode: CollapseMode.parallax,
+        background: Image.asset(
+          'assets/images/banner1.png',
+          fit: BoxFit.cover,
+        ),
+      ),
+      pinned: true,
+      floating: true,
+      expandedHeight: 200,
+      backgroundColor: Colors.white,
+      bottom: TabBar(
+          isScrollable: false,
+          indicatorSize: TabBarIndicatorSize.label,
+          indicatorWeight: 3,
+          tabs: [
+            Container(
+              child: Tab(text: "Products"),
+            ),
+            Container(
+              child: Tab(text: "Information"),
+            ),
+          ]),
     );
   }
 }

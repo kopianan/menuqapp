@@ -8,13 +8,16 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+  List<Widget> pages = [SignInForm(), SignUpForm()];
+
+  PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 20),
+          margin: EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -49,35 +52,151 @@ class _SignInPageState extends State<SignInPage> {
               SizedBox(
                 height: 20,
               ),
-              TextFormField(
-                style: TextStyle(fontSize: 14),
-                decoration: InputDecoration(hintText: "Email or username"),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              TextFormField(
-                style: TextStyle(fontSize: 14),
-                decoration: InputDecoration(hintText: "Password"),
-                obscureText: true,
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 10),
-                child: Text(
-                  "Forgot password ?",
-                  style: TextStyle(color: kPrimaryColor),
-                ),
-                alignment: Alignment.centerRight,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              DefaultButton(
-                text: "Sign In",
-                press: () {},
+              Expanded(
+                child: DefaultTabController(
+                    length: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        TabBar(
+                          isScrollable: true,
+                          indicatorWeight: 3,
+                          indicatorSize: TabBarIndicatorSize.tab,
+                          tabs: [
+                            Container(
+                                height: 35,
+                                alignment: Alignment.centerLeft,
+                                child: Text("Sign In")),
+                            Container(
+                                height: 35,
+                                alignment: Alignment.centerLeft,
+                                child: Text("Sign Up"))
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Expanded(
+                          child: TabBarView(
+                            children: pages,
+                          ),
+                        ),
+                      ],
+                    )),
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class SignInForm extends StatelessWidget {
+  const SignInForm({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          TextFormField(
+            style: TextStyle(fontSize: 14),
+            decoration: InputDecoration(hintText: "Email or username"),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          TextFormField(
+            style: TextStyle(fontSize: 14),
+            decoration: InputDecoration(hintText: "Password"),
+            obscureText: true,
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 10),
+            child: Text(
+              "Forgot password ?",
+              style: TextStyle(color: kPrimaryColor),
+            ),
+            alignment: Alignment.centerRight,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: DefaultButton(
+              text: "Sign In",
+              press: () {},
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SignUpForm extends StatelessWidget {
+  const SignUpForm({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextFormField(
+              style: TextStyle(fontSize: 14),
+              decoration: InputDecoration(hintText: "Nama"),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            TextFormField(
+              style: TextStyle(fontSize: 14),
+              decoration: InputDecoration(hintText: "Email / username"),
+              obscureText: true,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextFormField(
+              style: TextStyle(fontSize: 14),
+              decoration: InputDecoration(hintText: "Nomor Whatsapp"),
+              obscureText: true,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextFormField(
+              style: TextStyle(fontSize: 14),
+              decoration: InputDecoration(hintText: "Password"),
+              obscureText: true,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextFormField(
+              style: TextStyle(fontSize: 14),
+              decoration: InputDecoration(hintText: "Konfirmasi Password"),
+              obscureText: true,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: DefaultButton(
+                text: "Sign Up",
+                press: () {},
+              ),
+            ),
+          ],
         ),
       ),
     );
