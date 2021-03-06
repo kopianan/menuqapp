@@ -20,30 +20,14 @@ class _AppWidgetState extends State<AppWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final Future<FirebaseApp> _initialization = Firebase.initializeApp();
-
-    return FutureBuilder(
-      future: _initialization,
-      builder: (context, snapshot) {
-        if (snapshot.hasError) {
-          return onError();
-        }
-        // Once complete, show your application
-        if (snapshot.connectionState == ConnectionState.done) {
-          return GetMaterialApp(
-            initialRoute: '/splash_screen',
-            // home: MainHome(),
-            debugShowCheckedModeBanner: false,
-            title: 'Menuq',
-            getPages: getAllPages,
-            defaultTransition: Transition.downToUp,
-            theme: theme(),
-          );
-        }
-
-        // Otherwise, show something whilst waiting for initialization to complete
-        return onLoading();
-      },
+    return GetMaterialApp(
+      initialRoute: '/splash_screen',
+      // home: MainHome(),
+      debugShowCheckedModeBanner: false,
+      title: 'Menuq',
+      getPages: getAllPages,
+      defaultTransition: Transition.downToUp,
+      theme: theme(),
     );
   }
 }

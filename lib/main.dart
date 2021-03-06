@@ -9,11 +9,8 @@ import 'package:permission_handler/permission_handler.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  WidgetsFlutterBinding.ensureInitialized();
-
   configureInjection(Environment.prod);
   await GetStorage.init(dataStorage);
-
   await Permission.location.request();
 
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
